@@ -8,7 +8,6 @@ np.savetxt('tempdaten.txt', np.column_stack([data_x, data_y]), header='t T_1 T_2
 plt.plot(x, x**2, label=r'$x^2$')
 plt.plot(x, x**5, 'x', label=r'$x^5$')
 
-x, y=  
 
 # plt.subplot(1, 2, 2)
 # plt.plot(x, y, label='Kurve')

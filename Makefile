@@ -3,9 +3,10 @@ vXXX:
 
 v206:
 	make -C v206
+	make -C v206 clean
 
 clean:
 	make -C vXXX clean
 	make -C v206 clean
 
-.PHONY: vXXX clean v206
+.PHONY: clean vXXX clean v206
