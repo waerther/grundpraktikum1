@@ -16,7 +16,7 @@ Die gemessenen Daten werden wie folgt tabellarisch dargestellt.
   %\resizebox{.5/textwidth}{!}{%
   \begin{tabular}{c c c c c c c}  %\begin{tabular}{S[table-format=3.0] c c c c c c c[table-format=3.2]}
     \toprule
-    {$t (\unit{\second})$} &
+    {Zeit $t (\unit{\second})$} &
     {$T_{1} (\unit{\celsius})$}&
     {$T_{2} (\unit{\celsius})$}&
     {$p_{a} (\unit{\bar})$}&
@@ -138,8 +138,54 @@ C = \qty{294.8097(0.1062)}{\unit\kelvin} \\
 
 
 
-% quadratische regression für T_1 und T_2
-
 \subsubsection{Aufg. c: Bestimmung der Differentialquotienten}
 
-% usepackage{}
+Mithilfe dieser Funtionen sollen nun die Differentialquotienten $\frac{dT_{1}}{dt}$ und $\frac{dT_{2}}{dt}$ 
+für vier verschiedene Temperaturen berechnet werden. Hierbei wird sich für die Temperaturen bei 
+300s, 600s, 900s und 1200 entschieden. 
+\\\\
+Aus dem Diagramm werden die entsprechenden Steigungen über die Ableitungen der Näherungsfunktion entnommen:
+
+\begin{align*} 
+  \frac{dT}{dt} = 2At + B
+\end{align*}
+
+Für $T_{1} (\unit{\kelvin})$ ergeben sich folgende Differentialquotienten:
+
+\begin{table}
+  \centering
+  \caption{Differentialquotient für $T_{1}$}
+  \label{tab:berechnete_werte_T1}
+  \begin{tabular}{c c c}
+    \toprule
+    {Zeit $t^{2} (\unit{\second\squared})$} &
+    {$T_{1} (\unit{\kelvin})$} &
+    {$\frac{dT_{1}}{dt}$} \\
+    \midrule
+      420.0 &  305.0 &  0.0225 \\
+      780.0 &  312.0 &  0.0178 \\
+      1020.0 &  316.0 &  0.0146 \\
+      1140.0 &  317.0 &  0.0130 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+und analog für $T_{2} (\unit{\kelvin})$:
+
+\begin{table}
+  \centering
+  \caption{Differentialquotient für $T_{2}$}
+  \label{tab:berechnete_werte_T2}
+  \begin{tabular}{c c c}
+    \toprule
+    {Zeit $t^{2} (\unit{\second\squared})$} &
+    {$T_{2} (\unit{\kelvin})$} &
+    {$\frac{dT_{2}}{dt}$} \\
+    \midrule
+      420.0 &  286.0 & -0.0175 \\
+      780.0 &  280.0 & -0.0141 \\
+      1020.0 &  277.0 & -0.0119 \\
+      1140.0 &  276.0 & -0.0108 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
