@@ -44,8 +44,8 @@ Dabei ist zu beachten, dass $Q_{1}$ immer $Q_{2}$ plus $A$ entspricht:
 
 Für die ideale Wärmepumpe ohne weitere Verluste gilt:
 
-\begin{equation}
-    \frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} = 0 \implies \nu = \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1} - T_{2}}
+\begin{equation} \label{eq:nu_id}
+    \frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} = 0 \implies \nu_{id} = \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1} - T_{2}}
 \end{equation}
 
 Da wir hier allerdings eine reale Wärmepumpe haben, geschehen diese Prozesse nie verlustfrei:
@@ -65,7 +65,7 @@ Diese kann man durch eine Messreihe einfach durch den Differenzenquotienten ermi
 
 Dabei beschreiben $m_{1} c_{w}$ die Wärmekapazität in Reservoir 1 und $m_{k} c_{k}$ die Wärmekapazität der Kupferschlange und des Eimers.
 Daraus folgt für $\nu$:
-\begin{equation}
+\begin{equation} \label{eq:emp_nu}
     \stackrel{(\ref{eq:Q1diff})}{\implies} \nu = \frac{\increment Q_{1}}{\increment t N}
 \end{equation}
 
@@ -95,7 +95,7 @@ Nun sieht man, dass sich aus dem gleichsetzen der Gleichungen (\ref{eq:Q2diff}) 
 
 Dadurch ergibt sich die nützliche Formel für den Massendurchsatz:
 
-\begin{equation}
+\begin{equation} \label{eq:massendurchsatz}
     \frac{\increment m}{\increment t} = \frac{1}{L} (m_{2} c_{w} + m_{k} c_{k}) \frac{\increment T_{2}}{\increment t}
 \end{equation}
 
@@ -113,7 +113,7 @@ Dabei wird $\text{V}_\text{a}$ auf $\text{V}_\text{b}$ verringert.
 Wir möchten aber das bereits in \textbf{\ref{sec:Güteziffer}} genannte $N$ berechnen.
 Die ersparte Herleitung aus der Poissonschen Gleichung ergibt schließlich für $N_\text{mech}$
 
-\begin{equation}
+\begin{equation} \label{eq:n_mech}
     N_\text{mech} = \frac{\increment A_{\text{m}}} {\increment t}
     = \frac{1}{\kappa - 1} \left(\text{p}_\text{b} \sqrt[\kappa]{\frac{\text{p}_\text{a}}{\text{p}_\text{b}}
     } - \text{p}_\text{a} \right) \frac{\increment \text{V}_\text{a}}{\increment t}

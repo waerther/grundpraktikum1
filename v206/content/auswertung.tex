@@ -61,7 +61,7 @@ die Zeit für die Ausgleichsrechnung quadriert und gemäß der Versuchsanleitung
 
 \begin{table}
   \centering
-  \caption{Messdaten}
+  \caption{berechnete Werte}
   \label{tab:berechnete_werte}
   %\sisetup{table-format=1.2}
   %\resizebox{.5/textwidth}{!}{%
@@ -122,9 +122,9 @@ Im Folgenden werden die Temperaturverläufe in einem Diagramm dargestellt:
 
 Eine nicht-lineare Ausgleichsrechnung der Temperaturverläufe mittels PYTHON mithilfe der Näherungsfunktion
 
-\begin{equation} 
+\begin{align*} 
   T(t) = At^2 + Bt + C 
-\end{equation}
+\end{align*}
 \\
 ergibt die folgenden Parameter für $T_{1} (\unit{\kelvin})$: \\
 A = \qty{-6.6217(1407)e-6}{\unit[per-mode=reciprocal]{\kelvin\per\second\squared}} \\
@@ -136,18 +136,18 @@ A = \qty{4.6346(1811)e-6}{\unit[per-mode=reciprocal]{\kelvin\per\second\squared}
 B = \qty{-0.0214(0003)}{\unit[per-mode=reciprocal]{\kelvin\per\second}} \\
 C = \qty{294.8097(0.1062)}{\unit\kelvin} \\
 
+\newpage
 
-
-\subsubsection{Aufg. c: Bestimmung der Differentialquotienten}
+\subsubsection{Aufg. c: Bestimmung der Differentialquotienten} \label{sec:aufg_c}
 
 Mithilfe dieser Funtionen sollen nun die Differentialquotienten $\frac{dT_{1}}{dt}$ und $\frac{dT_{2}}{dt}$ 
 für vier verschiedene Temperaturen berechnet werden. Hierbei wird sich für die Temperaturen bei 
-300s, 600s, 900s und 1200 entschieden. 
+300s, 600s, 900s und 1200s entschieden. 
 \\\\
 Aus dem Diagramm werden die entsprechenden Steigungen über die Ableitungen der Näherungsfunktion entnommen:
 
 \begin{align*} 
-  \frac{dT}{dt} = 2At + B
+  \frac{dT}{dt} = 2At + B 
 \end{align*}
 
 Für $T_{1} (\unit{\kelvin})$ ergeben sich folgende Differentialquotienten:
@@ -158,14 +158,14 @@ Für $T_{1} (\unit{\kelvin})$ ergeben sich folgende Differentialquotienten:
   \label{tab:berechnete_werte_T1}
   \begin{tabular}{c c c}
     \toprule
-    {Zeit $t^{2} (\unit{\second\squared})$} &
+    {Zeit $t (\unit{\second})$} &
     {$T_{1} (\unit{\kelvin})$} &
     {$\frac{dT_{1}}{dt}$} \\
     \midrule
-      420.0 &  305.0 &  0.0225 \\
-      780.0 &  312.0 &  0.0178 \\
-      1020.0 &  316.0 &  0.0146 \\
-      1140.0 &  317.0 &  0.0130 \\
+     300 & 302.65 &  0.0241 \\
+     600 & 309.35 &  0.0202 \\
+     900 & 314.65 &  0.0162 \\
+    1200 & 318.75 &  0.0122 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -178,14 +178,171 @@ und analog für $T_{2} (\unit{\kelvin})$:
   \label{tab:berechnete_werte_T2}
   \begin{tabular}{c c c}
     \toprule
-    {Zeit $t^{2} (\unit{\second\squared})$} &
+    {Zeit $t (\unit{\second})$} &
     {$T_{2} (\unit{\kelvin})$} &
     {$\frac{dT_{2}}{dt}$} \\
     \midrule
-      420.0 &  286.0 & -0.0175 \\
-      780.0 &  280.0 & -0.0141 \\
-      1020.0 &  277.0 & -0.0119 \\
-      1140.0 &  276.0 & -0.0108 \\
+     300 & 288.75 & -0.0186 \\
+     600 & 283.75 & -0.0158 \\
+     900 & 279.35 & -0.0130 \\
+    1200 & 275.85 & -0.0103 \\
     \bottomrule
   \end{tabular}
 \end{table}
+
+\newpage
+
+\subsubsection{Aufg. d/g: Bestimmung der Güteziffer}
+
+Mithilfe der vier gewählten Temperaturen soll nun die Güteziffer $\nu$ nach Gleichung 
+(\ref{eq:Q1diff}) berechnet werden. \\
+\\
+Die Wärmekapazität der Kupferschlange beträgt $m_{k} c_{k}$ = 750 {\unit[per-mode=fraction]{\joule\per\kelvin}. \\
+Die Wärmekapazität der Wassermenge berechnet sich durch Multiplikation der Masse mit der spezifischen
+Wärmekapazität von Wasser nach \cite[278]{demtroeder1} zu $m_{w} c_{w}$ = 12546 {\unit[per-mode=fraction]{\joule\per\kelvin}. \\
+\\
+Für die ideale Güteziffer $\nu$ nach Gleichung (\ref{eq:nu_id}) und die empirische Güteziffer nach (\ref{eq:emp_nu})
+ergibt sich mit den Temperaturen aus Kapitel \ref{sec:aufg_c} für $T_{1}$:
+
+\begin{table}
+  \centering
+  \caption{Theoretische und empirische Güteziffer der Messreihe $T_{1}$}
+  \label{tab:güteziffern_t1}
+  \begin{tabular}{c c c c}
+    \toprule
+    {Zeit $t (\unit{\second})$} &
+    Güteziffer (Theorie) &
+    Güteziffer (empirisch) &
+    Abweichung (\%) \\
+    \midrule
+         300 &                21.773 &                   2.563 &           88.23 \\
+         600 &                12.084 &                   2.149 &           82.22 \\
+         900 &                 8.914 &                   1.873 &           78.99 \\
+        1200 &                 7.430 &                   1.411 &           81.01 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+Die Güteziffer für $T_{2}$ wird nicht erneut betrachtet, da diese im Idealfall gleich sein
+müsste, hier aber geringer war.
+
+Auffallend ist, dass die Güteziffer stark von der idealen Güteziffer abweicht. Ein Grund für diese
+Abweichung ist die Irreversibilität des Prozesses, obwohl bei der Berechnung der Güteziffer von
+einem reversiblen Prozess ausgegangen wurde. Außerdem kommt es durch Reibung zu Energieverlusten.
+Es wird weiter davon ausgegangen, dass der Kompressor adiabatisch komprimiert, was aufgrund natürlicher
+Umstände nicht möglich ist. Weitere Ursachen finden sich in der Diskussion.
+
+\subsection{Aufg. e: Bestimmung des Messdurchsatzes}
+
+Der Messdurchsatz berechnet sich zunächst durch die Bestimmung der Verdampfungswärme L.
+Dazu wird aus den Wertepaaren (p,T) der Messreihe und einer linearen Ausgleichsrechnung mittels PYTHON die 
+Steigung und Achsenabschnitt der ermittelten Ausgleichsgerade dargestellt: 
+
+\begin{table}
+  \centering
+  \caption{Steigung und Achsenabschnitt der Ausgleichsgerade}
+  \label{tab:güteziffern_t1}
+  \begin{tabular}{c c c}
+    \toprule
+    {} &         Wert &      Fehler \\
+    \midrule
+    Steigung m        &    24826.894 &     543.628 \\
+    Achsenabschnitt b & -6755427.013 &  169483.333 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Die Verdampfungswärme ergibt sich aus L = $m \cdot R$, wobei m die Steigung der Geraden und R die 
+allgemeine Gaskonstante ist. Der Fehler der Verdampfungswärme ergibt sich nach der Gauß’schen Fehlerfortpflanzung
+aus dem Fehler der Steigung $m$ und dem Fehler der allgemeinen Gaskonstanten \cite[467]{demtroeder1}. 
+Somit ergibt sich für die Verdampfungswärme:
+$L$ = \qty{206421.989(4519.968)}{\unit[per-mode=fraction]{\joule\second\per\mol\kelvin}}.
+\\
+\\
+Der Massendurchsatz berechnet sich nach Gleichung (\ref{eq:massendurchsatz}) zu:
+
+\begin{table}
+  \centering
+  \caption{berechneter Massendurchsatz}
+  \label{tab:massendurchsaetze}
+  \begin{tabular}{c c c c}
+    \toprule
+    {Zeit $t (\unit{\second})$} &
+    $\frac{\increment Q_{2}}{\increment t}$ &
+    {$\frac{\increment m}{\increment t} (\unit[per-mode=fraction]{\mol\per\second})$} &
+    {$\frac{\increment m}{\increment t} (\unit[per-mode=fraction]{\gram\per\second})$} \\
+    \midrule
+      300 & -247.3056 &      -0.001198 &      -0.1449 \\
+      600 & -210.0768 &      -0.001018 &      -0.1231 \\
+      900 & -172.8480 &      -0.000837 &      -0.1012 \\
+     1200 & -136.9488 &      -0.000663 &      -0.0802 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Für weitere Berechnungen soll der Massendurchsatz nun noch in SI-Einheiten umgewandelt. Dafür wird mit der molaren Masse
+120,91 $\unit[per-mode=fraction]{\gram\per\mol}$ von Dichlordifluormethan multipliziert. 
+
+\subsection{Aufg. f: Bestimmung der mech Kompressorleistung $N_{mech}$}
+
+Die Gasdichte $\rho$ lässt sich aus dem in der Versuchsanleitung \cite[7]{v206} angegebenen Wert 
+$p_{0}$ = 5,51 g/l (Dichlordifluormethan) und der idealen Gasgleichung berechnen:
+
+\begin{align*}
+  pV = nRT \iff \frac{pV}{T} = nR
+\end{align*}
+
+mit R = 8,3144508 \unit[per-mode=fraction]{\joule\second\per\mol\kelvin}, $p_{0}$ = 1 bar, $\kappa$ = 1,14 und
+$T_{0}$ = 0\unit{\celsius} = 273,14\unit{\kelvin}\\
+\\
+aus $nR$ = const., also $n_{1}R$ = $n_{2}R$, folgt:
+
+\begin{align*}
+  \frac{p_{0}V_{0}}{T_{0}} = \frac{p_{2}V_{2}}{T_{2}}
+\end{align*}
+
+Mit $\rho V \iff V = \frac{m}{\rho}$ folgt:
+
+\begin{align*}
+  \frac{p_{0}\cancel{m}}{\rho_{0}T_{0}} = \frac{p_{2}\cancel{m}}{\rho_{2}T_{2}}
+\end{align*} \\
+
+Somit folgt mit $\rho_{0} = \rho$ und $p_{2} = p_{a}$ schließlich:
+
+\begin{align}
+  \frac{p_{0}}{\rho_{0}T_{0}} = \frac{p_{a}}{T_{2}\rho} \iff \rho = \frac{p_{0}T_{0}p_{a}}{T_{2}p_{0}}
+\end{align}\\
+
+Damit folgt aus Gleichung (\ref{eq:n_mech}):
+
+\begin{equation*}
+  N_\text{mech} = 
+  \frac{1}{\kappa - 1} 
+  \left(\text{p}_\text{b} \sqrt[\kappa]{\frac {\text{p}_\text{a}} {\text{p}_\text{b}}} - \text{p}_\text{a} \right)
+  \frac{1} {\frac {\rho_{0}T_{0}p_{a}} {T_{2}p_{0}}} \frac{\increment m}{\increment t} 
+  =
+  \frac{1}{\kappa - 1} 
+  \left(\text{p}_\text{b} \sqrt[\kappa]{\frac {\text{p}_\text{a}} {\text{p}_\text{b}}} - \text{p}_\text{a} \right)
+  \frac {T_{2}p_{0}} {\rho_{0}T_{0}p_{a}} \frac{\increment m}{\increment t}
+\end{equation*} \\
+
+Die mechanische Leistung des Kompressors und zugehöriger Fehler betragen somit:
+
+\begin{table}
+  \centering
+  \caption{Gasdichte \rho und mechanische Leistung N (\unit{\watt})}
+  \label{tab:massendurchsaetze}
+  \begin{tabular}{c c c}
+    \toprule
+    {Zeit $t (\unit{\second})$} &
+    {Dichte $\rho (\unit[per-mode=fraction]{gram\per\cubic\meter})$} &
+    {Leistung N $(\unit{\watt})$} \\
+    \midrule
+       300 &               23.455 &         -1.388 \\
+       600 &               20.156 &         -1.877 \\
+       900 &               18.318 &         -1.956 \\
+      1200 &               16.368 &         -1.884 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
