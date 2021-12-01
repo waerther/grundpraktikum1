@@ -76,3 +76,4 @@ plt.ylabel(r'ln($\frac{p_{b}}{p_{0}}$)')
 
 plt.grid(True)
 plt.savefig('build/plot2.pdf', bbox_inches = "tight") # damit das label nicht abgeschnitten wird
+plt.clf()
