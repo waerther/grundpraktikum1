@@ -39,4 +39,40 @@ plt.ylabel(r'Temperatur (K)')
 plt.legend(loc="best")
 plt.grid(True)
 
-plt.savefig('build/plot.pdf')
+plt.savefig('build/plot1.pdf')
+
+plt.clf() # clears plot
+
+
+messdaten = pd.read_excel("messdaten.xlsx")
+pb = messdaten.iloc[:,[4, 9]] 
+np.savetxt('pb.txt', pb.values, header='T1(K) p_b(Pa)', fmt='%f')
+T1, pb = np.genfromtxt('pb.txt', unpack=True, skip_header=1)
+rT1 = 1/T1
+p0 = pb[0]
+xx = rT1
+yy = np.log((pb/p0))
+plt.plot(xx, yy, 'vb')
+
+# Nicht-lineare Ausgleichsfunktion
+def g(x, a, b):
+    return a * x + b
+
+para, pcov = curve_fit(g, rT1, yy)
+pcov = np.sqrt(np.diag(pcov))
+para = np.round(para, 3)
+pcov = np.round(pcov, 3)
+a, b = para
+fa, fb = pcov  
+R = 8.3144508
+
+dreg = {'Wert': para, 'Fehler': pcov}
+dfreg = pd.DataFrame(data = dreg, index = ['Steigung m', 'Achsenabschnitt b'])
+print(dfreg.to_latex(index = True, column_format= "c c c"))
+plt.plot(rT1, g(rT1, a, b), '-b')
+
+plt.xlabel(r'$\frac{1}{T_{1}}$ ($\frac{1}{s}$)')
+plt.ylabel(r'ln($\frac{p_{b}}{p_{0}}$)')
+
+plt.grid(True)
+plt.savefig('build/plot2.pdf', bbox_inches = "tight") # damit das label nicht abgeschnitten wird
