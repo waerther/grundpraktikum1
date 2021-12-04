@@ -52,7 +52,7 @@ rT1 = 1/T1
 p0 = pb[0]
 xx = rT1
 yy = np.log((pb/p0))
-plt.plot(xx, yy, 'vb')
+plt.plot(xx, yy, '.r')
 
 # Nicht-lineare Ausgleichsfunktion
 def g(x, a, b):
@@ -69,7 +69,7 @@ R = 8.3144508
 dreg = {'Wert': para, 'Fehler': pcov}
 dfreg = pd.DataFrame(data = dreg, index = ['Steigung m', 'Achsenabschnitt b'])
 print(dfreg.to_latex(index = True, column_format= "c c c"))
-plt.plot(rT1, g(rT1, a, b), '-b')
+plt.plot(rT1, g(rT1, a, b), '-r')
 
 plt.xlabel(r'$\frac{1}{T_{1}}$ ($\frac{1}{s}$)')
 plt.ylabel(r'ln($\frac{p_{b}}{p_{0}}$)')

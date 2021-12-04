@@ -38,9 +38,20 @@
 % deutsche Spracheinstellungen
 \usepackage[ngerman]{babel}
 
+
 % !!! zum durchstreichen
 \usepackage{amsmath}
 \usepackage[makeroom]{cancel}
+
+% !!! Zum ersetzen von \symup{}
+\usepackage{expl3}
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand \dif {m} {
+  \mathinner{\symup{d} #1}
+}
+\ExplSyntaxOff
+
 
 \usepackage[
   math-style=ISO,    % ┐

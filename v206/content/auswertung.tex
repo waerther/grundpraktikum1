@@ -1,130 +1,130 @@
-\newpage
 \section{Auswertung}
 \label{sec:Auswertung}
 
 \subsection{Bestimmung der Güteziffer}
 
-\subsubsection{Aufg. a: Messdaten und Diagramm}
+% \subsubsection{Messdaten und Diagramm}
 
-Die gemessenen Daten werden wie folgt tabellarisch dargestellt. Es sei beigemerkt, dass die Messung der Leistung aufgrund
-von technischen Schwierigkeiten erst ab der fünften Minute erfolgen konnte.
+Die gemessenen Daten werden für die Bestimmung der in \textbf{\ref{sec:Ziel}} genannten Größen ausgewertet.
+Es sei im Voraus angemerkt, dass die Messung der Leistung aufgrund von technischen Schwierigkeiten erst ab der fünften Minute erfolgen konnte. 
+\\
 
-\begin{table}
-  \centering
-  \caption{Messdaten}
-  \label{tab:Messdaten}
-  %\sisetup{table-format=1.2}
-  %\resizebox{.5/textwidth}{!}{%
-  \begin{tabular}{c c c c c c c}  %\begin{tabular}{S[table-format=3.0] c c c c c c c[table-format=3.2]}
-    \toprule
-    {Zeit $t (\unit{\second})$} &
-    {$T_{1} (\unit{\celsius})$}&
-    {$T_{2} (\unit{\celsius})$}&
-    {$p_{a} (\unit{\bar})$}&
-    {$p_{b} (\unit{\bar})$}&
-    {$P (\unit{\watt})$} \\
-    \midrule
-       0 &    21.50 &     21.50 &       4.20 &       3.80 &      - \\
-      60 &    23.30 &     20.70 &       3.90 &       5.30 &      - \\
-     120 &    24.70 &     19.30 &       3.60 &       5.90 &      - \\
-     180 &    26.40 &     17.70 &       3.60 &       6.00 &      - \\
-     240 &    27.90 &     16.60 &       3.60 &       6.40 &      - \\
-     300 &    29.50 &     15.60 &       3.50 &       6.80 & 125.00 \\
-     360 &    31.00 &     14.60 &       3.30 &       7.00 & 125.00 \\
-     420 &    32.50 &     13.50 &       3.20 &       7.40 & 125.00 \\
-     480 &    33.80 &     12.50 &       3.00 &       7.50 & 125.00 \\
-     540 &    35.10 &     11.50 &       2.40 &       8.00 & 125.00 \\
-     600 &    36.20 &     10.60 &       2.80 &       8.10 & 125.00 \\
-     660 &    37.50 &      9.60 &       2.70 &       8.50 & 125.00 \\
-     720 &    38.50 &      8.70 &       2.80 &       8.90 & 125.00 \\
-     780 &    39.60 &      7.80 &       2.50 &       9.00 & 125.00 \\
-     840 &    40.60 &      7.10 &       2.40 &       9.10 & 115.00 \\
-     900 &    41.50 &      6.20 &       2.40 &       9.30 & 115.00 \\
-     960 &    42.40 &      5.50 &       2.20 &       9.70 & 115.00 \\
-    1020 &    43.30 &      4.70 &       2.10 &       9.90 & 115.00 \\
-    1080 &    44.10 &      4.00 &       2.10 &      10.10 & 115.00 \\
-    1140 &    44.80 &      3.30 &       2.10 &      10.20 & 115.00 \\
-    1200 &    45.60 &      2.70 &       2.00 &      10.50 & 115.00 \\
-    1260 &    46.30 &      2.10 &       2.00 &      10.80 & 115.00 \\
-    1320 &    47.10 &      1.40 &       1.90 &      11.00 & 115.00 \\
-    1380 &    47.80 &      0.80 &       1.80 &      11.10 & 115.00 \\
-    1440 &    48.40 &      0.30 &       1.80 &      11.20 & 115.00 \\
-    1500 &    49.00 &     -0.20 &       1.80 &      11.60 & 115.00 \\
-    1560 &    49.50 &     -0.70 &       1.80 &      11.80 & 115.00 \\
-    1620 &    50.00 &     -0.10 &       1.80 &      12.00 & 115.00 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+% \begin{table}
+%   \centering
+%   \caption{Messdaten}
+%   \label{tab:Messdaten}
+%   %\sisetup{table-format=1.2}
+%   %\resizebox{.5/textwidth}{!}{%
+%   \begin{tabular}{c c c c c c c}  %\begin{tabular}{S[table-format=3.0] c c c c c c c[table-format=3.2]}
+%     \toprule
+%     {Zeit $t (\unit{\second})$} &
+%     {$T_{1} (\unit{\celsius})$}&
+%     {$T_{2} (\unit{\celsius})$}&
+%     {$p_{a} (\unit{\bar})$}&
+%     {$p_{b} (\unit{\bar})$}&
+%     {$P (\unit{\watt})$} \\
+%     \midrule
+%        0 &    21.50 &     21.50 &       4.20 &       3.80 &      - \\
+%       60 &    23.30 &     20.70 &       3.90 &       5.30 &      - \\
+%      120 &    24.70 &     19.30 &       3.60 &       5.90 &      - \\
+%      180 &    26.40 &     17.70 &       3.60 &       6.00 &      - \\
+%      240 &    27.90 &     16.60 &       3.60 &       6.40 &      - \\
+%      300 &    29.50 &     15.60 &       3.50 &       6.80 & 125.00 \\
+%      360 &    31.00 &     14.60 &       3.30 &       7.00 & 125.00 \\
+%      420 &    32.50 &     13.50 &       3.20 &       7.40 & 125.00 \\
+%      480 &    33.80 &     12.50 &       3.00 &       7.50 & 125.00 \\
+%      540 &    35.10 &     11.50 &       2.40 &       8.00 & 125.00 \\
+%      600 &    36.20 &     10.60 &       2.80 &       8.10 & 125.00 \\
+%      660 &    37.50 &      9.60 &       2.70 &       8.50 & 125.00 \\
+%      720 &    38.50 &      8.70 &       2.80 &       8.90 & 125.00 \\
+%      780 &    39.60 &      7.80 &       2.50 &       9.00 & 125.00 \\
+%      840 &    40.60 &      7.10 &       2.40 &       9.10 & 115.00 \\
+%      900 &    41.50 &      6.20 &       2.40 &       9.30 & 115.00 \\
+%      960 &    42.40 &      5.50 &       2.20 &       9.70 & 115.00 \\
+%     1020 &    43.30 &      4.70 &       2.10 &       9.90 & 115.00 \\
+%     1080 &    44.10 &      4.00 &       2.10 &      10.10 & 115.00 \\
+%     1140 &    44.80 &      3.30 &       2.10 &      10.20 & 115.00 \\
+%     1200 &    45.60 &      2.70 &       2.00 &      10.50 & 115.00 \\
+%     1260 &    46.30 &      2.10 &       2.00 &      10.80 & 115.00 \\
+%     1320 &    47.10 &      1.40 &       1.90 &      11.00 & 115.00 \\
+%     1380 &    47.80 &      0.80 &       1.80 &      11.10 & 115.00 \\
+%     1440 &    48.40 &      0.30 &       1.80 &      11.20 & 115.00 \\
+%     1500 &    49.00 &     -0.20 &       1.80 &      11.60 & 115.00 \\
+%     1560 &    49.50 &     -0.70 &       1.80 &      11.80 & 115.00 \\
+%     1620 &    50.00 &     -0.10 &       1.80 &      12.00 & 115.00 \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
 
-\newpage
-Alle Größen wurden in SI-Einheiten umgerechnet, die Zeit für die Ausgleichsrechnung quadriert und gemäß der Versuchsanleitung \cite{v206} den Drücken $\textit{p}_\textit{a}$ und $\textit{p}_\textit{b}$ 1 bar bzw. 100000 Pa addiert:
+% \newpage
 
-\begin{table}
-  \centering
-  \caption{berechnete Werte}
-  \label{tab:berechnete_werte}
-  %\sisetup{table-format=1.2}
-  %\resizebox{.5/textwidth}{!}{%
-  \begin{tabular}{c c c c c c}  %\begin{tabular}{S[table-format=3.0] c c c c c c c[table-format=3.2]}
-    \toprule
-    {$t^{2} (\unit{\second\squared})$}&
-    {$T_{1} (\unit{\kelvin})$}&
-    {$T_{2} (\unit{\kelvin})$}&
-    {$p_{a+} (\unit{\pascal})$}&
-    {$p_{b+} (\unit{\pascal})$}& \\
-    %{$1/T_{1} (1/\unit{\kelvin})$} \\
-    \midrule
-          0.00 &  294.65 &  294.65 & 520000.00 &  480000.00 \\
-       3600.00 &  296.45 &  293.85 & 490000.00 &  630000.00 \\
-      14400.00 &  297.85 &  292.45 & 460000.00 &  690000.00 \\
-      32400.00 &  299.55 &  290.85 & 460000.00 &  700000.00 \\
-      57600.00 &  301.05 &  289.75 & 460000.00 &  740000.00 \\
-      90000.00 &  302.65 &  288.75 & 450000.00 &  780000.00 \\
-     129600.00 &  304.15 &  287.75 & 430000.00 &  800000.00 \\
-     176400.00 &  305.65 &  286.65 & 420000.00 &  840000.00 \\
-     230400.00 &  306.95 &  285.65 & 400000.00 &  850000.00 \\
-     291600.00 &  308.25 &  284.65 & 340000.00 &  900000.00 \\
-     360000.00 &  309.35 &  283.75 & 380000.00 &  910000.00 \\
-     435600.00 &  310.65 &  282.75 & 370000.00 &  950000.00 \\
-     518400.00 &  311.65 &  281.85 & 380000.00 &  990000.00 \\
-     608400.00 &  312.75 &  280.95 & 350000.00 & 1000000.00 \\
-     705600.00 &  313.75 &  280.25 & 340000.00 & 1010000.00 \\
-     810000.00 &  314.65 &  279.35 & 340000.00 & 1030000.00 \\
-     921600.00 &  315.55 &  278.65 & 320000.00 & 1070000.00 \\
-    1040400.00 &  316.45 &  277.85 & 310000.00 & 1090000.00 \\
-    1166400.00 &  317.25 &  277.15 & 310000.00 & 1110000.00 \\
-    1299600.00 &  317.95 &  276.45 & 310000.00 & 1120000.00 \\
-    1440000.00 &  318.75 &  275.85 & 300000.00 & 1150000.00 \\
-    1587600.00 &  319.45 &  275.25 & 300000.00 & 1180000.00 \\
-    1742400.00 &  320.25 &  274.55 & 290000.00 & 1200000.00 \\
-    1904400.00 &  320.95 &  273.95 & 280000.00 & 1210000.00 \\
-    2073600.00 &  321.55 &  273.45 & 280000.00 & 1220000.00 \\
-    2250000.00 &  322.15 &  272.95 & 280000.00 & 1260000.00 \\
-    2433600.00 &  322.65 &  272.45 & 280000.00 & 1280000.00 \\
-    2624400.00 &  323.15 &  273.05 & 280000.00 & 1300000.00 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+Alle Größen wurden in SI-Einheiten umgerechnet, die Zeit für die Ausgleichsrechnung quadriert und gemäß
+der Versuchsanleitung \cite{v206} den Drücken $\textit{p}_\textit{a}$ und $\textit{p}_\textit{b}$ 1 bar bzw. 100000 Pa addiert. 
+\\
 
-\newpage
+% \begin{table}
+%   \centering
+%   \caption{berechnete Werte}
+%   \label{tab:berechnete_werte}
+%   %\sisetup{table-format=1.2}
+%   %\resizebox{.5/textwidth}{!}{%
+%   \begin{tabular}{c c c c c c}  %\begin{tabular}{S[table-format=3.0] c c c c c c c[table-format=3.2]}
+%     \toprule
+%     {$t^{2} (\unit{\second\squared})$}&
+%     {$T_{1} (\unit{\kelvin})$}&
+%     {$T_{2} (\unit{\kelvin})$}&
+%     {$p_{a+} (\unit{\pascal})$}&
+%     {$p_{b+} (\unit{\pascal})$}& \\
+%     %{$1/T_{1} (1/\unit{\kelvin})$} \\
+%     \midrule
+%           0.00 &  294.65 &  294.65 & 520000.00 &  480000.00 \\
+%        3600.00 &  296.45 &  293.85 & 490000.00 &  630000.00 \\
+%       14400.00 &  297.85 &  292.45 & 460000.00 &  690000.00 \\
+%       32400.00 &  299.55 &  290.85 & 460000.00 &  700000.00 \\
+%       57600.00 &  301.05 &  289.75 & 460000.00 &  740000.00 \\
+%       90000.00 &  302.65 &  288.75 & 450000.00 &  780000.00 \\
+%      129600.00 &  304.15 &  287.75 & 430000.00 &  800000.00 \\
+%      176400.00 &  305.65 &  286.65 & 420000.00 &  840000.00 \\
+%      230400.00 &  306.95 &  285.65 & 400000.00 &  850000.00 \\
+%      291600.00 &  308.25 &  284.65 & 340000.00 &  900000.00 \\
+%      360000.00 &  309.35 &  283.75 & 380000.00 &  910000.00 \\
+%      435600.00 &  310.65 &  282.75 & 370000.00 &  950000.00 \\
+%      518400.00 &  311.65 &  281.85 & 380000.00 &  990000.00 \\
+%      608400.00 &  312.75 &  280.95 & 350000.00 & 1000000.00 \\
+%      705600.00 &  313.75 &  280.25 & 340000.00 & 1010000.00 \\
+%      810000.00 &  314.65 &  279.35 & 340000.00 & 1030000.00 \\
+%      921600.00 &  315.55 &  278.65 & 320000.00 & 1070000.00 \\
+%     1040400.00 &  316.45 &  277.85 & 310000.00 & 1090000.00 \\
+%     1166400.00 &  317.25 &  277.15 & 310000.00 & 1110000.00 \\
+%     1299600.00 &  317.95 &  276.45 & 310000.00 & 1120000.00 \\
+%     1440000.00 &  318.75 &  275.85 & 300000.00 & 1150000.00 \\
+%     1587600.00 &  319.45 &  275.25 & 300000.00 & 1180000.00 \\
+%     1742400.00 &  320.25 &  274.55 & 290000.00 & 1200000.00 \\
+%     1904400.00 &  320.95 &  273.95 & 280000.00 & 1210000.00 \\
+%     2073600.00 &  321.55 &  273.45 & 280000.00 & 1220000.00 \\
+%     2250000.00 &  322.15 &  272.95 & 280000.00 & 1260000.00 \\
+%     2433600.00 &  322.65 &  272.45 & 280000.00 & 1280000.00 \\
+%     2624400.00 &  323.15 &  273.05 & 280000.00 & 1300000.00 \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
 
+% \newpage
 
-Im Folgenden werden die Temperaturverläufe in einem Diagramm dargestellt:
+In (\ref{fig:plot1}) werden die Temperaturverläufe in einem Diagramm dargestellt:
 
 \begin{figure}
   \centering
   \includegraphics{plot1.pdf}
   \caption{Temperaturverläufe während der Messung}
-  \label{fig:plot}
+  \label{fig:plot1}
 \end{figure}
-
-\subsubsection{Aufg. b: Bestimmung der Parameter der Näherungsfunktion}
 
 Eine nicht-lineare Ausgleichsrechnung der Temperaturverläufe mittels PYTHON mithilfe der Näherungsfunktion
 
-\begin{align*} 
+\begin{equation*} 
   T(t) = At^2 + Bt + C 
-\end{align*}
+\end{equation*}
 \\
 ergibt die folgenden Parameter für $T_{1} (\unit{\kelvin})$: \\
 A = \qty{-6.6217(1407)e-6}{\unit[per-mode=reciprocal]{\kelvin\per\second\squared}} \\
@@ -135,10 +135,7 @@ und für $T_{2} (\unit{\kelvin})$: \\
 A = \qty{4.6346(1811)e-6}{\unit[per-mode=reciprocal]{\kelvin\per\second\squared}} \\
 B = \qty{-0.0214(0003)}{\unit[per-mode=reciprocal]{\kelvin\per\second}} \\
 C = \qty{294.8097(0.1062)}{\unit\kelvin} \\
-
-\newpage
-
-\subsubsection{Aufg. c: Bestimmung der Differentialquotienten} \label{sec:aufg_c}
+% \subsubsection{Aufg. c: Bestimmung der Differentialquotienten} \label{sec:aufg_c}
 
 Mithilfe dieser Funktionen sollen nun die Differentialquotienten $\frac{dT_{1}}{dt}$ und $\frac{dT_{2}}{dt}$ 
 für vier verschiedene Temperaturen berechnet werden. Hierbei wird sich für die Temperaturen bei 
@@ -156,16 +153,17 @@ Für $T_{1} (\unit{\kelvin})$ ergeben sich folgende Differentialquotienten:
   \centering
   \caption{Differentialquotient für $T_{1}$}
   \label{tab:berechnete_werte_T1}
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c}
     \toprule
     {Zeit $t (\unit{\second})$} &
     {$T_{1} (\unit{\kelvin})$} &
-    {$\frac{dT_{1}}{dt}$} \\
+    {$\frac{\dif{T_{1}}} {\dif{t}}$} & 
+    {Gauß-Fehler $\increment \frac{\dif{T_{1}}} {\dif{t}}$}\\
     \midrule
-     300 & 302.65 &  0.0241 \\
-     600 & 309.35 &  0.0202 \\
-     900 & 314.65 &  0.0162 \\
-    1200 & 318.75 &  0.0122 \\
+     300.0 & 302.65 &  0.0241 &   0.0003 \\
+     600.0 & 309.35 &  0.0202 &   0.0004 \\
+     900.0 & 314.65 &  0.0162 &   0.0005 \\
+    1200.0 & 318.75 &  0.0122 &   0.0006 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -176,63 +174,56 @@ und analog für $T_{2} (\unit{\kelvin})$:
   \centering
   \caption{Differentialquotient für $T_{2}$}
   \label{tab:berechnete_werte_T2}
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c}
     \toprule
     {Zeit $t (\unit{\second})$} &
     {$T_{2} (\unit{\kelvin})$} &
-    {$\frac{dT_{2}}{dt}$} \\
+    {$\frac{dT_{2}}{dt}$} &
+    {Gauß-Fehler $\increment \frac{\dif{T_{2}}} {\dif{t}}$} \\
     \midrule
-     300 & 288.75 & -0.0186 \\
-     600 & 283.75 & -0.0158 \\
-     900 & 279.35 & -0.0130 \\
-    1200 & 275.85 & -0.0103 \\
+     300.0 & 288.75 & -0.0186 &   0.0004 \\
+     600.0 & 283.75 & -0.0158 &   0.0005 \\
+     900.0 & 279.35 & -0.0130 &   0.0006 \\
+    1200.0 & 275.85 & -0.0103 &   0.0007 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\newpage
+% \subsubsection{Aufg. d/g: Bestimmung der Güteziffer}
 
-\subsubsection{Aufg. d/g: Bestimmung der Güteziffer}
-
-Mithilfe der vier gewählten Temperaturen soll nun die Güteziffer $\nu$ nach Gleichung 
-(\ref{eq:Q1diff}) berechnet werden. \\
+Aus den vier gewählten Temperaturen wird die Güteziffer $\nu$ nach (\ref{eq:Q1diff}) berechnet.
 \\
-Die Wärmekapazität der Kupferschlange beträgt $m_{k} c_{k}$ = 750 {\unit[per-mode=fraction]{\joule\per\kelvin}. \\
-Die Wärmekapazität der Wassermenge berechnet sich durch Multiplikation der Masse mit der spezifischen
+Die Wärmekapazität der Kupferschlange beträgt $m_{k} c_{k}$ = 750 {\unit[per-mode=fraction]{\joule\per\kelvin}. 
+Die Wärmekapazität der Wassermenge berechnet sich durch Multiplikation der Masse, hier 3 $\unit{\kilo\gram}$, mit der spezifischen
 Wärmekapazität von Wasser nach \cite[278]{demtroeder1} zu $m_{w} c_{w}$ = 12546 {\unit[per-mode=fraction]{\joule\per\kelvin}. \\
 \\
-Für die ideale Güteziffer $\nu$ nach Gleichung (\ref{eq:nu_id}) und die empirische Güteziffer nach (\ref{eq:emp_nu})
-ergibt sich mit den Temperaturen aus Kapitel \ref{sec:aufg_c} für $T_{1}$:
+Für die ideale Güteziffer $\nu_{id}$ nach (\ref{eq:nu_id}) und die empirische Güteziffer nach (\ref{eq:emp_nu})
+ergibt sich mit den vier Temperaturen für $T_{1}$:
 
 \begin{table}
   \centering
   \caption{Theoretische und empirische Güteziffer der Messreihe $T_{1}$}
   \label{tab:güteziffern_t1}
-  \begin{tabular}{c c c c}
+  \begin{tabular}{c c c c c}
     \toprule
     {Zeit $t (\unit{\second})$} &
     Güteziffer (Theorie) &
     Güteziffer (empirisch) &
+    Gauß-Fehler &
     Abweichung (\%) \\
     \midrule
-         300 &                21.773 &                   2.563 &           88.23 \\
-         600 &                12.084 &                   2.149 &           82.22 \\
-         900 &                 8.914 &                   1.873 &           78.99 \\
-        1200 &                 7.430 &                   1.411 &           81.01 \\
+     300.0 &                21.773 &                   2.563 &        0.032 &           88.23 \\
+     600.0 &                12.084 &                   2.149 &        0.043 &           82.22 \\
+     900.0 &                 8.914 &                   1.873 &        0.058 &           78.99 \\
+    1200.0 &                 7.430 &                   1.411 &        0.069 &           81.01 \\
     \bottomrule
     \end{tabular}
 \end{table}
 
 Die Güteziffer für $T_{2}$ wird nicht erneut betrachtet, da diese im Idealfall gleich sein
-müsste, hier aber geringer war.\\
-\\
-Auffallend ist, dass die Güteziffer stark von der idealen Güteziffer abweicht. Ein Grund für diese
-Abweichung ist die Irreversibilität des Prozesses, obwohl bei der Berechnung der Güteziffer von
-einem reversiblen Prozess ausgegangen wurde. Außerdem kommt es durch Reibung zu Energieverlusten.
-Es wird weiter davon ausgegangen, dass der Kompressor adiabatisch komprimiert, was aufgrund natürlicher
-Umstände nicht möglich ist. Weitere Ursachen finden sich in der Diskussion.
+müsste, hier aber geringer war. \\
 
-\subsection{Aufg. e: Bestimmung des Messdurchsatzes}
+\subsection{Bestimmung des Messdurchsatzes}
 
 Der Messdurchsatz berechnet sich zunächst durch die Bestimmung der Verdampfungswärme L.
 Dazu wird aus den Wertepaaren (p,T) der Messreihe und einer linearen Ausgleichsrechnung mittels PYTHON die 
@@ -246,42 +237,45 @@ Steigung und Achsenabschnitt der ermittelten Ausgleichsgerade dargestellt:
     \toprule
     {} &         Wert &      Fehler \\
     \midrule
-    Steigung m        &    24826.894 &     543.628 \\
-    Achsenabschnitt b & -6755427.013 &  169483.333 \\
+    Steigung m        & -2651.537 &  97.560 \\
+    Achsenabschnitt b &     9.203 &   0.313 \\
     \bottomrule
   \end{tabular}
 \end{table} 
 
-Die Verdampfungswärme ergibt sich aus L = $m \cdot R$, wobei m die Steigung der Geraden und R die 
-allgemeine Gaskonstante ist. Der Fehler der Verdampfungswärme ergibt sich nach der Gauß’schen Fehlerfortpflanzung
-aus dem Fehler der Steigung $m$ und dem Fehler der allgemeinen Gaskonstanten \cite[467]{demtroeder1}. 
+Die Verdampfungswärme ergibt sich aus L = $-m \cdot R$, wobei m die Steigung der Geraden und R die 
+allgemeine Gaskonstante ist. Das negative Vorzeichen rührt von der negativen Steigung. 
+\\
+
 Somit ergibt sich für die Verdampfungswärme:
-$L$ = \qty{206421.989(4519.968)}{\unit[per-mode=fraction]{\joule\second\per\mol\kelvin}}.
+$L$ = \qty{22046.074(811.158)}{\unit[per-mode=fraction]{\joule\second\per\mol\kelvin}}.
 
 \begin{figure}
   \centering
   \includegraphics{plot2.pdf}
   \caption{Logarithmischer Druckverlauf des Drucks $p_{b}$}
-  \label{fig:plot}
+  \label{fig:plot2}
 \end{figure}
 
-Der Massendurchsatz berechnet sich nach Gleichung (\ref{eq:massendurchsatz}) zu:
+In Tabelle \ref{tb:massendurchsaetze} sind die nach (\ref{eq:massendurchsatz}) berechneten Massendurchsätze:
 
 \begin{table} 
   \centering
   \caption{berechneter Massendurchsatz}
   \label{tb:massendurchsaetze}
-  \begin{tabular}{c c c c}
+  \begin{tabular}{c c c c c c}
     \toprule
     {Zeit $t (\unit{\second})$} &
-    $\frac{\increment Q_{2}}{\increment t}$ &
-    {$\frac{\increment m}{\increment t} (\unit[per-mode=fraction]{\mol\per\second})$} &
-    {$\frac{\increment m}{\increment t} (\unit[per-mode=fraction]{\gram\per\second})$} \\
+    {$\frac {\dif{Q_{2}}} {\dif{t}}$} &
+    {$\frac {\dif{m}} {\dif{t}} (\unit[per-mode=fraction]{\mol\per\second})$} &
+    {Gauß-Fehler $\increment \frac {\dif{m}} {\dif{t}} (\unit[per-mode=fraction]{\mol\per\second})$} &
+    {$\frac{\dif{m}} {\dif{t}} (\unit[per-mode=fraction]{\gram\per\second})$} &
+    {Gauß-Fehler $\increment \frac {\dif{m}} {\dif{t}} (\unit[per-mode=fraction]{\gram\per\second})$} \\
     \midrule
-      300 & -247.3056 &      -0.001198 &      -0.1449 \\
-      600 & -210.0768 &      -0.001018 &      -0.1231 \\
-      900 & -172.8480 &      -0.000837 &      -0.1012 \\
-     1200 & -136.9488 &      -0.000663 &      -0.0802 \\
+     300.0 & -247.3056 &        -0.0112 &          0.0066 &      -1.3542 &        0.7980 \\
+     600.0 & -210.0768 &        -0.0095 &          0.0082 &      -1.1486 &        0.9915 \\
+     900.0 & -172.8480 &        -0.0078 &          0.0098 &      -0.9431 &        1.1849 \\
+    1200.0 & -136.9488 &        -0.0062 &          0.0115 &      -0.7496 &        1.3905 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -289,7 +283,8 @@ Der Massendurchsatz berechnet sich nach Gleichung (\ref{eq:massendurchsatz}) zu:
 Für weitere Berechnungen soll der Massendurchsatz nun noch in SI-Einheiten umgewandelt. Dafür wird mit der molaren Masse
 120,91 $\unit[per-mode=fraction]{\gram\per\mol}$ von Dichlordifluormethan multipliziert. 
 
-\subsection{Aufg. f: Bestimmung der mech Kompressorleistung $N_{mech}$}
+
+\subsection{Bestimmung der mech Kompressorleistung $N_{mech}$}
 
 Die Gasdichte $\rho$ lässt sich aus dem in der Versuchsanleitung \cite[7]{v206} angegebenen Wert 
 $p_{0}$ = 5,51 g/l (Dichlordifluormethan) und der idealen Gasgleichung berechnen:
@@ -352,5 +347,6 @@ Die mechanische Leistung des Kompressors beträgt somit:
     \end{tabular}
 \end{table}
 
-Es fällt auf, dass die mechanische Leistung negativ ist. Dies rührt von dem negativen Massendurchsatz wie der Tabelle (\ref{tb:massendurchsaetze}) entnommen werden kann. 
+Es fällt auf, dass die mechanische Leistung negativ ist. Dies rührt von dem negativen Massendurchsatz wie der
+Tabelle (\ref{tb:massendurchsaetze}) entnommen werden kann. 
 Aus dem Zusammenhang soll dieses Ergebnis als die tatsächlich positive Leistung interpretiert werden, die dem System zugefügt wird.
