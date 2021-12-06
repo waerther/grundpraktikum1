@@ -178,7 +178,7 @@ und analog für $T_{2} (\unit{\kelvin})$:
     \toprule
     {Zeit $t (\unit{\second})$} &
     {$T_{2} (\unit{\kelvin})$} &
-    {$\frac{dT_{2}}{dt}$} &
+    {$\frac{\dif{T_{2}}}{\dif{t}}$} &
     {Gauß-Fehler $\increment \frac{\dif{T_{2}}} {\dif{t}}$} \\
     \midrule
      300.0 & 288.75 & -0.0186 &   0.0003 \\
@@ -320,11 +320,11 @@ Damit folgt aus Gleichung (\ref{eq:n_mech}):
   N_\text{mech} = 
   \frac{1}{\kappa - 1} 
   \left(\text{p}_\text{b} \sqrt[\kappa]{\frac {\text{p}_\text{a}} {\text{p}_\text{b}}} - \text{p}_\text{a} \right)
-  \frac{1} {\frac {\rho_{0}T_{0}p_{a}} {T_{2}p_{0}}} \frac{\increment m}{\increment t} 
+  \frac{1} {\frac {\rho_{0}T_{0}p_{a}} {T_{2}p_{0}}} \frac{\dif{m}}{\dif{t}} 
   =
   \frac{1}{\kappa - 1} 
   \left(\text{p}_\text{b} \sqrt[\kappa]{\frac {\text{p}_\text{a}} {\text{p}_\text{b}}} - \text{p}_\text{a} \right)
-  \frac {T_{2}p_{0}} {\rho_{0}T_{0}p_{a}} \frac{\increment m}{\increment t}
+  \frac {T_{2}p_{0}} {\rho_{0}T_{0}p_{a}} \frac{\dif{m}}{\dif{t}}
 \end{equation*} \\
 
 Die mechanische Leistung des Kompressors beträgt somit:

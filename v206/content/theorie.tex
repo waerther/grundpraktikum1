@@ -59,13 +59,13 @@ Hieraus erkennt man, dass bei geringerer Temperaturdifferenz mehr Wärme umverla
 Nun sind wir allerdings an der realen Güteziffer $\nu_{real}$ interessiert.
 Diese kann man durch eine Messreihe einfach durch den Differenzenquotienten ermitteln:
 \begin{equation} \label{eq:Q1diff}
-    \frac{\increment Q_{1}}{\increment t} = (m_{1} c_{w} + m_{k} c_{k}) \frac{\increment T_{1}}{\increment t}
+    \frac{\dif{Q_{1}}}{\dif t} = (m_{1} c_{w} + m_{k} c_{k}) \frac{\dif{T_{1}}}{\dif{t}}
 \end{equation}
 
 Dabei beschreiben $m_{1} c_{w}$ die Wärmekapazität in Reservoir 1 und $m_{k} c_{k}$ die Wärmekapazität der Kupferschlange und des Eimers.
 Daraus folgt für $\nu$:
 \begin{equation} \label{eq:emp_nu}
-    \stackrel{(\ref{eq:Q1diff})}{\implies} \nu = \frac{\increment Q_{1}}{\increment t N}
+    \stackrel{(\ref{eq:Q1diff})}{\implies} \nu = \frac{\dif{Q_{1}}}{\dif{t} N}
 \end{equation}
 
 
@@ -74,21 +74,21 @@ Daraus folgt für $\nu$:
 Unter dem Massendurchsatz versteht man die Masse eines Mediums, das sich pro Zeitspanne durch einen Querschnitt bewegt.
 Dafür wird der Differenzenquotient von $Q{2}$ analog zu (\ref{eq:Q1diff}) gebildet:
 \begin{equation} \label{eq:Q2diff}
-    \frac{\increment Q_{2}}{\increment t} = (m_{2} c_{w} + m_{k} c_{k}) \frac{\increment T_{2}}{\increment t}
+    \frac{\dif{Q_{2}}}{\dif{t}} = (m_{2} c_{w} + m_{k} c_{k}) \frac{\dif{T_{2}}}{\dif{t}}
 \end{equation}
 
 Außerdem gilt mit der Kondensationswärme/Verdampfungswärme $L$:
 
 \begin{equation} \label{eq:Q2diffMasse}
-    \frac{\increment Q_{2}}{\increment t} = L \frac{\increment m}{\increment t}
+    \frac{\dif{Q_{2}}}{\dif{t}} = L \frac{\dif{m}}{\dif{t}}
 \end{equation}
 
 Nun ergibt sich aus dem Gleichsetzen von (\ref{eq:Q2diff}) und (\ref{eq:Q2diffMasse}) die Gleichung \ref{eg:diffQ2}:
 
 \begin{align} \label{eg:diffQ2}
     \begin{split}
-        \frac{\increment Q_{2}}{\increment t} & = (m_{2} c_{w} + m_{k} c_{k}) \frac{\increment T_{2}}{\increment t} \\
-            & \stackrel{(\ref{eq:Q2diffMasse})}{=} L \frac{\increment m}{\increment t}
+        \frac{\dif{Q_{2}}}{\dif{t}} & = (m_{2} c_{w} + m_{k} c_{k}) \frac{\dif{T_{2}}}{\dif{t}} \\
+            & \stackrel{(\ref{eq:Q2diffMasse})}{=} L \frac{\dif{m}}{\dif{t}}
     \end{split}
     %\\
     %\iff \frac{\increment m}{\increment t} = \frac{1}{L} (m_{2} c_{w} + m_{k} c_{k}) \frac{\increment T_{2}}{\increment t}
@@ -97,7 +97,7 @@ Nun ergibt sich aus dem Gleichsetzen von (\ref{eq:Q2diff}) und (\ref{eq:Q2diffMa
 Dadurch ergibt sich die Formel für den Massendurchsatz:
 
 \begin{equation} \label{eq:massendurchsatz}
-    \frac{\increment m}{\increment t} = \frac{1}{L} (m_{2} c_{w} + m_{k} c_{k}) \frac{\increment T_{2}}{\increment t}
+    \frac{\dif{m}}{\dif{t}} = \frac{1}{L} (m_{2} c_{w} + m_{k} c_{k}) \frac{\dif{T_{2}}}{\dif{t}}
 \end{equation}
 
 
@@ -114,11 +114,11 @@ wobei $\text{V}_\text{a}$ und $\text{V}_\text{b}$ die Gasvolumina sind, wobei $\
 Daraus kann $N$ berechtet werden: %\textbf{\ref{sec:Güteziffer}}
 
 \begin{equation} \label{eq:n_mech}
-    N_\text{mech} = \frac{\increment A_{\text{m}}} {\increment t}
+    N_\text{mech} = \frac{\dif{A_{\text{m}}}} {\dif{t}}
     = \frac{1}{\kappa - 1} \left(\text{p}_\text{b} \sqrt[\kappa]{\frac{\text{p}_\text{a}}{\text{p}_\text{b}}
-    } - \text{p}_\text{a} \right) \frac{\increment \text{V}_\text{a}}{\increment t}
+    } - \text{p}_\text{a} \right) \frac{\dif{\text{V}_\text{a}}}{\dif{t}}
     = \frac{1}{\kappa - 1} \left(\text{p}_\text{b} \sqrt[\kappa]{\frac{\text{p}_\text{a}}{\text{p}_\text{b}}
-    } - \text{p}_\text{a} \right) \frac{1}{\rho} \frac{\increment \text{m}}{\increment t}.
+    } - \text{p}_\text{a} \right) \frac{1}{\rho} \frac{\dif{\text{m}}}{\dif{t}}.
 \end{equation}
 
 Dabei entspricht $\rho$ der Massendichte, $\kappa$ dem Verhältnis der Molwärmen und p$_\text{i}$ 
