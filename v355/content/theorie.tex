@@ -10,13 +10,83 @@ Es werden zwei identische Schwingkreise betrachtet, die durch eine Kapazität $C
 
 \begin{figure} 
     \centering
-    \includegraphics[width=11cm] {pictures/prinzipschaltbild.png} \cite{v355} 
+    \includegraphics[width=10cm] {pictures/prinzipschaltbild.png} \cite{v355} 
     \caption{Schaltung kapazitiv gekoppelter Schwingkreise}
     \label{fig:prinzipschaltbild}
 \end{figure} 
 
-Mithilfe der \textit{Kirchhoffschen Gesetze} erbit sich im Knotenpunkt A
-
+Mithilfe der \textit{Kirchhoffschen Gesetze} ergibt sich im Knotenpunkt A
 \begin{equation}
     I_{1} = I_{K} + I_{2}
 \end{equation}
+
+Für Masche 1 und 2 ergibt sich
+\begin{equation}
+    U_{{1,2}_{C}} + U_{{1,2}_{L}} + U_{K} = 0
+\end{equation}
+
+In dieses Gleichungssystem setzt man die Beziehungen
+\begin{align} 
+    U_{C} &= \frac{1}{C} \dif{t} \int I  & \mbox{\centering und} && U_{L} = L \dot{I} 
+\end{align}
+
+Damit erhält man für die beiden Maschen mit Differentiation nach $t$ die Differentialgleichungen
+\begin{align}  
+    L {\dot{I}}_{1} + \frac{1}{C} I_{1} + \frac{1}{C_{K}} (I_{1} - I_{2})  = 0 \label{eq:dgl_1} \\
+    L {\dot{I}}_{2} + \frac{1}{C} I_{2} + \frac{1}{C_{K}} (I_{1} - I_{2})  = 0 \label{eq:dgl_2}
+\end{align}
+
+Addition und Subtraktion der Gleichungen (\ref{eq:dgl_1}) und (\ref{eq:dgl_2}) ergibt die entkoppelten 
+Differentialgleichungen für die neuen Variablen ($I_{1}+I_{2}$) und ($I_{1}-I_{2}$)
+\begin{align} 
+    L \frac {\dif{^2}} {\dif{t^2}} (I_{1} + I_{2}) + \frac{1}{C} (I_{1} + I_{2})  = 0 \label{eq:dgl_1_entk} \\
+    L \frac {\dif{^2}} {\dif{t^2}} (I_{1} - I_{2}) + \left( \frac{1}{C} + \frac{2}{C_{K}} \right) (I_{1} - I_{2})  = 0 \label{eq:dgl_2_entk}
+\end{align}
+
+Diese werden durch
+\begin{align}
+    (I_{1} + I_{2})(t) &= (I_{1,0} + I_{2,0}) \cos(I_{1} + I_{2}) \label{eq:dgl_1_sumsol} \\
+    (I_{1} - I_{2})(t) &= (I_{1,0} - I_{2,0}) \cos \left( \frac {t} {{\sqrt [] {L \left( \frac{1}{C} + \frac{2}{C_{K}} \right)^{-1} }}} \right) \label{eq:dgl_2_sumsol}
+\end{align}
+
+gelöst. Durch erneute Addition und Subtraktion von (\ref{eq:dgl_1_sumsol}) und (\ref{eq:dgl_2_sumsol}) ergeben sich die Lösungen 
+der ursprünglichen Ströme $I_{1}$ und $I_{2}$
+\begin{align}
+    I_{1}(t) &= \frac{1}{2} (I_{1,0} + I_{2,0}) \cos(2 \pi \nu^+ t)  +  \frac{1}{2} (I_{1,0} - I_{2,0}) \cos(2 \pi \nu^- t) \label{eq:dgl_1_sol} \\
+    I_{2}(t) &= \frac{1}{2} (I_{1,0} + I_{2,0}) \cos(2 \pi \nu^+ t)  -  \frac{1}{2} (I_{1,0} - I_{2,0}) \cos(2 \pi \nu^- t) \label{eq:dgl_2_sol} \\
+\end{align}
+
+wobei 
+\begin{align}
+    \nu^+ &= \frac {1} {2 \pi \sqrt[]{LC}} & \mbox{\centering und} && \nu^- = \frac {t} {2 \pi \sqrt [] {L \left( \frac{1}{C} + \frac{2}{C_{K}} \right)^{-1} }}
+\end{align}
+
+die Schwingunsfrequenzen von (\ref{eq:dgl_1_sumsol}) und (\ref{eq:dgl_2_sumsol}) darstellen. \\
+\\
+Sind zu Beginn die Amplituden beider Schwingkreise gleich groß ($I_{1,0} = I_{2,0}$), so entfallen bei (\ref{eq:dgl_1_sol}) und (\ref{eq:dgl_2_sol})
+die jeweils letzten Terme. In diesem Fall schwingen die beiden Schwingkreise gleichphasig mit der Schwingunsfrequenz $\nu^+$, am
+Koppelkondensator $C_{K}$ leigt dabei nie eine Spannung an. Bei gegengleichen Amplituden ($I_{1,0} = -I_{2,0}$) schwingen die Schwingkreise gegenphasig
+mit der erhöhten Schwingunsfrequenz $\nu^-$ und die Spannung an $C_{K}$ wird maximal. Diese beiden Schwingungstypen werden \textit{Fundamentalschwingungen} genannt. \\
+\\
+Wird hingegen nur einer der beiden Schwingkreise ausgelenkt ($I_{1,0} \neq 0, I_{2,0} = 0$), so ergeben sich Schwebungen.
+\begin{align}
+    I_{1}(t) &= I_{1,0} \cos(\pi (\nu^+ + \nu^-) t) \cos(\pi (\nu^+ - \nu^-) t) \label{eq:dgl_1_sol_schweb} \\
+    I_{2}(t) &= I_{1,0} \sin(\pi (\nu^+ + \nu^-) t) \sin(\pi (\nu^+ - \nu^-) t) \label{eq:dgl_2_sol_schweb} 
+\end{align}
+
+Der Verlauf der Ströme $I_{1}(t)$ und $I_{2}(t)$ werden in (\ref{fig:schwebung}) dargestellt.
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=10cm] {pictures/schwebung.png} \cite{v355} 
+    \caption{zeitlicher Verlauf der Ströme im Falle einer Schwebung}
+    \label{fig:schwebung}
+\end{figure} 
+
+Die Amplitude der Schwingunsfrequenz ändert sich mit der \textit{Schwebungunsfrequenz} $\nu^- - \nu^+$, während das System mit der Frequenz
+\begin{equation}
+    \frac{1}{2} \left( \nu^+ + \nu^- \right) \approx \nu^+ 
+\end{equation}
+schwingt.
+
+\subsection {Abhängigkeit des Stromes von der Frequenz}
