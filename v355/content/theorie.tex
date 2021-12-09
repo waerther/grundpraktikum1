@@ -110,3 +110,20 @@ mit den Impedanzen
 \begin{align} 
     z_{C} &= \frac{1}{i \omega C} & z_{L} = i \omega L  && z_{R} = R
 \end{align}
+
+Nach Elimination von $I_{1}$ folgt für $I_{2}$ 
+\begin{align}
+    I_{2} &=U \frac{\frac{1}{i \omega C_{K}}}{\left(i \omega L+\frac{1}{i \omega C}+\frac{1}{i \omega C_{K}}+R\right)^{2}+\frac{1}{\omega^{2} C_{K}^{2}}} \label{eq:strom2} \\
+    \Rightarrow\left|I_{2}\right| &=\lvert U\rvert \frac{1}{\sqrt{4 \omega^{2} C_{K}^{2} R^{2} Z(\omega)^{2}+\left(\frac{1}{\omega C_{K}}-\omega C_{K} Z(\omega)^{2}+\omega R^{2} C_{K}\right)^{2}}} \label{eq:betrag_strom2}     
+\end{align}
+
+mit
+\begin{align}
+    Z(\omega)=\omega L-\frac{1}{\omega\left(\frac{1}{C}+\frac{1}{C_{K}}\right)^{-1}}
+\end{align}
+
+Der Strom $I_{2}$ nimmt für $\nu^+$ und $\nu^-$ seine Maxima an:
+\begin{align}
+    \left|I_{2}\left(\omega^{+}\right)\right| &= \frac{1}{R \sqrt{4+\frac{R^{2} C_{K}^{2}}{L C}}} \label{eq:strom2_omegaplus}\\
+    \left|I_{2}\left(\omega^{-}\right)\right| &= \frac{1}{R \sqrt{4+\frac{R^{2} C_{K}^{2}}{L C}\left(1+\frac{C}{C_{K}}\right)}} \label{eq:strom2_omegaminus}
+\end{align}
