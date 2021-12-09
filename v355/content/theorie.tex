@@ -10,8 +10,8 @@ Es werden zwei identische Schwingkreise betrachtet, die durch eine Kapazität $C
 
 \begin{figure} 
     \centering
-    \includegraphics[width=10cm] {pictures/prinzipschaltbild.png} \cite{v355} 
-    \caption{Schaltung kapazitiv gekoppelter Schwingkreise}
+    \includegraphics[width=10cm] {pictures/prinzipschaltbild.png}  
+    \caption{Schaltung kapazitiv gekoppelter Schwingkreise. \cite{v355}}
     \label{fig:prinzipschaltbild}
 \end{figure} 
 
@@ -74,12 +74,12 @@ Wird hingegen nur einer der beiden Schwingkreise ausgelenkt ($I_{1,0} \neq 0, I_
     I_{2}(t) &= I_{1,0} \sin(\pi (\nu^+ + \nu^-) t) \sin(\pi (\nu^+ - \nu^-) t) \label{eq:dgl_2_sol_schweb} 
 \end{align}
 
-Der Verlauf der Ströme $I_{1}(t)$ und $I_{2}(t)$ werden in (\ref{fig:schwebung}) dargestellt.
+Der Verlauf der Ströme $I_{1}(t)$ und $I_{2}(t)$ werden in Abbildung (\ref{fig:schwebung}) dargestellt.
 
 \begin{figure} 
     \centering
-    \includegraphics[width=10cm] {pictures/schwebung.png} \cite{v355} 
-    \caption{zeitlicher Verlauf der Ströme im Falle einer Schwebung}
+    \includegraphics[width=10cm] {pictures/schwebung.png} 
+    \caption{Zeitlicher Verlauf der Ströme im Falle einer Schwebung. \cite{v355}}
     \label{fig:schwebung}
 \end{figure} 
 
@@ -89,4 +89,24 @@ Die Amplitude der Schwingunsfrequenz ändert sich mit der \textit{Schwebungunsfr
 \end{equation}
 schwingt.
 
+
 \subsection {Abhängigkeit des Stromes von der Frequenz}
+
+Werden die Schwingkreise durch eine von außen angelegte Sinusspannung angeregt (siehe Abblilfung \ref{fig:sinusspannung}), \\
+\begin{figure} 
+    \centering
+    \includegraphics[width=10cm] {pictures/sinusspannung.png} 
+    \caption{Schwingkreise mit Sinusgenerator. \cite{v355}}
+    \label{fig:sinusspannung}
+\end{figure} 
+
+so ergeben sich mithilfe der \textit{Kirchhoffschen Maschenregel}
+\begin{align}
+    U &= (z_{C} + z_{L} + z_{C_{K}} + z_{R}) I_{1} - z_{C_{K}} I_{2} \label{eq:sin_masche_1} \\
+    0 &= (z_{C} + z_{L} + z_{C_{K}} + z_{R}) I_{2} - z_{C_{K}} I_{1} \label{eq:sin_masche_2} 
+\end{align}
+
+mit den Impedanzen
+\begin{align} 
+    z_{C} &= \frac{1}{i \omega C} & z_{L} = i \omega L  && z_{R} = R
+\end{align}

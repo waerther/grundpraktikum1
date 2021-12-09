@@ -10,7 +10,7 @@ v308:
 v355:
 	make -C v355	
 
-v355:
+v101:
 	make -C v101
 
 clean:
