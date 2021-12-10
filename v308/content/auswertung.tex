@@ -137,13 +137,17 @@ Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.012\unit\m$, $d_{1
 
   Aus Gleichung (\ref{eq:Helmholtzgleichung}) ergeben sich die theoretischen Vergleichswerte.
   In der Tabelle wird das Magnetfeld im Zentrum also mit der Theorie verglichen.
+  Die prozentuale Abweichung berechnet sich über:
+  \begin{equation}
+    \increment_{Abw} = \left(\frac{B_{\text{gemessen}}}{B_{\text{errech}}} - 1\right) \cdot 100
+  \end{equation}
 
   \begin{table}
     \centering
     \caption{Vergleich der Messwerte mit der Theorie}
     \begin{tabular}{c c c c }
       \toprule
-      $d_{i}$ & $B_{\text{errech}}$(0) ($\unit{\milli\tesla}$) &  $B_{\text{gemessen}}$(0) ($\unit{\milli\tesla}$) & Prozentuale Abw. (\%)\\
+      $d_{i}$ & $B_{\text{errech}}$(0) / $\unit{\milli\tesla}$ &  $B_{\text{gemessen}}$(0) / $\unit{\milli\tesla}$ & $\increment_{Abw}$\\
       \midrule
       i = 1  & 1.585 &         1.632  &     2.97 \\ 
       i = 2  & 1.247 &         1.312  &     5.21 \\ 
@@ -161,7 +165,7 @@ Im folgenden wollen wir die Hysteresekurve der Ringspule graphisch darstellen.
 \caption{Messwerte der Hysterese}
 \begin{tabular}{c c c c c c}
   \toprule
-   I (A) &  B (mT) &  I (A) &  B (mT) &  I (A) &  B (mT)\\
+  $I$ / $\unit{\ampere}$ &  $B$ / $\unit{\milli\tesla}$ &  $I$ / $\unit{\ampere}$ &  $B$ / $\unit{\milli\tesla}$ &  $I$ / $\unit{\ampere}$ &  $B$ / $\unit{\milli\tesla}$\\
   \midrule
      0 &        0.0 &         0 &      -86.0 &   0 &     -134.3 \\
      1 &       64.9 &        -1 &     -118.0 &   1 &       75.5 \\
@@ -192,6 +196,6 @@ Im folgenden wollen wir die Hysteresekurve der Ringspule graphisch darstellen.
 Aus den Messwerten lassen sich Remanenz und Koerzitivkraft angeben.
 Dabei wird die Koerzitivkraft aus der Abbildung abgelesen.
 \begin{align*}
-  B_{r,1} &= -86 mT &  B_{r,2} &= 134.3 mT \\
-  H_{c,1} &\approx 0.5A & H_{c,2} &\approx 0.7A
+  B_{r,1} &= -86 \unit{\milli\tesla} &  B_{r,2} &= 134.3 \unit{\milli\tesla} \\
+  H_{c,1} &\approx 0.5 \unit{\ampere} & H_{c,2} &\approx 0.7\unit{\ampere}
 \end{align*}
