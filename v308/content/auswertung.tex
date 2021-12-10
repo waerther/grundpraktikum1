@@ -7,30 +7,33 @@ Im folgenden wird die magnetische Flussdichte einer langen Spule gemessen und gr
 \begin{table}
 \centering
 \caption{Messdaten der langen Spule}
-\begin{tabular}{c c}
-  \toprule
-  $x / \unit\m$ &  $B / \unit{\milli\tesla}$ \\
-  \midrule
-  -0.02 &         0.23 \\
-  -0.01 &         0.28 \\
-  -0.01 &         0.35 \\
-  -0.01 &         0.46 \\
-    0.00 &         0.60 \\
-    0.01 &         0.84 \\
-    0.01 &         1.15 \\
-    0.01 &         1.43 \\
-    0.02 &         1.70 \\
-    0.03 &         1.89 \\
-    0.03 &         2.02 \\
-    0.04 &         2.12 \\
-    0.04 &         2.18 \\
-  \bottomrule
-\end{tabular}
+  \begin{tabular}{c c}
+    \toprule
+    $x / \unit\m$ &  $B / \unit{\milli\tesla}$ \\
+    \midrule
+    -0.02 &         0.23 \\
+    -0.01 &         0.28 \\
+    -0.01 &         0.35 \\
+    -0.01 &         0.46 \\
+      0.00 &         0.60 \\
+      0.01 &         0.84 \\
+      0.01 &         1.15 \\
+      0.01 &         1.43 \\
+      0.02 &         1.70 \\
+      0.03 &         1.89 \\
+      0.03 &         2.02 \\
+      0.04 &         2.12 \\
+      0.04 &         2.18 \\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
-
-\includegraphics[width=\textwidth]{pictures/LangeSpule1.png}
-
+\begin{figure}
+  \centering
+  \includegraphics{LangeSpule1.pdf}
+  \caption{Magnetfeld in- und ausßerhalb der langen Spule.}
+  \label{fig:LangeSpule1}
+\end{figure}
 
 Es ist eine abflachende Steigung des Magnetfeldes zu erkennen. Der Theoriewert, der sich aus der Formel (\ref{eq:LangeSpule}) ergibt, lautet:
 \begin{equation}
@@ -40,11 +43,11 @@ Es ist eine abflachende Steigung des Magnetfeldes zu erkennen. Der Theoriewert, 
 
 \subsection{Helmholtzspulenpaar}
 
-Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.12\unit\m$, $d_{2} = 0.14\unit\m$ und $d_{3} = 0.16\unit\m$ in Tabellen und Plots dargestellt.
+Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.12\unit\m$, $d_{1} = 0.14\unit\m$ und $d_{1} = 0.16\unit\m$ in Tabellen und Plots dargestellt.
 
 \begin{table}
 \centering
-\caption{Messdaten Helmholtzspulenpaar $d_{1} = 0.012\unit\m$}
+\caption{Messdaten Helmholtzspulenpaar $d_{1} = 0.12\unit\m$}
 \begin{tabular}{c c}
   \toprule
   $x / \unit\m$ &  $B / \unit{\milli\tesla}$ \\
@@ -70,11 +73,16 @@ Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.12\unit\m$, $d_{2}
 \end{tabular}
 \end{table}
 
-\includegraphics[width=\textwidth]{pictures/Helmholtz1.png}    %Hier fehlt noch die Beschriftung
+\begin{figure}
+  \centering
+  \includegraphics{Helmholtz1.pdf}
+  \caption{Magnetfeld des Helmholtzspulenpaars bei d = 12cm.}
+  \label{fig:Helmholtz1}
+\end{figure}
 
 \begin{table}
 \centering
-\caption{Messdaten Helmholtzspulenpaar $d_{2} = 0.014\unit\m$}
+\caption{Messdaten Helmholtzspulenpaar $d_{2} = 0.14\unit\m$}
 \begin{tabular}{c c}
   \toprule
   $x / \unit\m$ &  $B / \unit{\milli\tesla}$ \\
@@ -100,12 +108,16 @@ Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.12\unit\m$, $d_{2}
   \end{tabular}
 \end{table}
 
-\includegraphics[width=\textwidth]{pictures/Helmholtz2.png}    %Hier fehlt noch die Beschriftung
-
+\begin{figure}
+  \centering
+  \includegraphics{Helmholtz2.pdf}
+  \caption{Magnetfeld des Helmholtzspulenpaars bei d = 14cm.}
+  \label{fig:Helmholtz2}
+\end{figure}
 
 \begin{table}
   \centering
-  \caption{Messdaten Helmholtzspulenpaar $d_{3} = 0.016\unit\m$}
+  \caption{Messdaten Helmholtzspulenpaar $d_{3} = 0.16\unit\m$}
   \begin{tabular}{c c}
     \toprule
     $x / \unit\m$ &  $B / \unit{\milli\tesla}$ \\
@@ -131,32 +143,37 @@ Im folgenden sind die Messdaten für die Abstände $d_{1} = 0.12\unit\m$, $d_{2}
   \end{tabular}
 \end{table}
 
-  \includegraphics[width=\textwidth]{pictures/Helmholtz3.png}
+\begin{figure}
+  \centering
+  \includegraphics{Helmholtz3.pdf}
+  \caption{Magnetfeld des Helmholtzspulenpaars bei d = 16cm.}
+  \label{fig:Helmholtz3}
+\end{figure}
 
-  Aus Gleichung (\ref{eq:Helmholtzgleichung}) ergeben sich die theoretischen Vergleichswerte.
-  In der Tabelle wird das Magnetfeld im Zentrum also mit der Theorie verglichen.
-  Die prozentuale Abweichung berechnet sich über:
-  \begin{equation}
-    \increment_{Abw} = \left(\frac{B_{\text{gemessen}}}{B_{\text{errech}}} - 1\right) \cdot 100
-  \end{equation}
+Aus Gleichung (\ref{eq:Helmholtzgleichung}) ergeben sich die theoretischen Vergleichswerte.
+In der Tabelle wird das Magnetfeld im Zentrum also mit der Theorie verglichen.
+Die prozentuale Abweichung berechnet sich über:
+\begin{equation}
+  \increment_{Abw} = \left(\frac{B_{\text{gemessen}}}{B_{\text{errech}}} - 1\right) \cdot 100
+\end{equation}
 
-  \begin{table}
-    \centering
-    \caption{Vergleich der Messwerte mit der Theorie}
-    \begin{tabular}{c c c c }
-      \toprule
-      $d_{i}$ & $B_{\text{errech}}$(0) / $\unit{\milli\tesla}$ &  $B_{\text{gemessen}}$(0) / $\unit{\milli\tesla}$ & $\increment_{Abw}$\\
-      \midrule
-      i = 1  & 1.585 &         1.632  &     2.97 \\ 
-      i = 2  & 1.247 &         1.312  &     5.21 \\ 
-      i = 3  & 0.985 &         1.044  &     5.99 \\ 
-      \bottomrule
-    \end{tabular}
-  \end{table}
+\begin{table}
+  \centering
+  \caption{Vergleich der Messwerte mit der Theorie}
+  \begin{tabular}{c c c c }
+    \toprule
+    $d_{i}$ & $B_{\text{errech}}$(0) / $\unit{\milli\tesla}$ &  $B_{\text{gemessen}}$(0) / $\unit{\milli\tesla}$ & $\increment_{Abw}$\\
+    \midrule
+    i = 1  & 1.585 &         1.632  &     2.97 \\ 
+    i = 2  & 1.247 &         1.312  &     5.21 \\ 
+    i = 3  & 0.985 &         1.044  &     5.99 \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \subsection{Ringspule}
 
-Im folgenden wollen wir die Hysteresekurve der Ringspule graphisch darstellen.
+Im Folgenden wollen wir die Hysteresekurve der Ringspule graphisch darstellen.
 
 \begin{table}
 \centering
@@ -189,7 +206,12 @@ Im folgenden wollen wir die Hysteresekurve der Ringspule graphisch darstellen.
   \end{tabular}
 \end{table}
 
-\includegraphics[width=\textwidth]{pictures/HysteresekurveGemessen.png}    %Hier fehlt noch die Beschriftung
+\begin{figure}
+  \centering
+  \includegraphics{Hysteresekurve.pdf}
+  \caption{Hysteresekurve der Toroidspule mit Eisenkern.}
+  \label{fig:Hysteresekurve_gemessen}
+\end{figure}
 
 Aus den Messwerten lassen sich Remanenz und Koerzitivkraft angeben.
 Dabei wird die Koerzitivkraft aus der Abbildung abgelesen.
