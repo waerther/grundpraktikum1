@@ -1,4 +1,65 @@
-\section{Theorie}
+\section{Theorie \tiny{\cite{sample}}}
 \label{sec:Theorie}
+\setlength{\parindent}{0pt}
 
-\cite{sample}
+Die Rotationsbewegung eines Körpers lässt sich durch die physikalische Größen \textit{Drehmoment} $M$, das 
+\textit{Trägheitsmoment} $I$ und die \textit{Winkelbeschleunigung} $\dot{\omega}$ beschreiben.
+Das Trägheitsmoment ist gewissermaßen ein Widerstand, den ein Körper der Bewegung entgegenbringt.
+Die Formel für das Trägheitsmoment lautet
+
+
+
+\begin{equation*}
+    I = \sum_{i} r_{i}^2 \cdot m_{i} 
+\end{equation*}
+
+wobei $m_{i}$ Massepunkte in dem Objekt von Interesse beschreibt und $r_{i}^2$ den Abstand von der Rotationsachse.
+Nun möchten wir allerdings nicht Massepunkte beschreiben, sondern ein kompaktes Objekt.
+Dies leistet folgende Integration:
+\begin{equation}
+    I = \int r^2 \text{dm}
+\end{equation}
+
+Diese Gleichungen sind in dieser Form nur dann richtig, wenn die Drehachse auch die Schwerpunktachse ist.
+Sobald dies nicht mehr gewährleistet ist, muss man zu dem Satz von Steiner übergehen.
+Dabei ist $I_{s}$ das Trägheitsmoment des Körpers, wenn die Schwerpunktachse der Rotationsachse entspricht
+und $a$ ist der Abstand zur Rotationsachse:
+
+\begin{equation}
+    I = I_{s} + m \cdot a^2
+\end{equation}
+
+Ebenfalls ist oft das \textit{Drehmoment} $M$ von Interesse. Dies berechnet mit dem Winkel $\varphi$ durch die Formel:
+\begin{equation} \label{eq:drehmoment}
+    \vec{M} = \vec{r} \times \vec{F} \implies \lvert M \rvert = \lvert F \rvert \lvert r \rvert \sin{\varphi}
+\end{equation}
+
+Bei schwingungsfähigen Systemen wie bei einer Feder, lässt sich $M$ auch mithilfe der \textit{Winkelrichtgröße} $D$ beschreiben:
+\begin{equation}
+    M = D \cdot \varphi
+\end{equation}
+
+Dabei gilt für $D$ die wichtige Beziehung:
+\begin{equation} \label{eq:T}
+    T = 2\pi \sqrt{\frac{I}{D}}
+\end{equation}
+
+durch umstellen erhält man ebenfalls folgende Gleichungen:
+\begin{align} \label{eq:Tumgestellt}
+    I & = \frac{T^2D}{4\pi^2} & D & = \frac{4\pi^2I}{T^2} 
+\end{align}
+
+Zu beachten ist jedoch dass (\ref{eq:T}) und (\ref{eq:Tumgestellt}) ihre Gültigkeit nur für kleine Auslenkungen $\varphi$ wahren.
+Es gelten die Näherungen der Kleinwinkelnäherung.
+Möchte man also D berechnen, gibt es zwei Methoden.
+
+\subsection*{Statische Methode}
+Bei der statischen Methode wird mit einem Newtonmeter die Kraft $F$ bestimmt, die bei einer Auslenkung $\varphi$ wirkt.
+Dadurch kann man dann durch /(\ref{eq:drehmoment}) und (ref{eq:Tumgestellt}) D bestimmen.
+Dabei ist natürlich darauf zu achten, das Newtonmeter in 90° zum Hebelarm zu halten.
+
+\subsection*{Dynamische Methode}
+Bei der dynamischen Methode wird die Beziehung (\ref{eq:Tumgestellt}) benutzt.
+Diesmal wird jedoch die Gleichung für I benutzt.
+Es wird also die Schwingungsdauer $T$ gemessen und mit bekanntem Trägheitsmoment $I$ wird  $D$ bestimmt
+Es sei angemerkt, dass durch die Anwendung beider Methoden $D$ und $I$ gleichtzeitig bestimmt werden können.
