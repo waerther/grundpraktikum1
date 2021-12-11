@@ -6,17 +6,28 @@
 \subsection{Anpassung der Schwingkreise}
 
 Zuerst muss der anpassbare Schwingkreis an die Resonanzfrequenz des Referenzschwingkreises angepasst werden, indem dort die Kapazität variiert wird.
-Also sucht man zuerst die Resonanzfrequenz des Referenzschwingkreises.
+Also wird zunächst die Resonanzfrequenz des Referenzschwingkreises bestimmt.
 
 \begin{figure} 
-    \centering
-    \includegraphics[width=7cm] {pictures/messschaltung.png} 
-    \caption{Schaltung zur Bestimmung der Resonanzfrequenz. \cite{v355}}
+    \begin{subfigure}{0.48\textwidth}
+        %\centering
+        \includegraphics[height=7cm] {pictures/messschaltung.png} 
+        \caption{Schematischer Aufbau. \cite{v355}}
+        \label{fig:schema}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        %\centering
+        \includegraphics[height=7cm] {pictures/resonanzfrequenz.png} 
+        \caption{Aufbau am Schwingkreis.}
+        \label{fig:foto}
+    \end{subfigure}
+    \caption{Schaltung zur Bestimmung der Resonanzfrequenz.}
     \label{fig:messschaltung}
 \end{figure} 
 
-Dafür nutzt man die in der Abbildung \ref{fig:messschaltung} dargestellte Schaltung und probiert mit den Frequenzen so lange herum,
-bis die \textit{Lissajous-Figur} eine Gerade darstellt. Dies kann man am  Oszilloskop visuell darstellen.
+Dafür wird mithilfe der Schaltung in Abblildung \ref{fig:messschaltung} die Frequenz des Sinus-Signals solange variiert,
+bis die \textit{Lissajous-Figur} die From einer Gerade annimmt. Dies kann man am  Oszilloskop visuell darstellen.
 Hat man die Resonanzfrequenz gefunden, sind nun Spannung und Strom in Phase.
 Hat man diese gefunden, kann man den anderen Schwingkreis passend einstellen.
 
