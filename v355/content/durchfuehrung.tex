@@ -5,7 +5,8 @@
 
 \subsection{Anpassung der Schwingkreise}
 
-Zuerst muss der anpassbare Schwingkreis an die Resonanzfrequenz des Referenzschwingkreises angepasst werden, indem dort die Kapazität variiert wird.
+Da die Schwingkreise nicht dieselbe Resonanzfrequenz besitzen, muss der einstellbare Schwingkreis an die Resonanzfrequenz
+des Referenzschwingkreises angepasst werden, indem dort die Kapazität variiert wird.
 Also wird zunächst die Resonanzfrequenz des Referenzschwingkreises bestimmt.
 
 \begin{figure} 
@@ -26,11 +27,14 @@ Also wird zunächst die Resonanzfrequenz des Referenzschwingkreises bestimmt.
     \label{fig:messschaltung}
 \end{figure} 
 
+Zunächst wird die Frequenz der Sinusspannung angepasst, bis das Oszilloskop eine maximale Amplitude zeigt.
+Für eine genaue Messung wird anschließend das Oszilloskop zusätzlich mit der Generatorspannung über den zweiten Eingang verbunden.
 Dafür wird mithilfe der Schaltung in Abblildung \ref{fig:messschaltung} die Frequenz des Sinus-Signals solange variiert,
-bis die \textit{Lissajous-Figur} die From einer Gerade annimmt. Dies kann man am  Oszilloskop visuell darstellen.
-Hat man die Resonanzfrequenz gefunden, sind nun Spannung und Strom in Phase.
-Hat man diese gefunden, kann man den anderen Schwingkreis passend einstellen.
-
+bis die \textit{Lissajous-Figur} die From einer Gerade annimmt. 
+Ist die Resonanzfrequenz erreicht, so befinden sich die Sinus-Spannung und der Strom in Phase.
+Analog wird der andere Schwingkreis passend einstellen.
+Die anpassbare Kapazität wird auf die ermittelte Kapazität eingestellt
+und für alle folgenden Messungen nicht mehr geändert.
 
 \subsection{Messung}
 \subsubsection*{Messung der Schwebungsfrequenz}
@@ -44,13 +48,13 @@ Nun wird die Schaltung in Abbildung \ref{fig:schwebeschaltung} mit einem Rechtec
     \label{fig:schwebeschaltung}
 \end{figure} 
 
-Durch die Widerstände von $R = 48 \Omega$ wird sich ein Spannungsabfall ergeben.
-Die Stromänderung wird zur Beobachtung der Schwebung am Oszilloskop visualisiert.
-Jetzt werden die Maxima der Schwingung innerhalb einer Periode gezählt.
-
+Durch die Widerstände von $R = 48 \,\unit{\ohm}$ ergibt sich ein Spannungsabfall.
+Die Stromänderung wird zur Beobachtung der Schwebung am Oszilloskop visualisiert und
+die Maxima der Schwingung innerhalb einer Periode gezählt.\\
+\\
 Damit lässt sich schließlich das Verhältnis der Schwebungsfrequenz und der Schwingungsfrequenz bestimmen.
 Dieser Prozess wird für mehrere Kapazitäten durchgeführt.
-Dabei sind Kapazitäten zwischen $C_{\text{min}} = 2 nF$ und $C_{\text{max}} = 12 nF$ möglich.
+Dabei sind Kapazitäten zwischen $C_{\text{K}} = 2 \,\unit{\nano\farad}$ und $C_{\text{K}} = 12 \,\unit{\nano\farad}$ möglich.
 
 
 \subsubsection*{Fundamentalschwingungen}
