@@ -88,10 +88,35 @@ Setzt man nun $I_{\text{Zyl}}$ in Gleichtung (\ref{eq:Tumgestellt}) ein und stel
 \end{equation}
 
 Nun erhält man durch lineare Regression eine Ausgleichsgerade der Form $y = a \cdot x + b$ mit den Parametern
-$a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$. Damit ergibt sich folgender Plot:
+$a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$. Damit ergibt sich der Plot in Abbildung (\ref{fig:Lineareregression}).
+Nun wird durch Koeffizientenvergleich a und b in (\ref{eq:IZyl}) erkannt und eingesetzt.
+Es ergibt sich:
+\begin{align} \label{var:aundb}
+  a & = \frac{4 \pi^2 m}{D} & b & = \frac{4 \pi^2}{D} m_{\text{Zyl}}  \left(I_{D} + \frac{3 r^2 + h^2}{6} \right)
+\end{align}
+
 \begin{figure}
   \caption{Regressionsgerade des Eigenträgheitsmomentes}
   \centering
   \includegraphics{pictures/Lineare Regression.pdf}
-  \label{fig:LinReg}
+  \label{fig:Lineareregression}
 \end{figure}
+
+Stellt man nun (\ref{eq:IZyl}) nach $I_{D}$ um, gilt:
+\begin{equation*}   % Ist diese Gleichung überhaupt richtig? Überprüfen wenn Zeit
+  \begin{split}
+  I_{D} {} &= I_{\text{Zyl}} - m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \\
+    &\stackrel{\ref{var:aundb}}{=} \frac{b \cdot D}{4 \cdot \pi^2} - m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right)
+  \end{split}
+\end{equation*}
+
+Mit (\ref{fehler:gauß}) ergibt sich  für $\increment I_{D}$:
+
+\begin{equation*}
+  \increment I_{D} = \sqrt{\left(\frac{b}{4 \pi^2} \cdot  \increment D\right)^2 + \left(\frac{D}{4 \pi^2} \cdot  \increment b\right)^2}
+\end{equation*}
+
+Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben. Es gilt also:
+\begin{equation*}
+  I_{D} = 
+\end{equation*}
