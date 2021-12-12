@@ -41,3 +41,57 @@ Es ergibt sich der Mittelwert:
   \implies D &  = 0.021 \pm 0.00295 \unit{\newton\meter}
 \end{align*}
 
+Um das Eigenträgheitsmoment zu bestimmen wird nach (\ref{eq:Tumgestellt}) I berechnet.
+Dafür wird die Umlaufzeit gemessen, wobei der Stab mit zwei bekannten Massen an den Seiten ausgelenkt wird.
+Dabei ist der Radius genau bestimmt.
+Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen:
+
+\begin{table}
+  \centering
+  \caption{Messdaten zum Eigenträgheitsmoment $I_{D}$}
+  \label{tab:Eigenträgheitsmoment}
+  \begin{tabular}{c c c c}
+    \toprule
+    $r / \unit\meter$  &  $T / \unit\second$ & $r^2 / (\unit\meter^2)$  & $T^2 / (\unit\second)^2$\\
+    \midrule
+      0.050   & 2.750   & 0.003   &  7.562  \\
+      0.075   & 3.100   & 0.006   &  9.610  \\
+      0.100   & 3.800   & 0.010   & 14.440  \\
+      0.125   & 4.100   & 0.016   & 16.810  \\
+      0.150   & 4.750   & 0.022   & 22.562  \\
+      0.175   & 5.300   & 0.031   & 28.090  \\
+      0.200   & 5.800   & 0.040   & 33.640  \\
+      0.225   & 6.600   & 0.051   & 43.560  \\
+      0.250   & 7.150   & 0.062   & 51.123  \\
+      0.275   & 7.800   & 0.076   & 60.840  \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+Aus diesen Daten können wir jetzt das Eigenträgheitsmoment bestimmen.
+Dafür brauchen wir zunächst noch die Formeln für einen Zylinder.
+Dieses lässt sich mit rechnerisch bestimmen, hier sei nur die Formel angegeben:
+\begin{equation*}
+  I_{\text{Zyl}} = \frac{m \cdot R^2} {2}
+\end{equation*}
+
+Mit dem Satz von Steiner (\ref{eq:SatzvSteiner}) ergibt sich:
+\begin{equation} \label{eq:IZyl}
+  I_{\text{Zyl}} = I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right)
+\end{equation}
+
+Setzt man nun $I_{\text{Zyl}}$ in Gleichtung (\ref{eq:Tumgestellt}) ein und stellt um, erhält man folgende Gleichung:
+
+\begin{equation}
+  T^2 = \frac{4 \pi^2}{D} \cdot \left( ma^2 + I_{\text{Zyl}} \right) \stackrel{(\ref{eq:IZyl})}{=} 
+  \frac{4 \pi^2}{D} \left( ma^2 + I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \right)
+\end{equation}
+
+Nun erhält man durch lineare Regression eine Ausgleichsgerade der Form $y = a \cdot x + b$ mit den Parametern
+$a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$. Damit ergibt sich folgender Plot:
+\begin{figure}
+  \caption{Regressionsgerade des Eigenträgheitsmomentes}
+  \centering
+  \includegraphics{pictures/Lineare Regression.pdf}
+  \label{fig:LinReg}
+\end{figure}
