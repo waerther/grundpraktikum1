@@ -282,4 +282,61 @@ Woraus das Trägheitsmoment $I_{\text{Kug}}$ folgt:
       \end{tabular}
 \end{table}
 
-Die Puppe hat die folgende Masse: $m_{\text{Puppe}} = 0.1079\unit{\kilo\gram}
+Die Puppe hat die folgende Masse: $m_{\text{Puppe}} = 0.1079\unit{\kilo\gram}$.
+Die Maße der Gliedmaßen der Puppe sind in Tabelle (\ref{tab:Abmessungen}) aufgetragen.
+Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximieren (siehe Tabelle (\ref{tab:MittelwertGlieder})).
+
+\begin{table}
+  \centering
+  \caption{Mittelwerte der Glieder}
+  \label{tab:MittelwertGlieder}
+  \begin{tabular}{rrrrrrrr}
+    \toprule
+       & $d_{\text{Bein}} / \unit\meter$ &     - &     $d_{\text{Arm}} / \unit\meter$ &     - &    $d_{\text{Körper}} /  \unit\meter$ &     - &    $d_{\text{Kopf}} /  \unit\meter$\\
+    \midrule
+     & ober & unter & ober & unter& ober & unter & \\
+    Mittelwert: & 0.017 & 0.015 & 0.013 & 0.013 & 0.039 & 0.037 & 0.027 \\
+    Standartabweichung:  &0.001 & 0.002 & 0.001 & 0.001 & 0.004 & 0.008 & 0.002 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+Im folgenden wird das Volumen der Puppe errechnet.
+Dazu wird das Volumen der einzenen Zylinder berchnet.
+Das Zylindervolumen ist gegeben durch:
+\begin{equation*}
+  V_{\text{Zyl}} = \pi r^2 h
+\end{equation*}
+Ebenfalls benötigt wird das Kugelvolumen, um den Kopf zu approximieren:
+\begin{equation*}
+  V_{\text{Kug}} = \frac{4}{3} \pi r^3
+\end{equation*}
+
+Um den Fehler anzugeben, benötigen wir noch die Gauß'sche Fehlerfortpflanzung (\ref{fehler:gauß}):
+
+\begin{equation}
+  \increment V_{\text{Ges}} = \sqrt{(\increment V_{\text{Körper}})^2 + 4 \cdot (\increment V_{\text{Arm}})^2 
+    + 4 \cdot (\increment V_{\text{Bein}})^2 + (\increment V_{\text{Kopf}})^2}
+\end{equation}
+
+wobei die einzelnen Volumina durch 
+\begin{align*}
+  \increment V_{\text{Zyl}} &= \sqrt{4 \pi^2 \cdot r^2 \cdots h^2 \cdot (\increment r)^2} & 
+  \increment V_{\text{Kug}} &= \sqrt{16 \pi^2 \cdot r^4 \cdot (\increment r)^2}
+\end{align*}
+
+Damit lassen sich die Volumina der einzelnen Körperteile angeben (Tabelle (\ref{tab:VolGlieder})):
+
+\begin{table}[H]
+  \centering
+  \caption{Volumen der Körperteile}
+  \label{tab:VolGlieder}
+  \begin{tabular}{rrrrrrr}
+    \toprule
+    & Oberschenkel &     Unterschenkel &     Oberarm &     Unterarm &    Oberkörper &     Bauch \\
+    \midrule
+    $V / \unit{\milli\cubic\meter}$  & 13.164012 & 10.102287 & 6.849035 & 6.976654 & 47.793662 & 43.246845 \\
+    $\increment V / \unit{\milli\cubic\meter}$  &  1.675321 &  2.110987 & 0.668167 & 0.864282 &  9.056683 & 19.592513 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
