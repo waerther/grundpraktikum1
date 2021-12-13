@@ -296,7 +296,7 @@ Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximi
     \midrule
      & ober & unter & ober & unter& ober & unter & \\
     Mittelwert: & 0.008550 & 0.007490 & 0.006470 & 0.006530 & 0.019690 & 0.018730 & 0.013380 \\
-    Standartabweichung: & 0.000544 & 0.000783 & 0.000316 & 0.000404 & 0.001866 & 0.004243 & 0.001225 \\
+    Standartabw:: & 0.000544 & 0.000783 & 0.000316 & 0.000404 & 0.001866 & 0.004243 & 0.001225 \\
     \bottomrule
     \end{tabular}
 \end{table}
@@ -349,5 +349,59 @@ Damit lassen sich die Volumina der einzelnen Körperteile angeben (Tabelle (\ref
 Daraus resultiert das Gesamtvolumen, wobei das Volumen der Arme und Beine doppelt gezählt wird:
 
 \begin{equation*}
-  V_{\text{Ges}} = \sum_i V_{i} \pm  \increment V_{\text{Ges}}= 170.199 \pm 55.954
+  V_{\text{Ges}} = \sum_i V_{i} \pm  \increment V_{\text{Ges}}= (170.199 \pm 55.954) \cdot 10^{-6} \unit{\cubic\meter}
 \end{equation*}
+
+Nun werden die einzelnen Anteile am Gesamtvolumen bestimmt.
+Damit wird dann schließlich die Masse der einzelnen Teile bestimmt.
+Die Volumenanteile und deren Fehler berechnen sich über folgende Formeln:
+
+\begin{align*}
+  A_{\text{Körperteil}} & = \frac {V_{\text{Körperteil}}} {V_{\text{Ges}}} \\
+  \increment A_{\text{Körperteil}} & = \sqrt{\left(\frac{1}{V_{\text{Ges}}}\right)^2 
+  \cdot \left(\left( \increment V_{\text{Körperteil}} \right)^2 + \left( V_{\text{Körperteil}} 
+  \cdot \increment V_{\text{Ges}} \right)^2\right)}
+\end{align*}
+
+Damit ergeben sich die Anteile in Tabelle (\ref{tab:AnteileKörper}):
+
+\begin{table}
+  \centering
+  \caption{Anteile der Glieder}
+  \label{tab:AnteileKörper}
+  \begin{tabular}{rrrrrrrr}
+    \toprule
+      & $A_{\text{Oberschenkel}}$ &     $A_{\text{Unterschenkel}}$ &     $A_{\text{Oberarm}}$ &     $A_{\text{Unterarm}}$    &    $A_{\text{Oberkörper}}$ &     $A_{\text{Bauch}}$ & $A_{\text{Kopf}}$ \\
+    \midrule
+    & 0.0966 & 0.074 & 0.050 & 0.051 & 0.351 & 0.317 & 0.058 \\
+    $\increment A_i$ & 0.034 & 0.029 & 0.017 & 0.018 & 0.133 & 0.178 & 0.025 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Nun werden die Massen der Gliedmaßen berechnet. Dafür benötigen wir die Formel:
+\begin{equation*}
+  m_{\text{Körperteil}} = A_{\text{Körperteil}} \cdot M_{\text{Ges}}
+\end{equation*}
+
+Dann erhält man die Massen, die in Tabelle {\ref{tab:Massenanteile}}
+
+\begin{table}
+  \centering
+  \caption{Massenanteile}
+  \label{tab:Massenanteile}
+  \begin{tabular}{rrrrrrrrr}
+    \toprule
+    & $m_{\text{OS}} / \unit{\kilo\gram}$ &     $m_{\text{US}} / \unit{\kilo\gram}$ &     $m_{\text{OA}} / \unit{\kilo\gram}$ &     $m_{\text{UA}} / \unit{\kilo\gram}$    &    $m_{\text{OK}} / \unit{\kilo\gram}$ &     $m_{\text{Bauch}} / \unit{\kilo\gram}$ & $m_{\text{Kopf}} / \unit{\kilo\gram}$ \\
+    \midrule
+    & 0.01043 & 0.00800 & 0.00542 & 0.00552 & 0.03787 & 0.03427 & 0.00636 \\
+    $\increment m_i / \unit{\kilo\gram}$ & 0.00367 & 0.00311 & 0.00186 & 0.00194 & 0.01437 & 0.01918 & 0.00272 \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+Nun sind alle nötigen Parameter bestimmt, um die Trägheitsmomente der Puppe zu berechnen.
+
+\subsubsection{Trägheitsmoment der Puppe: Pose 1}
+
