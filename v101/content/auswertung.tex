@@ -295,8 +295,8 @@ Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximi
        & $d_{\text{Bein}} / \unit\meter$ &     - &     $d_{\text{Arm}} / \unit\meter$ &     - &    $d_{\text{Körper}} /  \unit\meter$ &     - &    $d_{\text{Kopf}} /  \unit\meter$\\
     \midrule
      & ober & unter & ober & unter& ober & unter & \\
-    Mittelwert: & 0.017 & 0.015 & 0.013 & 0.013 & 0.039 & 0.037 & 0.027 \\
-    Standartabweichung:  &0.001 & 0.002 & 0.001 & 0.001 & 0.004 & 0.008 & 0.002 \\
+    Mittelwert: & 0.008550 & 0.007490 & 0.006470 & 0.006530 & 0.019690 & 0.018730 & 0.013380 \\
+    Standartabweichung: & 0.000544 & 0.000783 & 0.000316 & 0.000404 & 0.001866 & 0.004243 & 0.001225 \\
     \bottomrule
     \end{tabular}
 \end{table}
@@ -321,7 +321,7 @@ Um den Fehler anzugeben, benötigen wir noch die Gauß'sche Fehlerfortpflanzung 
 
 wobei die einzelnen Volumina durch 
 \begin{align*}
-  \increment V_{\text{Zyl}} &= \sqrt{4 \pi^2 \cdot r^2 \cdots h^2 \cdot (\increment r)^2} & 
+  \increment V_{\text{Zyl}} &= \sqrt{4 \pi^2 \cdot r^2 \cdot h^2 \cdot (\increment r)^2} & 
   \increment V_{\text{Kug}} &= \sqrt{16 \pi^2 \cdot r^4 \cdot (\increment r)^2}
 \end{align*}
 
@@ -331,12 +331,23 @@ Damit lassen sich die Volumina der einzelnen Körperteile angeben (Tabelle (\ref
   \centering
   \caption{Volumen der Körperteile}
   \label{tab:VolGlieder}
-  \begin{tabular}{rrrrrrr}
+  \begin{tabular}{rrrrr}
     \toprule
-    & Oberschenkel &     Unterschenkel &     Oberarm &     Unterarm &    Oberkörper &     Bauch \\
+    & Oberschenkel &     Unterschenkel &     Oberarm &     Unterarm \\
     \midrule
-    $V / \unit{\milli\cubic\meter}$  & 13.164012 & 10.102287 & 6.849035 & 6.976654 & 47.793662 & 43.246845 \\
-    $\increment V / \unit{\milli\cubic\meter}$  &  1.675321 &  2.110987 & 0.668167 & 0.864282 &  9.056683 & 19.592513 \\
+    $V / \unit{\milli\cubic\meter}$  & 16.455016 & 12.627858 & 8.561294 & 8.720818 \\
+    $\increment V / \unit{\milli\cubic\meter}$  &   2.094151 &  2.638733 & 0.835208 & 1.080353  \\
+    \midrule
+    &    Oberkörper &     Bauch & Kopf & \\
+    \midrule
+    $V / \unit{\milli\cubic\meter}$  & 59.742077 & 54.058556 & 10.03360 & \\ 
+    $\increment V / \unit{\milli\cubic\meter}$  &  11.320854 & 24.490641 & 2.75676 & \\
     \bottomrule
     \end{tabular}
 \end{table}
+
+Daraus resultiert das Gesamtvolumen, wobei das Volumen der Arme und Beine doppelt gezählt wird:
+
+\begin{equation*}
+  V_{\text{Ges}} = \sum_i V_{i} \pm  \increment V_{\text{Ges}}= 170.199 \pm 55.954
+\end{equation*}
