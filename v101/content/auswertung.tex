@@ -405,28 +405,57 @@ Nun sind alle nötigen Parameter bestimmt, um die Trägheitsmomente der Puppe zu
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 1}
 Zunächst soll die \enquote{90° Pose} untersucht werden.
+Diese ist ebenfalls in Abbildung (\ref{fig:rechterWinkel}) zu sehen.
+In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte aufgetragen.
 
 
-\begin{figure}
+\begin{figure}[H]
   \caption{90° Pose}
   \centering
   \includegraphics[width=0.3\columnwidth]{pictures/puppe_rechter_winkel.jpg}
   \label{fig:rechterWinkel}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Messwerte der Periodendauer}
   \label{tab:PeriodendauerPose1}
-  \begin{tabular}{rr}
+  \begin{tabular}{rrr}
     \toprule
-     T/s (90°) &  T/s (120°) \\
+     & $T / \unit\second$ &  $T / \unit\second$  \\
     \midrule
-          0.90 &        0.86 \\
-          0.87 &        0.90 \\
-          0.86 &        0.85 \\
-          0.85 &        0.90 \\
-          0.88 &        0.80 \\
+    $\varphi$ : & 90° & 120° \\
+    \midrule
+          & 0.90 &        0.86 \\
+          & 0.87 &        0.90 \\
+          & 0.86 &        0.85 \\
+          & 0.85 &        0.90 \\
+          & 0.88 &        0.80 \\
+    \midrule
+    $T_{\text{mittel}}$ : & 0.872 & 0.862 \\
     \bottomrule
     \end{tabular}
 \end{table}
+
+Daraus lässt sich die gemittelte Schwingungsdauer bestimmen:
+\begin{equation*}
+  T_E = (0.867 \pm 0.02934) \unit\second
+\end{equation*}
+
+Nun lässt sich das Trägheitsmoment berechnen.
+
+\begin{equation*}
+  \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = (0.39985 \pm ) \cdot 10^{-3} 
+  \unit{\kilo\gram\meter\squared} %Fehler angeben
+\end{equation*}
+
+Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
+Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
+Dafür werden folgende Gleichungen verwendet:
+
+\begin{align*}
+  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
+  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
+  I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
+  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
+\end{align*}
