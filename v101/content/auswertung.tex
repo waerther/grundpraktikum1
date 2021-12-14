@@ -126,7 +126,7 @@ Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben. Es gilt als
   I_{D} =  \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
-Eigenträgheitsmoment vernachlässigbar?
+Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt werden kann.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -405,7 +405,7 @@ Nun sind alle nötigen Parameter bestimmt, um die Trägheitsmomente der Puppe zu
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 1}
 Zunächst soll die \enquote{90° Pose} untersucht werden.
-Diese ist ebenfalls in Abbildung (\ref{fig:rechterWinkel}) zu sehen.
+Diese ist ebenfalls in Abbildung (\ref{fig:pose1}) zu sehen.
 In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte aufgetragen.
 
 
@@ -413,12 +413,12 @@ In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte auf
   \caption{90° Pose}
   \centering
   \includegraphics[width=0.3\columnwidth]{pictures/puppe_rechter_winkel.jpg}
-  \label{fig:rechterWinkel}
+  \label{fig:pose1}
 \end{figure}
 
 \begin{table}[H]
   \centering
-  \caption{Messwerte der Periodendauer}
+  \caption{Messwerte der Periodendauer: Pose 1}
   \label{tab:PeriodendauerPose1}
   \begin{tabular}{rrr}
     \toprule
@@ -445,17 +445,67 @@ Daraus lässt sich die gemittelte Schwingungsdauer bestimmen:
 Nun lässt sich das Trägheitsmoment berechnen.
 
 \begin{equation*}
-  \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = (0.39985 \pm ) \cdot 10^{-3} 
+  \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = 0.39985 \cdot 10^{-3}  % FEHLER FEHLT
   \unit{\kilo\gram\meter\squared} %Fehler angeben
 \end{equation*}
 
-Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
-Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
-Dafür werden folgende Gleichungen verwendet:
+%Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
+%Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
+%Dafür werden folgende Gleichungen verwendet:
+%
+%\begin{align*}
+%  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
+%  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
+%  I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
+%  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
+%\end{align*}
+%
+%
+%Insgesamt ergibt sich damit:
+%\begin{equation*}
+%  I_{\text{Ideal}} = %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{equation*}
 
-\begin{align*}
-  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
-  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
-  I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
-  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
-\end{align*}
+\subsubsection{Trägheitsmoment der Puppe: Pose 2}
+
+Nun wird das Trägheitsmoment der Figur in der \enquote{T-Pose} (siehe Abb. (\ref{fig:pose2})) untersucht.
+
+\begin{figure}[H]
+  \caption{T-Pose}
+  \centering
+  \includegraphics[width=0.3\columnwidth]{pictures/puppe_tpose.jpg}
+  \label{fig:pose2}
+\end{figure}
+
+\begin{table}
+  \centering
+  \caption{Messwerte der Periodendauer: Pose 2}
+  \label{tab:PeriodendauerPose2}
+  \begin{tabular}{rrr}
+    \toprule
+    & $T / \unit\second$ &  $T / \unit\second$  \\
+    \midrule
+    $\varphi$ : & 90° & 120° \\
+    \midrule
+          & 0.64 &        0.70 \\
+          & 0.70 &        0.67 \\
+          & 0.66 &        0.68 \\
+          & 0.67 &        0.70 \\
+          & 0.65 &        0.71 \\
+    \midrule
+    $T_{\text{mittel}}$ : & 0.664 & 0.692 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+Daraus lässt sich die gemittelte Schwingungsdauer bestimmen:
+\begin{equation*}
+  T_E = (0.678 \pm 0.02271) \unit\second
+\end{equation*}
+
+Daraus wiederum analog wie bei Pose 1 das Trägheitsmoment:
+
+\begin{equation*}
+  \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = 0.24452  \cdot 10^{-3} % FEHLER FEHLT
+  \unit{\kilo\gram\meter\squared} %Fehler angeben
+\end{equation*}
