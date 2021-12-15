@@ -2,8 +2,8 @@
 \label{sec:Auswertung}
 
 \subsection{Vorbereitung}\label{subsec:Vorbereitung}
-Um die Messungen auswerten zu können, muss zunächst das Eigenträgheitsmoment $I_{D}$ und die Winkelrichtgröße $D$ berechnet werden.
-
+Um die Messungen auswerten zu können, muss zunächst das Eigenträgheitsmoment $I_{D}$ und die Winkelrichtgröße $D$ berechnet werden.\\
+\\
 Mit (\ref{eq:drehmoment}) und (\ref{eq:drehmomentwinkel}) ergibt sich:
 \begin{equation}
 D = \frac{\lvert F \rvert \lvert r \rvert \sin{\vartheta}}{\varphi} \stackrel{F,r > 0}{=} \frac{F r \sin{\vartheta}}{\varphi} 
@@ -37,8 +37,8 @@ In Tabelle (\ref{tab:Winkelrichtgröße}) sind die entsprechenden Messwerte und 
 
 Es ergibt sich der Mittelwert:
 \begin{align*}
-  D_{mittel} = D  & = (0.021325364366313267 \pm 0.002952928161464375) \unit{\newton\meter}\\
-  \implies D &  = (0.021 \pm 0.00295) \unit{\newton\meter}
+  D_{mittel} = D  & = (0.021325364366313267 \pm 0.002952928161464375) \, \unit{\newton\meter}\\
+  \implies D &  = (0.021 \pm 0.00295) \, \unit{\newton\meter}
 \end{align*}
 
 Um das Eigenträgheitsmoment zu bestimmen wird $I$ nach (\ref{eq:Tumgestellt}) berechnet.
@@ -69,8 +69,8 @@ Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen:
 \end{table}
 
 Aus diesen Daten können wir jetzt das Eigenträgheitsmoment bestimmen.
-Dafür brauchen wir zunächst noch die Formeln für einen Zylinder.
-Dieses lässt sich rechnerisch bestimmen, hier sei nur die Formel angegeben:
+Aufgrund der Form der verwendeteten Gewichte wird zunächst noch die Formel für einen Zylinder benötigt,
+welche sich rechnerisch bestimmen lässt:
 \begin{equation*}
   I_{\text{Zyl}} = \frac{m \cdot R^2} {2}
 \end{equation*}
@@ -80,29 +80,34 @@ Mit dem Satz von Steiner (\ref{eq:SatzvSteiner}) ergibt sich:
   I_{\text{Zyl}} = I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right)
 \end{equation}
 
-Setzt man nun $I_{\text{Zyl}}$ in Gleichtung (\ref{eq:Tumgestellt}) ein und stellt um, erhält man folgende Gleichung:
+Nach Einsetzen von $I_{\text{Zyl}}$ in Gleichung (\ref{eq:Tumgestellt}) und Umstellen, ergibt sich:
 
 \begin{equation}
   T^2 = \frac{4 \pi^2}{D} \cdot \left( 2ma^2 + I_{\text{Zyl}} \right) \stackrel{(\ref{eq:IZyl})}{=} 
   \frac{4 \pi^2}{D} \left( ma^2 + I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \right)
 \end{equation}
 
-Nun erhält man durch lineare Regression eine Ausgleichsgerade der Form $y = a \cdot x + b$ mit den Parametern
-$a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$. Damit ergibt sich der Plot in Abbildung (\ref{fig:Lineareregression}).
+Durch lineare Regression mithilfe der Ausgleichsgerade 
+\begin{equation*}
+  y = a \cdot x + b 
+\end{equation*}
+
+mit den Parametern $a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$ ergibt sich der Plot in Abbildung (\ref{fig:Lineareregression}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/Lineare Regression.pdf}
+  \caption{Regressionsgerade des Eigenträgheitsmomentes}
+  \label{fig:Lineareregression}
+\end{figure}
+
 Nun wird durch Koeffizientenvergleich a und b in (\ref{eq:IZyl}) erkannt und eingesetzt.
 Es ergibt sich:
 \begin{align} \label{var:aundb}
   a & = \frac{8 \pi^2 m}{D} & b & = \frac{4 \pi^2}{D} \left(I_{D} + m_{\text{Zyl}} \frac{3 r^2 + h^2}{6} \right)
 \end{align}
 
-\begin{figure}[H]
-  \caption{Regressionsgerade des Eigenträgheitsmomentes}
-  \centering
-  \includegraphics{pictures/Lineare Regression.pdf}
-  \label{fig:Lineareregression}
-\end{figure}
-
-Stellt man nun (\ref{eq:IZyl}) nach $I_{D}$ um, gilt:
+Wird (\ref{eq:IZyl}) nach $I_{D}$ umgestellt, gilt:
 \begin{equation} \label{eq:idgauß}  % Ist diese Gleichung überhaupt richtig? Überprüfen wenn Zeit
   \begin{split}
   I_{D} {} &= I_{\text{Zyl}} - m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \\
@@ -122,13 +127,13 @@ Mit (\ref{fehler:gauß}) ergibt sich  für $\increment I_{D}$:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben.
-Die Zylinder haben die Maße $h = 0.023 \unit{\meter}, d = 0.45 \unit{\meter} \text{ und } m = 0.0624 \unit{\kilo\gram}$.
+Die Zylinder haben die Maße $h = 0.023 \, \unit{\meter}, \: d = 0.45 \, \unit{\meter} \text{ und } m = 0.0624 \, \unit{\kilo\gram}$.
 Es gilt also:
 \begin{equation*}
-  I_{D} =  (-0.00588 \pm 0.020731) \unit{\kilo\gram\meter\squared}
+  I_{D} =  (-0.00588 \pm 0.020731) \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
-Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt werden kann.
+Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt wird.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,11 +144,11 @@ Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung
 \label{sec:KugelundZylinder}
 
 \subsubsection*{Der Zylinder}
-Der betrachtete Zylinder hat folgende Maße: $m_1 = 0.3678 \unit{\kilo\gram}, d_1 = 0.0983 \unit{\meter}$
+Der betrachtete Zylinder hat folgende Maße: $m_1 = 0.3678 \, \unit{\kilo\gram}, \: d_1 = 0.0983 \, \unit{\meter}$
 Damit errechnet sich der Theoriewert des Trägheitsmomentes:
 
 \begin{align*}
-  I_{\text{Zyl, theo}} &= 4.4425 10^{-4} \unit{\kilo\gram\meter\squared}
+  I_{\text{Zyl, theo}} &= 4.4425 10^{-4} \, \unit{\kilo\gram\meter\squared}
 \end{align*}
 
 Die experimentellen Werte sind in Tabelle (\ref{tab:SchwingungsdauerZylinder}) zu finden.
@@ -172,7 +177,7 @@ Die experimentellen Werte sind in Tabelle (\ref{tab:SchwingungsdauerZylinder}) z
 
 Damit lässt sich die Schwingungsdauer angeben:
 \begin{equation*}
-  T_{Zyl} = (0.758 \pm 0.02357) \unit{\second}
+  T_{Zyl} = (0.758 \pm 0.02357) \, \unit{\second}
 \end{equation*}
 
 
@@ -192,7 +197,7 @@ Damit kann das Trägheitsmoment $I_{\text{Zyl}}$ nun angegeben werden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{equation*}
-  I_{\text{Zyl}} = (3.056 \pm 1.475) \cdot 10^{-4} \unit{\kilo\gram\meter\squared}
+  I_{\text{Zyl}} = (3.056 \pm 1.475) \cdot 10^{-4} \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,14 +207,14 @@ Damit kann das Trägheitsmoment $I_{\text{Zyl}}$ nun angegeben werden.
 
 \subsubsection*{Die Kugel}
 
-Die betrachtete Kugel hat die folgenden Eigenschaften: $m_2 = 1.1716\unit{\kilo\gram}$ und $d = 14.645\unit{\centi\meter}$.
+Die betrachtete Kugel hat die folgenden Eigenschaften: $m_2 = 1.1716 \, \unit{\kilo\gram}$ und $d = 14.645 \, \unit{\centi\meter}$.
 Die Formel für das Trägheitsmoment einer Kugel wird auch hier nur angegeben:
 \begin{equation*}
   I_{\text{K}} = \frac{2}{5} m r^2
 \end{equation*}
 Mit den Werten bedeutet das:
 \begin{equation*}
-  I_{\text{K, theo}} = 2.5128 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{K, theo}} = 2.5128 \cdot 10^{-3} \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \begin{table}[H]
@@ -236,7 +241,7 @@ Mit den Werten bedeutet das:
 
 Damit ergibt sich aus Mittelwert und Standartabweichung für $T_{Kug}$:
 \begin{equation*}
-  T_{Kug} = (1.842 \pm 0.044) \unit\second
+  T_{Kug} = (1.842 \pm 0.044) \, \unit\second
 \end{equation*}
 
 Woraus das Trägheitsmoment $I_{\text{Kug}}$ folgt:
@@ -248,7 +253,7 @@ Woraus das Trägheitsmoment $I_{\text{Kug}}$ folgt:
 
 
 \begin{equation*}
-  I_{\text{Kug}} = (1.8048 \pm 0.8413) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{Kug}} = (1.8048 \pm 0.8413) \cdot 10^{-3} \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,11 +297,11 @@ Woraus das Trägheitsmoment $I_{\text{Kug}}$ folgt:
       \end{tabular}
 \end{table}
 
-Die Puppe hat die folgende Masse: $m_{\text{Puppe}} = 0.1079\unit{\kilo\gram}$.
+Die Puppe hat die folgende Masse: $m_{\text{Puppe}} = 0.1079 \, \unit{\kilo\gram}$.
 Die Maße der Gliedmaßen der Puppe sind in Tabelle (\ref{tab:Abmessungen}) aufgetragen.
-Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximieren (siehe Tabelle (\ref{tab:MittelwertGlieder})).
+Diese Werte werden gemittelt, um die Gliedmaßen durch einen Zylinder zu approximieren (siehe Tabelle (\ref{tab:MittelwertGlieder})).
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Mittelwerte der Glieder}
   \label{tab:MittelwertGlieder}
@@ -311,31 +316,30 @@ Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximi
     \end{tabular}
 \end{table}
 
-Im folgenden wird das Volumen der Puppe errechnet.
-Dazu wird das Volumen der einzenen Zylinder berchnet.
+Im Folgenden wird das Volumen der Puppe errechnet.
+Dazu wird das Volumen der einzelnen Zylinder berechnet.
 Das Zylindervolumen ist gegeben durch:
 \begin{equation*}
   V_{\text{Zyl}} = \pi r^2 h
 \end{equation*}
-Ebenfalls benötigt wird das Kugelvolumen, um den Kopf zu approximieren:
+Ebenfalls wird das Kugelvolumen benötigt, um den Kopf zu approximieren:
 \begin{equation*}
   V_{\text{Kug}} = \frac{4}{3} \pi r^3
 \end{equation*}
 
-Um den Fehler anzugeben, benötigen wir noch die Gauß'sche Fehlerfortpflanzung (\ref{fehler:gauß}):
-
+Um den Fehler anzugeben, ist die Gauß'sche Fehlerfortpflanzung (\ref{fehler:gauß}) 
 \begin{equation}
   \increment V_{\text{Ges}} = \sqrt{(\increment V_{\text{Körper}})^2 + 4 \cdot (\increment V_{\text{Arm}})^2 
     + 4 \cdot (\increment V_{\text{Bein}})^2 + (\increment V_{\text{Kopf}})^2}
 \end{equation}
 
-wobei die einzelnen Volumina durch 
+erfoderlich, wobei die einzelnen Volumina durch 
 \begin{align*}
   \increment V_{\text{Zyl}} &= \sqrt{4 \pi^2 \cdot r^2 \cdot h^2 \cdot (\increment r)^2} & 
   \increment V_{\text{Kug}} &= \sqrt{16 \pi^2 \cdot r^4 \cdot (\increment r)^2}
 \end{align*}
 
-Damit lassen sich die Volumina der einzelnen Körperteile angeben (Tabelle (\ref{tab:VolGlieder})):
+gegeben sind. Damit lassen sich die Volumina der einzelnen Körperteile angeben (Tabelle (\ref{tab:VolGlieder})):
 
 \begin{table}[H]
   \centering
@@ -363,7 +367,7 @@ Daraus resultiert das Gesamtvolumen, wobei das Volumen der Arme und Beine doppel
 \end{equation*}
 
 Nun werden die einzelnen Anteile am Gesamtvolumen bestimmt.
-Damit wird dann schließlich die Masse der einzelnen Teile bestimmt.
+Damit wird schließlich die Masse der einzelnen Teile bestimmt.
 Die Volumenanteile und deren Fehler berechnen sich über folgende Formeln:
 
 \begin{align*}
@@ -389,12 +393,12 @@ Damit ergeben sich die Anteile in Tabelle (\ref{tab:AnteileKörper}):
   \end{tabular}
 \end{table}
 
-Nun werden die Massen der Gliedmaßen berechnet. Dafür benötigen wir die Formel:
+Nun werden die Massen der Gliedmaßen berechnet:
 \begin{equation*}
   m_{\text{Körperteil}} = A_{\text{Körperteil}} \cdot M_{\text{Ges}}
 \end{equation*}
 
-Dann erhält man die Massen, die in Tabelle {\ref{tab:Massenanteile}}
+Damit ergeben sich die Massen in Tabelle {\ref{tab:Massenanteile}}
 
 \begin{table}
   \centering
@@ -420,9 +424,9 @@ In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte auf
 
 
 \begin{figure}[H]
-  \caption{90° Pose}
   \centering
   \includegraphics[width=0.3\columnwidth]{pictures/puppe_rechter_winkel.jpg}
+  \caption{90° Pose}
   \label{fig:pose1}
 \end{figure}
 
@@ -449,31 +453,28 @@ In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte auf
 
 Daraus lässt sich die gemittelte Schwingungsdauer bestimmen:
 \begin{equation*}
-  T_E = (0.867 \pm 0.02934) \unit\second
+  T_E = (0.867 \pm 0.02934) \, \unit\second
 \end{equation*}
 
 Nun lässt sich das Trägheitsmoment berechnen.
 
 \begin{equation*}
   \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = 0.39985 \cdot 10^{-3}  % FEHLER FEHLT
-  \unit{\kilo\gram\meter\squared} %Fehler angeben
+  \, \unit{\kilo\gram\meter\squared} %Fehler angeben
 \end{equation*}
 
 Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
-Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
-Dafür werden folgende Gleichungen verwendet:
-
-\begin{align*}
+Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder mithilfe der folgenden Gleichungen berechnet.
+\begin{align*} \label{I_Puppe}
   I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
   I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
   I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
   I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
 \end{align*}
 
-
 Insgesamt ergibt sich damit:
 \begin{equation*}
-  I_{\text{Ideal}} = 0.477969 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{Ideal}} = 0.477969 \cdot 10^{-3} \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 2}
@@ -481,7 +482,6 @@ Insgesamt ergibt sich damit:
 Nun wird das Trägheitsmoment der Figur in der \enquote{T-Pose} (siehe Abb. (\ref{fig:pose2})) untersucht.
 Zunächst wird die theoretische Erwartung berechnet.
 Aus dem Satz von Steiner (\ref{eq:SatzvSteiner}) folgen die Gleichungen:
-
 \begin{align*}
   I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot h_{\text{OS}}^2} {3} \\
   I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot h_{\text{US}}^2 + 3 \cdot m_{US} \cdot h_{OS}^2} {3} \\
@@ -491,13 +491,13 @@ Aus dem Satz von Steiner (\ref{eq:SatzvSteiner}) folgen die Gleichungen:
 
 Damit lässt sich das Träheitsmoment berechnen:
 \begin{equation*}
-  I_{\text{Ideal}} = 0.13192 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{Ideal}} = 0.13192 \cdot 10^{-3} \, \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \begin{figure}[H]
-  \caption{T-Pose}
   \centering
   \includegraphics[width=0.3\columnwidth]{pictures/puppe_tpose.jpg}
+  \caption{T-Pose}
   \label{fig:pose2}
 \end{figure}
 
@@ -524,12 +524,12 @@ Damit lässt sich das Träheitsmoment berechnen:
 
 Daraus lässt sich die gemittelte Schwingungsdauer bestimmen:
 \begin{equation*}
-  T_E = (0.678 \pm 0.02271) \unit\second
+  T_E = (0.678 \pm 0.02271) \, \unit\second
 \end{equation*}
 
 Daraus wiederum analog wie bei Pose 1 das Trägheitsmoment:
 
 \begin{equation*}
   \stackrel{(\ref{eq:Tumgestellt}),(\ref{fehler:gauß})}{\implies} I_E = 0.24452  \cdot 10^{-3} % FEHLER FEHLT
-  \unit{\kilo\gram\meter\squared} %Fehler angeben
+  \, \unit{\kilo\gram\meter\squared} %Fehler angeben
 \end{equation*}
