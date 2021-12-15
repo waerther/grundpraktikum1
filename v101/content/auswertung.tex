@@ -118,15 +118,18 @@ Mit (\ref{fehler:gauß}) ergibt sich  für $\increment I_{D}$:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Muss noch errechnet werden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben. Es gilt also:
+Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben.
+Die Zylinder haben die Maße $h = 0.023 \unit{\meter}, d = 0.45 \unit{\meter} \text{ und } m = 0.0624 \unit{\kilo\gram}$.
+Es gilt also:
 \begin{equation*}
-  I_{D} =  \unit{\kilo\gram\meter\squared}
+  I_{D} =  -0.00588 \pm 0.020731 \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt werden kann.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,8 +176,15 @@ Damit lässt sich die Schwingungsdauer angeben:
 \end{equation*}
 
 
-Damit ist das Trägheitsmoment $I_{\text{Zyl}}$ kann nun angegeben werden.
 Der Fehler berechnet sich nach (\ref{eq:idgauß}). Es folgt:
+
+\begin{equation} \label{eq:fehler:traeg}
+  \increment I = \sqrt{\left( \frac{2 \cdot D \cdot  T \cdot \increment T}{4 \pi} \right)^2 + \left( \frac{T^2 \cdot \increment D}{4 \pi}\right)^2}
+\end{equation}
+
+
+Damit kann das Trägheitsmoment $I_{\text{Zyl}}$ nun angegeben werden.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +192,7 @@ Der Fehler berechnet sich nach (\ref{eq:idgauß}). Es folgt:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{equation*}
-  I_{\text{Zyl}} = 
+  I_{\text{Zyl}} = (3.056 \pm 1.475) \cdot 10^{-4} \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,7 +209,7 @@ Die Formel für das Trägheitsmoment einer Kugel wird auch hier nur angegeben:
 \end{equation*}
 Mit den Werten bedeutet das:
 \begin{equation*}
-  I_{\text{K, theo}} = 1.0051 \cdot 10^{-2} \unit{\kilo\gram\meter\squared}
+  I_{\text{K, theo}} = 2.5128 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \begin{table}[H]
@@ -238,7 +248,7 @@ Woraus das Trägheitsmoment $I_{\text{Kug}}$ folgt:
 
 
 \begin{equation*}
-  I_{\text{Kug}} = 
+  I_{\text{Kug}} = (1.8048 \pm 0.8413) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +302,7 @@ Diese Werte werden gemittelt, um der die Gliedmaßen durch Zylinder zu approximi
   \label{tab:MittelwertGlieder}
   \begin{tabular}{rrrrrrrr}
     \toprule
-       & $d_{\text{Bein}} / \unit\meter$ &     - &     $d_{\text{Arm}} / \unit\meter$ &     - &    $d_{\text{Körper}} /  \unit\meter$ &     - &    $d_{\text{Kopf}} /  \unit\meter$\\
+       & $r_{\text{Bein}} / \unit\meter$ &     - &     $r_{\text{Arm}} / \unit\meter$ &     - &    $r_{\text{Körper}} /  \unit\meter$ &     - &    $r_{\text{Kopf}} /  \unit\meter$\\
     \midrule
      & ober & unter & ober & unter& ober & unter & \\
     Mittelwert: & 0.008550 & 0.007490 & 0.006470 & 0.006530 & 0.019690 & 0.018730 & 0.013380 \\
@@ -449,26 +459,40 @@ Nun lässt sich das Trägheitsmoment berechnen.
   \unit{\kilo\gram\meter\squared} %Fehler angeben
 \end{equation*}
 
-%Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
-%Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
-%Dafür werden folgende Gleichungen verwendet:
-%
-%\begin{align*}
-%  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
-%  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
-%  I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
-%  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
-%\end{align*}
-%
-%
-%Insgesamt ergibt sich damit:
-%\begin{equation*}
-%  I_{\text{Ideal}} = %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\end{equation*}
+Dieser Wert soll nun mit der theoretischen Erwartung verglichen werden.
+Dafür wird zunächst das Trägheitsmoment der einzelnen Zylinder berechnet.
+Dafür werden folgende Gleichungen verwendet:
+
+\begin{align*}
+  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}}^2 + 2 \cdot m_{OS} \cdot r_{OS}^2} {2} \\
+  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot r_{\text{US}}^2 + 2 \cdot m_{US} \cdot r_{US}^2} {2} \\
+  I_{\text{Oberarm}} &= \frac{m_{\text{OA}} \cdot h_{\text{OA}^2} + 3 \cdot m_{\text{OA}} \cdot r_{\text{OK}}^2} {3} \\
+  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot h_{\text{UA}^2} + 3 \cdot m_{\text{UA}} \cdot \left( r_{\text{OK}} + h_{\text{OA}}\right)^2} {3} \\
+\end{align*}
+
+
+Insgesamt ergibt sich damit:
+\begin{equation*}
+  I_{\text{Ideal}} = (0.477969 \pm ) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+\end{equation*}
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 2}
 
 Nun wird das Trägheitsmoment der Figur in der \enquote{T-Pose} (siehe Abb. (\ref{fig:pose2})) untersucht.
+Zunächst wird die theoretische Erwartung berechnet.
+Aus dem Satz von Steiner (\ref{eq:SatzvSteiner}) folgen die Gleichungen:
+
+\begin{align*}
+  I_{\text{Oberschenkel}} &= \frac{m_{\text{OS}} \cdot h_{\text{OS}}^2} {3} \\
+  I_{\text{Unterschenkel}} &= \frac{m_{\text{US}} \cdot h_{\text{US}}^2 + 3 \cdot m_{US} \cdot h_{OS}^2} {3} \\
+  I_{\text{Oberarm}} &= \frac{m_{\text{OS}} \cdot r_{\text{OS}^2} + 2 \cdot m_{\text{OA}} \cdot (r_{\text{OA}} + r_{\text{OK}})^2} {2} \\
+  I_{\text{Unterarm}} &= \frac{m_{\text{UA}} \cdot r_{\text{UA}^2} + 2 \cdot m_{\text{UA}} \cdot (r_{\text{UA}} + r_{\text{OK}})^2} {2} \\
+\end{align*}
+
+Damit lässt sich das Träheitsmoment berechnen:
+\begin{equation*}
+  I_{\text{Ideal}} = (0.13192 \pm ) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+\end{equation*}
 
 \begin{figure}[H]
   \caption{T-Pose}
