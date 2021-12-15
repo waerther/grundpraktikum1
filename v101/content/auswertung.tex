@@ -37,11 +37,11 @@ In Tabelle (\ref{tab:Winkelrichtgröße}) sind die entsprechenden Messwerte und 
 
 Es ergibt sich der Mittelwert:
 \begin{align*}
-  D_{mittel} = D  & = 0.021325364366313267 \pm 0.002952928161464375 \unit{\newton\meter}\\
-  \implies D &  = 0.021 \pm 0.00295 \unit{\newton\meter}
+  D_{mittel} = D  & = (0.021325364366313267 \pm 0.002952928161464375) \unit{\newton\meter}\\
+  \implies D &  = (0.021 \pm 0.00295) \unit{\newton\meter}
 \end{align*}
 
-Um das Eigenträgheitsmoment zu bestimmen wird nach (\ref{eq:Tumgestellt}) I berechnet.
+Um das Eigenträgheitsmoment zu bestimmen wird $I$ nach (\ref{eq:Tumgestellt}) berechnet.
 Dafür wird die Umlaufzeit gemessen, wobei der Stab mit zwei bekannten Massen an den Seiten ausgelenkt wird.
 Dabei ist der Radius genau bestimmt.
 Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen:
@@ -70,7 +70,7 @@ Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen:
 
 Aus diesen Daten können wir jetzt das Eigenträgheitsmoment bestimmen.
 Dafür brauchen wir zunächst noch die Formeln für einen Zylinder.
-Dieses lässt sich mit rechnerisch bestimmen, hier sei nur die Formel angegeben:
+Dieses lässt sich rechnerisch bestimmen, hier sei nur die Formel angegeben:
 \begin{equation*}
   I_{\text{Zyl}} = \frac{m \cdot R^2} {2}
 \end{equation*}
@@ -83,7 +83,7 @@ Mit dem Satz von Steiner (\ref{eq:SatzvSteiner}) ergibt sich:
 Setzt man nun $I_{\text{Zyl}}$ in Gleichtung (\ref{eq:Tumgestellt}) ein und stellt um, erhält man folgende Gleichung:
 
 \begin{equation}
-  T^2 = \frac{4 \pi^2}{D} \cdot \left( ma^2 + I_{\text{Zyl}} \right) \stackrel{(\ref{eq:IZyl})}{=} 
+  T^2 = \frac{4 \pi^2}{D} \cdot \left( 2ma^2 + I_{\text{Zyl}} \right) \stackrel{(\ref{eq:IZyl})}{=} 
   \frac{4 \pi^2}{D} \left( ma^2 + I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \right)
 \end{equation}
 
@@ -92,7 +92,7 @@ $a = 724.885 ± 10.115$ und $b = 5.945 ± 0.400$. Damit ergibt sich der Plot in 
 Nun wird durch Koeffizientenvergleich a und b in (\ref{eq:IZyl}) erkannt und eingesetzt.
 Es ergibt sich:
 \begin{align} \label{var:aundb}
-  a & = \frac{4 \pi^2 m}{D} & b & = \frac{4 \pi^2}{D} m_{\text{Zyl}}  \left(I_{D} + \frac{3 r^2 + h^2}{6} \right)
+  a & = \frac{8 \pi^2 m}{D} & b & = \frac{4 \pi^2}{D} \left(I_{D} + m_{\text{Zyl}} \frac{3 r^2 + h^2}{6} \right)
 \end{align}
 
 \begin{figure}[H]
@@ -125,7 +125,7 @@ Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben.
 Die Zylinder haben die Maße $h = 0.023 \unit{\meter}, d = 0.45 \unit{\meter} \text{ und } m = 0.0624 \unit{\kilo\gram}$.
 Es gilt also:
 \begin{equation*}
-  I_{D} =  -0.00588 \pm 0.020731 \unit{\kilo\gram\meter\squared}
+  I_{D} =  (-0.00588 \pm 0.020731) \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt werden kann.
@@ -473,7 +473,7 @@ Dafür werden folgende Gleichungen verwendet:
 
 Insgesamt ergibt sich damit:
 \begin{equation*}
-  I_{\text{Ideal}} = (0.477969 \pm ) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{Ideal}} = 0.477969 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 2}
@@ -491,7 +491,7 @@ Aus dem Satz von Steiner (\ref{eq:SatzvSteiner}) folgen die Gleichungen:
 
 Damit lässt sich das Träheitsmoment berechnen:
 \begin{equation*}
-  I_{\text{Ideal}} = (0.13192 \pm ) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
+  I_{\text{Ideal}} = 0.13192 \cdot 10^{-3} \unit{\kilo\gram\meter\squared}
 \end{equation*}
 
 \begin{figure}[H]
