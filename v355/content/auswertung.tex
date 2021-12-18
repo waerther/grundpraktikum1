@@ -1,3 +1,62 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Abweichung der Justierung}
+
+Die in Schaltung 1 (siehe Abbildung \ref{fig:foto}) verbauten Kenngrößen sind sind in 
+Tabelle \ref{tab:komponenten_schaltung1} zu sehen.
+\begin{table}
+    \centering
+    \caption{Werte der in Schwingkreis 1 verbauten Komponenten}
+    \label{tab:komponenten_schaltung1}
+    \begin{tabular}{c c}
+        \toprule
+        Kompentente &  Wert \\
+        \midrule
+        L               & $23.954 \, \unit{\milli\henry}$   \\
+        C               & $0.7932 \, \unit{\nano\farad}$    \\
+        $C_{\text{Sp}}$ & $ 0.028 \, \unit{\nano\farad}$    \\
+        R               & $ 48 \, \unit{\ohm}$              \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Wobei $C_{\text{Sp}}$ die Kapazität der realen Spule entspricht, wie der Abblildung 
+\ref{fig:spulenkapazität} entnommen werden kann.
+\begin{figure} 
+    \centering
+    \includegraphics[width=10cm] {pictures/spulenkapazität.png}  
+    \caption{Berücksichtigung der Spulenkapazität $\text{C}_{\text{Sp}}$. \cite{v355}}
+    \label{fig:spulenkapazität}
+\end{figure} 
+
+
+Die bei der Justierung gemessene Resonanzfrequenz des ersten Schwingkreises beträgt
+\begin{equation*}
+    \text{C}_{\text{gemessen}} = \qty{35.7}{\kilo\hertz} \, .
+\end{equation*}
+
+Mithilfe von (\ref{eq:resonanzfrequenzen}) lässt sich die theoretische Fundamentalfrequenz 
+von Schwingkreis 1 errechnen:
+\begin{equation}
+    \nu_{+}=\frac{1}{2 \pi} \cdot \frac{1}{\sqrt{L C}}= \qty{36.51}{\kilo\hertz}
+    \quad \text {bzw.} \quad
+    \nu_{+}=\frac{1}{2 \pi} \cdot \frac{1}{\sqrt{L\left(C+C_{\mathrm{SP}}\right)}}= \qty{35.88}{\kilo\hertz} 
+\end{equation}
+
+Die Ergebnisse zwischen Messung und Theoriewerte stimmen mit geringer Abweichung
+überein (siehe Tabelle \ref{tab:abweichung_schaltung1}).
+\begin{table}
+    \centering
+    \caption{Werte der in Schwingkreis 1 verbauten Komponenten}
+    \label{tab:abweichung_schaltung1}
+    \begin{tabular}{c c}
+        \toprule
+        {Betrachtete Kapazität $\mathbin{/} \, \unit{\nano\farad}$} &
+        {Abweichung $\mathbin{/} \, \unit{\percent}$} \\
+        \midrule
+        C = 0.7932                                   & 2.3  \\
+        $\text{C} + \text{C}_{\text{Sp}} = 0.8212$   & 0.5  \\
+        \bottomrule
+    \end{tabular}
+\end{table}

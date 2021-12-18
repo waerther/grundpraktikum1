@@ -3,7 +3,7 @@
 \label{sec:Durchführung}
 
 
-\subsection{Anpassung der Schwingkreise}
+\subsection{Justierung der Schwingkreise}
 
 Da die Schwingkreise nicht dieselbe Resonanzfrequenz besitzen, muss der einstellbare Schwingkreis an die Resonanzfrequenz
 des Referenzschwingkreises angepasst werden, indem dort die Kapazität variiert wird.
@@ -11,16 +11,16 @@ Also wird zunächst die Resonanzfrequenz des Referenzschwingkreises bestimmt.
 
 \begin{figure} 
     \begin{subfigure}{0.48\textwidth}
-        %\centering
+        \centering
         \includegraphics[height=7cm] {pictures/messschaltung.png} 
         \caption{Schematischer Aufbau. \cite{v355}}
         \label{fig:schema}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48\textwidth}
-        %\centering
+        \centering
         \includegraphics[height=7cm] {pictures/resonanzfrequenz.png} 
-        \caption{Aufbau am Schwingkreis.}
+        \caption{Aufbau des Schwingkreises 1.}
         \label{fig:foto}
     \end{subfigure}
     \caption{Schaltung zur Bestimmung der Resonanzfrequenz.}
@@ -41,7 +41,7 @@ und für alle folgenden Messungen nicht mehr geändert.
 
 Nun wird die Schaltung in Abbildung \ref{fig:schwebeschaltung} mit einem Rechteckspuls angeregt.
 
-\begin{figure} 
+\begin{figure} [H]
     \centering
     \includegraphics[width=10cm] {pictures/schwebeschaltung.png} 
     \caption{Schaltung zur Messung der Energieübertragung. \cite{v355}}
@@ -60,26 +60,26 @@ Dabei sind Kapazitäten zwischen $C_{\text{K}} = 2 \,\unit{\nano\farad}$ und $C_
 \subsubsection*{Fundamentalschwingungen}
 
 Jetzt werden die Frequenzen $\nu^{-}$ und $\nu^{+}$ der \textit{Fundamentalschwingungen} in 
-Abhängigkeit der Koppelkapazität $C_{K}$ gemessen.
+Abhängigkeit der Koppelkapazität $C_{\text{K}}$ gemessen.
 Dafür wird die Anregung wieder auf eine Sinusanregung gestellt.
 Zusätzlich wird die Generatorspannung als x-Ablenkung benutzt.
 Nun sucht man wie zu Beginn mithilfe der Lissajous-Figuren die Frequenzen, bei denen die Phase 0 oder $\pi$ ist.
-Dies wird für alle kapazitäten $C_{k}$ durchgeführt.
+Dies wird für alle Kapazitäten $C_{\text{K}}$ durchgeführt.
 
+%%%%%%%%%%%%%%%%%%% Wie wurde der Verlauf der Ströme gemessen ??? %%%%%%%%%%%%%%%%%%%
 
-\subsubsection*{Verlauf der Ströme}
+% \subsubsection*{Verlauf der Ströme}
 
-Im Folgenden werden die Verläufe der Ströme $I_{K}$ und $I_{2}$ in Abhängigkeit von der Frequenz
-mithilfe der Schaltung in Abbildung \ref{fig:stromkurven} untersucht.
+% Im Folgenden werden die Verläufe der Ströme $I_{K}$ und $I_{2}$ in Abhängigkeit von der Frequenz
+% mithilfe der Schaltung in Abbildung \ref{fig:stromkurven} untersucht.
 
-\begin{figure} 
-    \centering
-    \includegraphics[width=10cm] {pictures/stromkurven.png} 
-    \caption{Schaltung zur Aufnahme der Stromkurven. \cite{v355}}
-    \label{fig:stromkurven}
-\end{figure} 
+% \begin{figure} 
+%     \centering
+%     \includegraphics[width=10cm] {pictures/stromkurven.png} 
+%     \caption{Schaltung zur Aufnahme der Stromkurven. \cite{v355}}
+%     \label{fig:stromkurven}
+% \end{figure} 
 
-Dafür wird der Spannungsabfall in den Widerständen mit einem AC-Breitband-Millivoltmeter gemessen.
-Der sogenannte \textit{Wobbelgenerator} gibt neben der Wechselspannung auch noch ein Gleichspannungssignal.
-Mit diesen Spannung lässt sich der XY-Schreiber ansteuern und  den Strom in Abhängigkeit der Frequenz visualisiert.
-s
+% Dafür wird der Spannungsabfall in den Widerständen mit einem AC-Breitband-Millivoltmeter gemessen.
+% Der sogenannte \textit{Wobbelgenerator} gibt neben der Wechselspannung auch noch ein Gleichspannungssignal.
+% Mit diesen Spannung lässt sich der XY-Schreiber ansteuern und  den Strom in Abhängigkeit der Frequenz visualisiert.
