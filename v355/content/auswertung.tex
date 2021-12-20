@@ -32,7 +32,7 @@ Wobei $C_{\text{Sp}}$ die Kapazität der realen Spule entspricht, wie der Abblil
 
 Die bei der Justierung gemessene Resonanzfrequenz des ersten Schwingkreises beträgt
 \begin{equation*}
-    \text{C}_{\text{gemessen}} = \qty{35.7}{\kilo\hertz} \, .
+    \nu^+_{\text{gemessen}} = \qty{35.7}{\kilo\hertz} \, .
 \end{equation*}
 
 Mithilfe von (\ref{eq:resonanzfrequenzen}) lässt sich die theoretische Fundamentalfrequenz 
@@ -74,7 +74,7 @@ Anzahl an Schwingungen pro Schwebung bestimmen (siehe Tabelle \ref{tab:maxima}).
         ${C_\text{K}} \mathbin{/} \unit{\nano\farad}$ &  Maxima &
         $n$ & $\increment n_{\text{rel}} \mathbin{/} \unit{\percent}$ \\
         \midrule
-            2.19 &       4  &  2.14 & 46.50 \\
+            2.19 &       4  &  3.69 &  7.69 \\
             2.86 &       5  &  4.55 &  9.01 \\
             4.74 &       7  &  6.94 &  0.90 \\
             6.86 &       9  &  9.62 &  6.85 \\
@@ -97,12 +97,13 @@ $C_\text{K}$ besitzt dabei einen Fehler von 0.3 $\unit{\percent}$, der sich wie 
     \begin{tabular}{c c c c c}
         \toprule
         ${C_\text{K}} \mathbin{/} \unit{\nano\farad}$ &
-        $\nu^+ \mathbin{/} \unit{\kilo\hertz}$ &
-        $\nu^- \mathbin{/} \unit{\kilo\hertz}$ &
+        $\nu^+_{t} \mathbin{/} \unit{\kilo\hertz}$ &
+        $\nu^-_{t} \mathbin{/} \unit{\kilo\hertz}$ &
         $\nu_\text{Schwingung} \mathbin{/} \unit{\kilo\hertz}$ &
         $\nu_\text{Schwebung} \mathbin{/} \unit{\kilo\hertz}$ \\
         \midrule
          0.997${}\pm{}$0.003 &    36.51 & 58.77${}\pm{}$0.050 &    47.64${}\pm{}$0.027 &   22.26${}\pm{}$0.050 \\
+          2.19${}\pm{}$0.007 &    36.51 & 47.95${}\pm{}$0.030 &    42.23${}\pm{}$0.015 &   11.44${}\pm{}$0.030 \\
           2.86${}\pm{}$0.009 &    36.51 & 45.53${}\pm{}$0.024 &    41.02${}\pm{}$0.012 &    9.02${}\pm{}$0.024 \\
           4.74${}\pm{}$0.014 &    36.51 & 42.18${}\pm{}$0.016 &    39.35${}\pm{}$0.008 &    5.67${}\pm{}$0.016 \\
           6.86${}\pm{}$0.021 &    36.51 & 40.51${}\pm{}$0.011 &    38.51${}\pm{}$0.006 &    4.00${}\pm{}$0.011 \\
@@ -125,7 +126,7 @@ Zu beachten ist, dass die Messwerte
 ganzzahlige Maxima darstellen, während die Theoriewerte das exakte Verhältnis von
 Schwingungs- und Schwebungsfrequenz angeben. Die Berechnung der Abweichung $\increment n_{\text{rel}}$ erfolgt durch
 \begin{equation}
-    \increment n_{\text{rel}}=\frac{\increment n}{n}=\frac{\left|n-n_{t}\right|}{n} \, .
+    \increment n_{\text{rel}} = \frac{\increment n}{n}=\frac{\left|n-n_{t}\right|}{n} \, .
 \end{equation}
 
 
@@ -146,29 +147,89 @@ wurden (siehe Tabelle \ref{tab:schwebung}). Der dabei auftretende Fehler wird in
     & \multicolumn{2}{c}{Theoriewerte} & \multicolumn{2}{c}{Messwerte} \\
     \cmidrule(lr){2-3}\cmidrule(lr){4-5}
     {${C_\text{K}} \mathbin{/} \unit{\nano\farad}$} &
-    {$\nu^+ \mathbin{/} \unit{\kilo\hertz}$} & {$\nu^- \mathbin{/} \unit{\kilo\hertz}$} &
+    {$\nu^+_{t} \mathbin{/} \unit{\kilo\hertz}$} & {$\nu^-_{t} \mathbin{/} \unit{\kilo\hertz}$} &
     {$\nu^+ \mathbin{/} \unit{\kilo\hertz}$} & {$\nu^- \mathbin{/} \unit{\kilo\hertz}$} \\
     \midrule
     0.997${}\pm{}$0.003 &    36.51 & 58.77${}\pm{}$0.050 &    35.1 &   55.8 \\
+     2.19${}\pm{}$0.007 &    36.51 & 47.95${}\pm{}$0.030 &    35.1 &   43.9 \\
      2.86${}\pm{}$0.009 &    36.51 & 45.53${}\pm{}$0.024 &    35.1 &   46.1 \\
      4.74${}\pm{}$0.014 &    36.51 & 42.18${}\pm{}$0.016 &    35.1 &   40.7 \\
      6.86${}\pm{}$0.021 &    36.51 & 40.51${}\pm{}$0.011 &    35.1 &   39.2 \\
-     8.18${}\pm{}$0.025 &    36.51 & 39.90${}\pm{}$0.010 &    35.1 &   38.9 \\
+     8.18${}\pm{}$0.025 &    36.51 & 39.90${}\pm{}$0.010 &    35.1 &   38.6 \\
      9.99${}\pm{}$0.030 &    36.51 & 39.30${}\pm{}$0.008 &    35.1 &   38.0 \\
     12.00${}\pm{}$0.040 &    36.51 & 38.85${}\pm{}$0.007 &    35.1 &   37.5 \\
     \bottomrule
     \end{tabular}
 \end{table}
 
-Die Frequenz der Fundamentalschwingungen $\nu^-$ findet sich grafisch visualisiert in der
-Abbildung \ref{fig:plot1}.
-\begin{figure} [H]
+% Die Frequenz der Fundamentalschwingungen $\nu^-$ findet sich grafisch visualisiert in der
+% Abbildung \ref{fig:plot1}.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{plot1.pdf}
+    \includegraphics[width=0.75\textwidth]{plot1.pdf}
     \caption{Theorie- und Messwerte der Fundamentalschwingung $\nu^-$ in Abhängigkeit
     der Kapazität ${C_\text{K}}$.}
     \label{fig:plot1}
 \end{figure}
 
-
 \subsection{Frequenzabhängige Stromstärke}
+
+Die Fundamentalfrequenzen sind die Frequenzen, für die der Strom, maximal wird. 
+Daraus und dem \textit{ohmschen Gesetz} $U = R \cdot I$ folgt, dass auch die Sinusspannung maximal wird,
+welche sich in Form von Amplitude. innerhalb des Frequenzintervalls äußern.\\
+\\
+Es sei angemerkt, dass bei dieser Messung aus technischen Gründen auf einen analogen Aufbau mit anderen Kenngrößen
+zurückgegriffen wurde (siehe Tabelle \ref{tab:komponenten_schaltung2}). Die hierbei gemessene Resonanzfrequenz ist 
+\begin{equation*}
+    \nu^+_{\text{gemessen}} = \qty{30.66}{\kilo\hertz} \, .
+\end{equation*}
+
+\begin{table}
+    \centering
+    \caption{Werte der im analogen Aufbau verbauten Komponenten.}
+    \label{tab:komponenten_schaltung2}
+    \begin{tabular}{c c}
+        \toprule
+        Kompentente &  Wert \\
+        \midrule
+        L               & $32.351 \, \unit{\milli\henry}$   \\
+        C               & $0.8015 \, \unit{\nano\farad}$    \\
+        $C_{\text{Sp}}$ & $ 0.037 \, \unit{\nano\farad}$    \\
+        R               & $ 48 \, \unit{\ohm}$              \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Die mithilfe des Wobbelgenerators gemessenen Zeitpunkte der Amplituden sind in Tabelle \ref{tab:amplituden} zu sehen.
+\begin{table}[H]
+    \centering
+    \caption{}
+    \label{tab:amplituden}
+    \begin{tabular}{c c c c c}
+        \toprule
+        ${C_\text{K}} \mathbin{/} \unit{\nano\farad}$ &
+        {Amplitude bei $t \mathbin{/} \unit{\milli\second}$} &
+        $\nu^+_{t} \mathbin{/} \unit{\kilo\hertz}$ &
+        $\increment n_{\text{rel}} \mathbin{/} \unit{\percent}$ &
+        $\nu^-_{t} \mathbin{/} \unit{\kilo\hertz}$ \\
+        \midrule
+           1.11${}\pm{}$0.003 &      2.25 &    22.22 &  27.52 & 48.86${}\pm{}$0.040 \\
+           2.03${}\pm{}$0.006 &      2.00 &    25.00 &  18.46 & 41.81${}\pm{}$0.028 \\
+           3.00${}\pm{}$0.009 &      1.75 &    28.57 &   6.81 & 38.72${}\pm{}$0.020 \\
+           4.00${}\pm{}$0.012 &      1.75 &    28.57 &   6.81 & 36.99${}\pm{}$0.016 \\
+           5.02${}\pm{}$0.015 &      1.50 &    33.33 &   8.72 & 35.90${}\pm{}$0.013 \\
+           6.47${}\pm{}$0.019 &      1.50 &    33.33 &   8.72 & 34.91${}\pm{}$0.010 \\
+           8.00${}\pm{}$0.024 &      1.50 &    33.33 &   8.72 & 34.24${}\pm{}$0.009 \\
+           9.99${}\pm{}$0.030 &      1.50 &    33.33 &   8.72 & 33.67${}\pm{}$0.007 \\
+        \bottomrule
+        \end{tabular}
+\end{table}
+
+Die theoretische Fundamentalfrequenz $\nu^+_{t}$ und der relative Abweichung $\increment \nu^+_{\text{rel}}$
+von der gemessenen Resonanzfrequenz berrechnen sich dabei mithilfe von
+\begin{equation*}
+    \nu^+ = \frac {1} {t} 
+    \quad\text{und}\quad 
+    \increment \nu^+_{\text{rel}} = \frac{\increment \nu^+}{\nu^+}=\frac{\left|\nu^+-\nu^+_{t}\right|}{\nu^+} \, .
+\end{equation*}
+Wobei $\nu^-_{t}$ analog zum ursprünglichen Aufbau nach (\ref{eq:resonanzfrequenzen}) berechnet wird.
