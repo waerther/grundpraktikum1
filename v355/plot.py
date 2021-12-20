@@ -15,7 +15,7 @@ def nu_minus(l, c, ck):
 L = 0.023954
 C = 0.7932e-9
 
-x = np.linspace(0.997, 13, 120)
+x = np.linspace(0.5, 13, 120)
 y = nu_minus(L, C, x*10**-9)
 
 plt.plot(x, y*10**-3, '-r', label = 'Theoriewerte')
@@ -24,7 +24,7 @@ plt.xlabel(r'$C_{K} \,/\, \mathrm{nF}$')
 plt.ylabel(r'$\nu^- \,/\, \mathrm{kHz}$')
 plt.legend(loc="best")
 plt.xlim(0, 12.5)
-plt.ylim(35, 58)
+plt.ylim(35, 60)
 plt.grid(True)
 
 plt.savefig('build/plot1.pdf', bbox_inches = "tight")
