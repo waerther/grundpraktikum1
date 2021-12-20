@@ -63,7 +63,7 @@ der ursprünglichen Ströme $I_{1}$ und $I_{2}$
 
 wobei 
 \begin{align} \label{eq:resonanzfrequenzen}
-    \nu^+ &= \frac {1} {2 \pi \sqrt[]{LC}} & \mbox{\centering und} && \nu^- = \frac {t} {2 \pi \sqrt [] {L \left( \frac{1}{C} + \frac{2}{C_\text{K}} \right)^{-1} }}
+    \nu^+ &= \frac {1} {2 \pi \sqrt[]{LC}} & \mbox{\centering und} && \nu^- = \frac {1} {2 \pi \sqrt [] {L \left( \frac{1}{C} + \frac{2}{C_\text{K}} \right)^{-1} }}
 \end{align}
 
 die Schwingungsfrequenzen von (\ref{eq:dgl_1_sumsol}) und (\ref{eq:dgl_2_sumsol}) darstellen. \\
@@ -89,10 +89,10 @@ Der Verlauf der Ströme $I_{1}(t)$ und $I_{2}(t)$ werden in Abbildung (\ref{fig:
 
 Bei diesen Anfangsbedingungen wird die Energie des ausgelenkten Schwingkreises auf den ruhenden übertragen, was eine gekoppelte Schwingung zur Folge hat.
 Die Amplitude der Schwingungsfrequenz ändert sich mit der \textit{Schwebungungsfrequenz} 
-\begin{align}
-    \nu_\text{Schwebung} &= \nu^- - \nu^+ \., \\
+\begin{align} 
+    \nu_\text{Schwebung} &= \nu^- - \nu^+ \., \label{eq:schwebung} \\
     \intertext{während das System mit der Schwingungsfrequenz}
-    \nu_\text{Schwingung} &= \frac{1}{2} \left( \nu^+ + \nu^- \right) \approx \nu^+ 
+    \nu_\text{Schwingung} &= \frac{1}{2} \left( \nu^+ + \nu^- \right) \approx \nu^+ \label{eq:schwingung}
 \end{align}
 schwingt.
 
