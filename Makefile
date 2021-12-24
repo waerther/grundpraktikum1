@@ -29,10 +29,4 @@ clean:
 	make -C v302 clean
 
 .PHONY: 
-	clean vXXX
-	clean v206 
-	clean v308 
-	clean v355 
-	clean v101 
-	clean v203 
-	clean v302
+	clean vXXX clean v206 clean v308 clean v355 clean v101 clean v203 clean v302
