@@ -32,7 +32,7 @@ Für Masche 1 und 2 ergibt sich
 
 In dieses Gleichungssystem werden die Beziehungen
 \begin{equation} 
-    U_{C} = \frac{1}{C} \dif{t} \int I \quad\text{und}\quad U_\text{L} = L \dot{I} \quad\text{ein.}
+    U_{C} = \frac{1}{C} \dif{t} \int I \quad\text{und}\quad U_\text{L} = L \dot{I} 
 \end{equation}
 
 eingesetzt. Damit ergeben sich für die beiden Maschen mit Differentiation nach $t$ die Differentialgleichungen
@@ -70,13 +70,14 @@ die Schwingungsfrequenzen von (\ref{eq:dgl_1_sumsol}) und (\ref{eq:dgl_2_sumsol}
 \\
 Sind zu Beginn die Amplituden beider Schwingkreise gleich groß ($I_{1,0} = I_{2,0}$), so entfallen bei (\ref{eq:dgl_1_sol}) und (\ref{eq:dgl_2_sol})
 die jeweils letzten Terme. In diesem Fall schwingen die beiden Schwingkreise gleichphasig mit der Schwingunsfrequenz $\nu^+$, am
-Koppelkondensator $C_\text{K}$ leigt dabei nie eine Spannung an. Bei gegengleichen Amplituden ($I_{1,0} = -I_{2,0}$) schwingen die Schwingkreise gegenphasig
+Koppelkondensator $C_\text{K}$ liegt dabei nie eine Spannung an. Bei gegengleichen Amplituden ($I_{1,0} = -I_{2,0}$) schwingen die Schwingkreise gegenphasig
 mit der erhöhten Schwingunsfrequenz $\nu^-$ und die Spannung an $C_\text{K}$ wird maximal. Diese beiden Schwingungstypen werden \textit{Fundamentalschwingungen} genannt. \\
 \\
-Wird hingegen nur einer der beiden Schwingkreise ausgelenkt ($I_{1,0} \neq 0, I_{2,0} = 0$), so ergeben sich Schwebungen.
+Wird hingegen nur einer der beiden Schwingkreise ausgelenkt ($I_{1,0} \neq 0 \, , I_{2,0} = 0$), so ergeben sich Schwebungen.
+Für die Ströme gilt dann
 \begin{align}
     I_{1}(t) &= I_{1,0} \cos(\pi (\nu^+ + \nu^-) t) \cos(\pi (\nu^+ - \nu^-) t) \label{eq:dgl_1_sol_schweb} \\
-    I_{2}(t) &= I_{1,0} \sin(\pi (\nu^+ + \nu^-) t) \sin(\pi (\nu^+ - \nu^-) t) \label{eq:dgl_2_sol_schweb} 
+    I_{2}(t) &= I_{1,0} \sin(\pi (\nu^+ + \nu^-) t) \sin(\pi (\nu^+ - \nu^-) t) \, .\label{eq:dgl_2_sol_schweb} 
 \end{align}
 
 Der Verlauf der Ströme $I_{1}(t)$ und $I_{2}(t)$ werden in Abbildung (\ref{fig:schwebung}) dargestellt.
@@ -99,7 +100,7 @@ schwingt.
 
 \subsection {Abhängigkeit des Stromes von der Frequenz}
 
-Werden die Schwingkreise durch eine von außen angelegte Sinusspannung angeregt (siehe Abblildung \ref{fig:sinusspannung}), \\
+Werden die Schwingkreise durch eine von außen angelegte Sinusspannung angeregt (siehe Abbilldung \ref{fig:sinusspannung}), \\
 \begin{figure} 
     \centering
     \includegraphics[width=10cm] {pictures/sinusspannung.png} 
@@ -129,6 +130,7 @@ mit
     Z(\omega)=\omega L-\frac{1}{\omega\left(\frac{1}{C}+\frac{1}{C_\text{K}}\right)^{-1}} \,.
 \end{align}
 
+% Hier muss Theorie noch angepasst werden, siehe Korrektur
 Der Strom $I_{2}$ nimmt für $\nu^+$ und $\nu^-$ seine Maxima an:
 \begin{align}
     \left|I_{2}\left(\omega^{+}\right)\right| &= \frac{1}{R \sqrt{4+\frac{R^{2} C_\text{K}^{2}}{L C}}} \label{eq:strom2_omegaplus}\\
