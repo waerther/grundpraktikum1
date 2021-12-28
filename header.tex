@@ -4,10 +4,10 @@
   titlepage=firstiscover, % Titelseite ist Deckblatt
 ]{scrartcl}
 
-% !! Python in Latex
+% !!! Python in Latex
 \usepackage{pythontex}
 
-% !! zum Drehen von Seiten
+% !!! zum Drehen von Seiten
 \usepackage{adjustbox}
 
 % Paket float verbessern
@@ -38,12 +38,11 @@
 % deutsche Spracheinstellungen
 \usepackage[ngerman]{babel}
 
-
-% !!! zum durchstreichen
+% !!! zum durchstreichen durch \cancel{}
 \usepackage{amsmath}
 \usepackage[makeroom]{cancel}
 
-% !!! Zum ersetzen von \symup{}
+% !!! zum Ersetzen von \symup{} durch z.B. \dif{}, siehe latex-Skript
 \usepackage{expl3}
 \usepackage{xparse}
 \ExplSyntaxOn
@@ -52,7 +51,7 @@
 }
 \ExplSyntaxOff
 
-% !!! Nummerierung der von Gleichungen nach Sections: 
+% !!! Nummerierung von Gleichungen nach Sections: 
 \usepackage{amsmath}
 \numberwithin{equation}{section}
 
