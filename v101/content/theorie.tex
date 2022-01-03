@@ -1,4 +1,4 @@
-\section{Theorie \tiny{\cite{v101}}}
+\section{Theorie}
 \label{sec:Theorie}
 \setlength{\parindent}{0pt}
 
@@ -7,23 +7,23 @@ Die Rotationsbewegung eines Körpers lässt sich durch die physikalischen Größ
 Das Trägheitsmoment ist gewissermaßen ein Widerstand, den ein Körper der Bewegung entgegenbringt.
 Die Formel für das Trägheitsmoment lautet
 \begin{equation*}
-    I = \sum_{i} r_{i}^2 \cdot m_{i} 
+    I = \sum_{i} r_{i}^2 \cdot m_{i} \text{ ,}
 \end{equation*}
 
 wobei $m_{i}$ Massepunkte in dem Objekt beschreibt und $r_{i}^2$ den senkrechten Abstand von der Rotationsachse.
 Nun werden allerdings nicht einzelne Massepunkte betrachtet, sondern eine kontinuierliche Massenverteilung.
-Dies ergibt folgende Integration:
+Dies ergibt die folgende Integration
 \begin{equation}
-    I = \int r^2 \dif{m}
+    I = \int r^2 \dif{m} \text{.}
 \end{equation}
 
 Diese Gleichungen sind in dieser Form nur dann richtig, wenn die Drehachse auch die Schwerpunktachse ist.
 Sobald dies nicht mehr gewährleistet ist, ist der \textit{Satz von Steiner} erforderlich.
 Dabei ist $I_{s}$ das Trägheitsmoment des Körpers, wenn die Schwerpunktachse der Rotationsachse entspricht
-und $a$ der Abstand zur Rotationsachse ist:
+und $a$ der parallele Abstand zur Rotationsachse ist. Es folgt
 
 \begin{equation} \label{eq:SatzvSteiner}
-    I = I_{s} + m \cdot a^2
+    I = I_{s} + m \cdot a^2 \text{.}
 \end{equation}
 
 Ebenfalls ist das \textit{Drehmoment} $M$ von Interesse, welches mit dem Winkel $\varphi$ zwischen dem Orts- und Kraftvektor die Formel
@@ -31,31 +31,45 @@ Ebenfalls ist das \textit{Drehmoment} $M$ von Interesse, welches mit dem Winkel 
     \vec{M} = \vec{r} \times \vec{F} \implies \lvert M \rvert = \lvert F \rvert \lvert r \rvert \sin{\varphi}
 \end{equation}
 
-ergibt. Bei schwingungsfähigen Systemen wie bei einer Feder, lässt sich $M$ auch mithilfe der \textit{Winkelrichtgröße} $D$ beschreiben:
+ergibt. Bei schwingungsfähigen Systemen wie bei einer Feder, lässt sich $M$ auch mithilfe der \textit{Winkelrichtgröße} $D$ beschreiben.
+Es gilt
 \begin{equation} \label{eq:drehmomentwinkel}
-    M = D \cdot \varphi
+    M = D \cdot \varphi \text{ .}
 \end{equation}
 
-Dabei gilt für $D$ die wichtige Beziehung:
+Dabei gilt für $D$ die wichtige Beziehung
 \begin{equation} \label{eq:T}
-    T = 2\pi \sqrt{\frac{I}{D}}
+    T = 2\pi \sqrt{\frac{I}{D}} \text{.}
 \end{equation}
 
-durch umstellen erhält man ebenfalls folgende Gleichungen:
-\begin{align} \label{eq:Tumgestellt}
-    I & = \frac{T^2D}{4\pi^2} & D & = \frac{4\pi^2I}{T^2} 
-\end{align}
+Durch umstellen ergeben sich die Gleichungen 
+%\begin{align} \label{eq:Tumgestellt}
+%    I & = \frac{T^2D}{4\pi^2} \\
+%    D & = \frac{4\pi^2I}{T^2} 
+%\end{align}
 
-Zu beachten ist jedoch, dass (\ref{eq:T}) und (\ref{eq:Tumgestellt}) ihre Gültigkeit nur für kleine Auslenkungen $\varphi$ wahren.
+
+
+\begin{equation}\label{eq:Tumgestellt1}
+    I = \frac{T^2D}{4\pi^2}
+\end{equation}
+und 
+\begin{equation}\label{eq:Tumgestellt2}
+    D = \frac{4\pi^2I}{T^2} \text{ .}
+\end{equation}
+
+Zu beachten ist jedoch, dass (\ref{eq:T}), (\ref{eq:Tumgestellt1}) und (\ref{eq:Tumgestellt2}) ihre Gültigkeit nur für kleine Auslenkungen $\varphi$ wahren.
 Es gelten die Näherungen der Kleinwinkelnäherung.
 Zur Berechnung von D bieten sich dafür zwei Methoden an.
 
-\subsection*{Statische Methode}
+
+% Korrektur: In Durchführung verschieben?
+\subsection{Statische Methode} \label{sec:statmethode}
 Bei der statischen Methode wird mit einem Newtonmeter die Kraft $F$ bestimmt, die bei einer Auslenkung $\varphi$ wirkt.
-Dadurch lässt sich durch (\ref{eq:drehmoment}) und (\ref{eq:Tumgestellt}) D bestimmen.
+Dadurch lässt sich durch (\ref{eq:drehmoment}) und (\ref{eq:Tumgestellt2}) D bestimmen.
 Dabei ist darauf zu achten, dass das Newtonmeter im rechten Winkel zum Hebelarm zu halten ist.
 
-\subsection*{Dynamische Methode}
-Bei der dynamischen Methode wird die Beziehung (\ref{eq:Tumgestellt}) benutzt, wobei die Gleichung für \textit{I} verwendet wird.
+\subsection{Dynamische Methode} \label{sec:dynmethode}
+Bei der dynamischen Methode wird die Beziehung (\ref{eq:Tumgestellt1}) benutzt.
 Es wird also die Schwingungsdauer $T$ gemessen und mit dem bekannten Trägheitsmoment $I$ die Winkelrichtgröße $D$ bestimmt.
-Es sei angemerkt, dass durch die Anwendung beider Methoden $D$ und $I$ gleichtzeitig bestimmt werden können.
+Es sei angemerkt, dass durch die Anwendung beider Methoden $D$ und $I$ gleichzeitig bestimmt werden können.

@@ -3,28 +3,36 @@
 
 
 Im Folgenden wird die allgemeine Fehlerrechnung, und alle wichtigen Größen der entsprechenden Rechnung, erklärt.
-Die wichtigsten Werte dabei sind der Mittelwert und die Standartabweichung:
+Die wichtigsten Werte dabei sind der Mittelwert und die Standartabweichung.
+Der arithmetische Mittelwert wird dabei durch die Gleichung
+\begin{equation}
+    \stackrel{_{-}}{x}_{\text{arithm}}  = \frac{1}{N} \sum_{i=0}^{n} x_i
+\end{equation}
+beschrieben.
+Die Standartabweichung ist durch
+\begin{equation}
+    \sigma  = \sqrt{\frac{1}{N - 1 } \sum_{i=0}^{N} (x_i -  \stackrel{_{-}}{x}_{\text{arithm}})^2}
+\end{equation}
+gegeben. Dabei entspricht N der Anzahl an Werten und $x_i$ ist jeweils ein mit einem Fehler gemessener Wert.
+%\begin{align}
+%    \text{Mittelwert:} & \stackrel{_{-}}{x}_{\text{arithm}}  = \frac{1}{N} \sum_{i=0}^{n} x_i & \\
+%    \text{Standartabweichung: } & \sigma  = \sqrt{\frac{1}{N - 1 } \sum_{i=0}^{N} (x_i -  \stackrel{_{-}}{x}_{\text{arithm}})^2}
+%\end{align}
 
-\begin{align}
-    \text{Mittelwert:} & \stackrel{_{-}}{x}_{\text{arithm}}  = \frac{1}{N} \sum_{i=0}^{n} x_i & \\
-    \text{Standartabweichung: } & \sigma  = \sqrt{\frac{1}{N - 1 } \sum_{i=0}^{N} (x_i -  \stackrel{_{-}}{x}_{\text{arithm}})^2}
-\end{align}
 
-Dabei entspricht N der Anzahl an Werten und $x_i$ ist jeweils ein mit einem Fehler gemessener Wert.\\
-Es ergibt sich ebenfalls die statistische Messunischerheit:
+Es ergibt sich ebenfalls die statistische Messunischerheit
 
 \begin{equation}
     \increment \stackrel{_{-}}{x}_{\text{arithm}} = \frac{\sigma}{\sqrt{N}} = 
-    \sqrt{\frac{1}{N(N - 1)} \sum_{i=0}^{N} (x_i -  \stackrel{_{-}}{x}_{\text{arithm}})^2}
+    \sqrt{\frac{1}{N(N - 1)} \sum_{i=0}^{N} (x_i -  \stackrel{_{-}}{x}_{\text{arithm}})^2} \text{ .}
 \end{equation}
 
-Hat man nun mehrere Unbekannte in seiner Messung, folgen daraus auch mehrere Messunischerheiten.
-Nun muss man diese auch in dem weiteren Verlauf seiner Rechnung berücksichtigen.
-Es gilt die \textit{Gaußsche Fehlerfortplanzung}:
+Sind nun mehrere fehlerbehaftete Größen in der Messung, wird der sich fortpflanzende Fehler wichtig.
+Es gilt die \textit{Gaußsche Fehlerfortplanzung}
 
 \begin{equation} \label{fehler:gauß}
     \increment f(y_1 ,y_2 ,...,y_N ) = \sqrt{\left(\frac{\text{d} f}{\text{d} y_{1}} \increment y_{1}\right)^2
     + \left(\frac{\text{d} f}{\text{d} y_{2}} \increment y_{2}\right)^2 + ... + 
     \left(\frac{\text{d} f}{\text{d} y_{N}} \increment y_{N}\right)^2
-    }
+    } \text{ .}
 \end{equation}
