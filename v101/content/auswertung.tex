@@ -35,7 +35,7 @@ In Tabelle (\ref{tab:Winkelrichtgröße}) sind die entsprechenden Messwerte und 
 \end{tabular}
 \end{table}
 
-Es ergibt sich der Mittelwert:
+Es ergibt sich der Mittelwert
 \begin{align*}
   D_{mittel} = D  & = (0,021 \pm 0,003) \, \unit{\newton\meter} \text{ .}
 \end{align*}
@@ -47,11 +47,11 @@ Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen.
 
 \begin{table}
   \centering
-  \caption{Die Messdaten zum Eigenträgheitsmoment $I_{D}$}
+  \caption{Die Messdaten zum Eigenträgheitsmoment $I_{D}$.}
   \label{tab:Eigenträgheitsmoment}
   \begin{tabular}{c c c c}
     \toprule
-    $r / \unit\meter$  &  $T / \unit\second$ & $r^2 / (\unit\meter^2)$  & $T^2 / (\unit\second)^2$\\
+    $r / \unit\meter$  &  $T / \unit\second$ & $r^2 / (\unit\meter)^2$  & $T^2 / (\unit\second)^2$\\
     \midrule
       0,050   & 2,750   & 0,003   &  7,562  \\
       0,075   & 3,100   & 0,006   &  9,610  \\
@@ -68,13 +68,12 @@ Die Daten sind in Tabelle (\ref{tab:Eigenträgheitsmoment}) aufgetragen.
 \end{table}
 
 Aus diesen Daten wird das Eigenträgheitsmoment bestimmt.
-Aufgrund der Form der verwendeteten Gewichte wird zunächst noch die Formel für einen Zylinder benötigt,
-welche sich rechnerisch bestimmen lässt zu
-\begin{equation*}
-  I_{\text{Zyl}} = \frac{m \cdot R^2} {2} \text{ .}
-\end{equation*}
-
-Mit dem Satz von Steiner aus (\ref{eq:SatzvSteiner}) ergibt sich
+%Aufgrund der Form der verwendeteten Gewichte wird zunächst noch die Formel für einen Zylinder benötigt,
+%welche sich rechnerisch bestimmen lässt zu
+%\begin{equation*}
+%  I_{\text{Zyl}} = \frac{m \cdot R^2} {2} \text{ .}
+%\end{equation*}
+Mit dem Satz von Steiner aus (\ref{eq:SatzvSteiner}) und dem Trägheitsmoment eines Zylinder aus (\ref{eq:AllgTreagZyl}) ergibt sich
 \begin{equation} \label{eq:IZyl}
   I_{\text{Zyl}} = I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \text{ .}
 \end{equation}
@@ -83,7 +82,7 @@ Nach Einsetzen von $I_{\text{Zyl}}$ in Gleichung (\ref{eq:Tumgestellt1}) und Ums
 
 \begin{equation}
   T^2 = \frac{4 \pi^2}{D} \cdot \left( 2ma^2 + I_{\text{Zyl}} \right) \stackrel{(\ref{eq:IZyl})}{=} 
-  \frac{4 \pi^2}{D} \left( ma^2 + I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \right)
+  \frac{4 \pi^2}{D} \left( 2ma^2 + I_{D} + m_{\text{Zyl}}  \left( \frac{3 r^2 + h^2}{6} \right) \right)
 \end{equation}
 
 Durch lineare Regression mithilfe der Ausgleichsgerade 
@@ -91,7 +90,7 @@ Durch lineare Regression mithilfe der Ausgleichsgerade
   y = a \cdot x + b 
 \end{equation*}
 
-mit den Parametern $a = 724,885 ± 10,115 \frac{1}{\unit{\square\second\square\meter}}$ und $b = 5,945 ± 0,400\frac{1}{\unit{\square\second}}$ ergibt sich der Plot in Abbildung (\ref{fig:Lineareregression}).
+mit den Parametern $a = 724,885 ± 10,115 \frac{1}{\unit{\square\second\square\meter}}$ und $b = 5,945 ± 0,400\frac{1}{\unit{\square\second}}$ ergibt sich der Plot in Abbildung \ref{fig:Lineareregression}.
 
 \begin{figure}[H]
   \centering
@@ -127,9 +126,9 @@ Mit (\ref{fehler:gauß}) ergibt sich  für $\increment I_{D}$:
 
 Damit lässt sich der Fehler für das Eigenträgheitsmoment angeben.
 Die Zylinder haben die Maße $h = 0.023 \, \unit{\meter}, \: d = 0.45 \, \unit{\meter} \text{ und } m = 0.0624 \, \unit{\kilo\gram}$.
-Es gilt also:
+Es gilt also für das Trägheitsmoment
 \begin{equation*}
-  I_{D} =  (0.0016 \pm 0.0005) \, \unit{\kilo\gram\meter\squared}
+  I_{D} =  (0.0016 \pm 0.0005) \, \unit{\kilo\gram\meter\squared} \text{ .}
 \end{equation*}
 
 Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung vernachlässigt wird.
@@ -143,7 +142,7 @@ Es ist also so klein, dass das Eigenträgheitsmoment in der folgenden Auswertung
 \label{sec:TraegZylinder}
 
 Der betrachtete Zylinder hat die Maße: $m_1 = 0,3678 \, \unit{\kilo\gram}$ und $d_1 = 0,0983 \, \unit{\meter}$.
-Damit errechnet sich der Theoriewert des Trägheitsmomentes
+Damit errechnet sich der Theoriewert des Trägheitsmomentes mit Formel (\ref{eq:AllgTreagZyl}) zu
 
 \begin{align*}
   I_{\text{Zyl, theo}} &= 4,4425 \cdot 10^{-4} \, \unit{\kilo\gram\meter\squared} \text{ .}
@@ -153,7 +152,7 @@ Die experimentellen Werte sind in Tabelle (\ref{tab:SchwingungsdauerZylinder}) z
 
 \begin{table}
   \centering
-  \caption{Messung der Schwingungsdauer des Zylinders}
+  \caption{Messung der Schwingungsdauer des Zylinders.}
   \label{tab:SchwingungsdauerZylinder}
   \begin{tabular}{c c}
     \toprule
@@ -187,7 +186,7 @@ Der Fehler des Trägheitsmomentes berechnet sich nach (\ref{eq:idgauß}). Es fol
 \end{equation*}
 
 
-Damit kann das Trägheitsmoment nun angegeben werden zu
+Damit kann das Trägheitsmoment nach Formel (\ref{eq:Tumgestellt1}) nun angegeben werden zu
 
 \begin{equation*}
   I_{\text{Zyl}} = (3,056 \pm 1,475) \cdot 10^{-4} \, \unit{\kilo\gram\meter\squared} \text{ .}
@@ -208,7 +207,7 @@ berechnen.
 
 \begin{table}[H]
   \centering
-  \caption{Messung der Schwingungsdauer der Kugel}
+  \caption{Messung der Schwingungsdauer der Kugel.}
   \label{tab:SchwingungsdauerKugel}
   \begin{tabular}{c c}
     \toprule
@@ -233,7 +232,7 @@ Damit ergibt sich aus Mittelwert und Standartabweichung für
   T_{Kug} = (1,842 \pm 0,044) \, \unit\second \text{ .}
 \end{equation*}
 
-Daraus folgt das Trägheitsmoment
+Daraus folgt mit Formel (\ref{eq:AllgTreagKugel}) das Trägheitsmoment 
 
 \begin{equation*}
   I_{\text{Kug}} = (1.8048 \pm 0.8413) \cdot 10^{-3} \, \unit{\kilo\gram\meter\squared} \text{ .}
@@ -488,7 +487,7 @@ Nun sind alle nötigen Parameter bestimmt, um die Trägheitsmomente der Puppe zu
 
 \subsubsection{Trägheitsmoment der Puppe: Pose 1}
 Zunächst soll die \enquote{90° Pose} untersucht werden.
-Diese ist in Abbildung (\ref{fig:pose1}) zu sehen.
+Diese ist in Abbildung \ref{fig:pose1} zu sehen.
 In Tabelle (\ref{tab:PeriodendauerPose1}) sind die experimentellen Messwerte aufgetragen.
 
 
@@ -551,7 +550,7 @@ Insgesamt ergibt sich damit
 \subsubsection{Trägheitsmoment der Puppe: Pose 2}
 
 Nun wird das Trägheitsmoment der Figur in der \enquote{T-Pose} untersucht.
-Diese ist in Abbildung (\ref{fig:pose2}) dargestellt.
+Diese ist in Abbildung \ref{fig:pose2} dargestellt.
 Zunächst wird die theoretische Erwartung berechnet.
 Aus dem Satz von Steiner (\ref{eq:SatzvSteiner}) folgen die Gleichungen
 \begin{align*}
@@ -570,7 +569,7 @@ berechnen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.3\columnwidth]{pictures/puppe_tpose.jpg}
-  \caption{Die Puppe mit ausgestreckten Armen (\enquote{T-Pose})}
+  \caption{Die Puppe mit ausgestreckten Armen (\enquote{T-Pose}).}
   \label{fig:pose2}
 \end{figure}
 
