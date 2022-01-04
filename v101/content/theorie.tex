@@ -26,6 +26,11 @@ und $a$ der parallele Abstand zur Rotationsachse ist. Es folgt
     I = I_{s} + m \cdot a^2 \text{.}
 \end{equation}
 
+Durch Anwendung dieser Gleichungen, ergibt sich das Trägheitsmoment der Kugel
+\begin{equation} \label{eq:AllgTreagKugel}
+  I_{\text{K}} = \frac{2}{5} m r^2 \text{ .}
+\end{equation}
+
 Ebenfalls ist das \textit{Drehmoment} $M$ von Interesse, welches mit dem Winkel $\varphi$ zwischen dem Orts- und Kraftvektor die Formel
 \begin{equation} \label{eq:drehmoment}
     \vec{M} = \vec{r} \times \vec{F} \implies \lvert M \rvert = \lvert F \rvert \lvert r \rvert \sin{\varphi}
@@ -35,6 +40,12 @@ ergibt. Bei schwingungsfähigen Systemen wie bei einer Feder, lässt sich $M$ au
 Es gilt
 \begin{equation} \label{eq:drehmomentwinkel}
     M = D \cdot \varphi \text{ .}
+\end{equation}
+
+Mit (\ref{eq:drehmoment}) und (\ref{eq:drehmomentwinkel}) ergibt sich
+\begin{equation}
+D = \frac{\lvert F \rvert \lvert r \rvert \sin{\vartheta}}{\varphi} \stackrel{F,r > 0}{=} \frac{F r \sin{\vartheta}}{\varphi} 
+\stackrel{\vartheta = \frac{\pi}{2}}{=} \frac{F \cdot r}{\varphi} \text{ .}
 \end{equation}
 
 Dabei gilt für $D$ die wichtige Beziehung
