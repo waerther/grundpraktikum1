@@ -5,7 +5,7 @@ Mit der Phase eines Stoffes wird ein räumlich abgegrenzter Bereich in einem abg
 in dem sich der Stoff in einem physikalisch homogenen Zustand befindet. 
 Darunter gelten unter anderem die Aggregatzustände: fest, flüssig und gasförmig.
 
-In einem sogenannten Phasendiagramm (siehe Abbildung \ref{fig:phasendiagramm}) besitzt ein System
+In einem sogenannten Phasendiagramm, wie dem in Abbildung \ref{fig:phasendiagramm}, besitzt ein System
 innerhalb eines abgegrenzten Bereichs zwei Freiheitsgrade, den Druck $p$ und die Temperatur $T$.
 Das heißt, dass diese ohne Phasenänderung variiert werden können, solange keine Grenzlinie überschritten wird.
 \begin{figure} 
@@ -17,7 +17,7 @@ Das heißt, dass diese ohne Phasenänderung variiert werden können, solange kei
 
 Zur Untersuchung des Übergangs von flüssig zu gasförmig, wird die Grenzlinie zwischen dem
 Tripelpunkt (TP.) und den kritischen Punkt (K.P.) betrachtet, der sogenannten \textit{Dampfdruckkurve}.
-An dem Tripelpunkt liegen alle drei Phasen gleichzeitig, während entlang der Kurve bis zum
+An dem Tripelpunkt liegen alle drei Phasen gleichzeitig vor, während entlang der Kurve bis zum
 kritischen Punkt die flüssige und gasförmige Phase koexistieren.
 
 Die Form dieser Dampfdruckkurve ist durch einen temperaturabhängigen Parameter festgelegt, 
@@ -37,12 +37,10 @@ Die Verdampfungswärme wird also bei der Kondensation wieder freigesetzt.
 Nach einiger Zeit stellt sich ein Gleichgewicht zwischen Verdampfung und Kondensation ein. 
 Der Druck, der dann herscht, wird \textit{Sättigungsdampfdruck} genannt.
 Da dieser Druck nicht vom Volumen des Gasraumes abhängt, kann dieser nicht mithilfe der
-\textit{idealen~Gasgleichung} 
 \begin{equation}
-    pV = RT \, , \: \text{mit der allgemeinen Gaskonstante} \: R \approx \qty{8.314}{\joule\per\mol\per\kelvin} \, ,
-    \label{eq:idgasgleichung} 
+    \text{\textit{idealen~Gasgleichung}} \quad pV = RT  \, , \label{eq:idgasgleichung} 
 \end{equation}
-berechnet werden.
+mit der allgemeinen Gaskonstanten $ R \approx \qty[per-mode=reciprocal]{8.314}{\joule\per\mol\per\kelvin} \,$, berechnet werden.
 
 Zur Berechnung der Dampfdruckkurve wird dagegen der Kreisprozess der Verdampfung und Kondensation von Wasser
 in Abbildung \ref{fig:kreisprozess} betrachtet.
@@ -70,7 +68,7 @@ so ergibt sich die Gleichung
     (C_\text{F} - (C_\text{D}) \dif{T} + \dif{L} = (V_\text{D} - V_\text{F}) \dif{p} \, .
 \end{equation}
 
-$C_\text{F}$ und $(C_\text{D}$ Sind dabei die Molwärmen im flüssigen beziehungsweise gasförmigen Zustand.
+$C_\text{F}$ und $C_\text{D}$ sind dabei die Molwärmen im flüssigen beziehungsweise gasförmigen Zustand.
 $\dif{L}$ beschreibt die Differenz der nötigen Verdampfungswärmen, da diese bei höheren Temperaturen sinkt.
 Da hier ein reversibler Kreisprozess vorliegt, gilt nach dem Zweiten Hauptsatz der Thermodynamik für 
 die Summe der reduzierten Wärmemengen
@@ -80,3 +78,28 @@ die Summe der reduzierten Wärmemengen
     0 \, .
 \end{equation}
 
+Nach einer Vereinfachung der zweiten Summe ergibt sich die 
+\begin{equation}
+    \text{\textit{Clausius-Clapeyronsche Gleichung}} \quad \left(V_{\text{D}}-V_{\text{F}}\right) \dif{p} = \frac{L}{T} \dif{T} \, . 
+    \label{eq:clausius}
+\end{equation}
+
+Liegt die Temperatur $T$ weit unter der kritischen Temperatur $T_\text{kr}$ (siehe Abbildung \ref{fig:phasendiagramm}),
+dann sind folgende Näherungen möglich:
+\begin{itemize}
+    \item $V_\text{F}$ ist gegenüber $V_\text{D}$ vernachlässigbar,
+    \item $V_\text{D}$ ist nach (\ref{eq:idgasgleichung}) berechenbar und
+    \item $L$ ist temperatur- und druckunabhängig.
+\end{itemize}
+
+Mithilfe dieser Voraussetzungen nähert sich (\ref{eq:clausius}) der Gleichung
+\begin{equation}
+    \frac{R}{p} \dif{p} = \frac{L}{T^2} \dif{T} \, . 
+    \label{eq:approxclausius}
+\end{equation}
+
+Schließlich folgt nach Integration der Näherung die Formel
+\begin{equation}
+    p = p_{0} \cdot \exp \left(-\frac{L}{R T}\right) \quad \text{bzw.} \quad \ln(p)= -\frac{L}{R T} + \ln(p_{0}) \, .
+    \label{eq:damppfdruck}
+\end{equation}
