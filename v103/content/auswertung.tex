@@ -21,20 +21,20 @@ gehen die Parameter
 \end{align*}
 hervor. Nun wird diese Gerade mit der Formel für das Elastizitätsmodul $E$ in (\ref{tbd}) verglichen, wobei für $I$ nach (\ref{eq:FlTreagKreis})
 \begin{equation*}
-  I = \frac{h^4} {12} = \frac{0.01^4} {12} \unit\meter^4
+  I = \frac{R^4 \pi}{2} = \frac{0.005^4 \pi}{2}
 \end{equation*}
 und es gilt
 \begin{equation*}
-  E = \frac{m \cdot g} {2 \cdot I \cdot a} = (108.4 \pm 1.1) 10^9 \frac{N}{m^2} \text{ .}
+  E = \frac{m \cdot g} {2 \cdot I \cdot a} = (108.4 \pm 1.1) 10^9 \frac{\unit\newton}{\unit\meter^2} \text{ .}
 \end{equation*}
 
 Dieser Wert wird mit dem Literaturwert {\cite{demtroeder1}}
 \begin{equation*}
-  E_\text{Lit} = 105 \cdot 10^9 \frac{N}{m^2}
+  E_\text{Lit} = 125 \cdot 10^9 \frac{\unit\newton}{\unit\meter^2}
 \end{equation*}
 von Kupfer verglichen. Dabei ergibt sich eine Abweichung von
 \begin{equation*}
-  \increment E = \left|\frac{100 - 125}{125}\right| \cdot 100 = 20 \%
+  \increment E = \left|\frac{108.4 - 125}{125}\right| \cdot 100 = 13.28 \%
 \end{equation*}
 vom Theoriewert.
 
@@ -84,6 +84,25 @@ vom Theoriewert.
 
 \subsection{Eckiger Stab, einseitige Einspannung}
 
+Für den eckigen Stab wird analog vorgangen.
+Die Messwerte für diese Messung sind in Tabelle \ref{tab:eckigerstabeinseitig} zu finden.
+Die Ausgleichsgerade $y(x) = a \cdot x + b$ in Abbildung \ref{fig:plot2} hat die Parameter
+\begin{align*}
+  a &= 0.0254 ± 0.0003 \frac{1}{\unit{\meter\squared}} & \text{und}& & b&= (0.0401 ± 0.0138) \cdot 10^{-3} \unit\meter \text{ .} \\
+\end{align*}
+Das Flächenträgheitsmoment wird nach Formel (\ref{eq:FlTreagKreis}) bestimmt und liefert mit Höhe $H = 0.01 \unit\meter$
+\begin{equation*}
+  I_\text{Quadrat} = \frac{h^4} {12} = \frac{0.01^4} {12} \text{ .}
+\end{equation*}
+Nun kann das Elastizitätsmodul berechnet werden zu
+\begin{equation*}
+  E = (124.3 \pm 1.5) \cdot 10^{9} \text{ .}
+\end{equation*}
+Vergleicht man das mit dem Literaturwert ergibt sich eine Abweichung von
+\begin{equation*}
+  \increment E = \left|\frac{124.3 - 125}{125}\right| \cdot 100 = 0.56 \% \text{ .}
+\end{equation*}
+
 
 
 
@@ -128,11 +147,25 @@ vom Theoriewert.
   \centering
   \includegraphics{pictures/Lineare Regression2.pdf}
   \caption{Plot des eckigen, einseitig eingespannten Stabes gegen die lin. Regression.}
-  \label{fig:plot1}
+  \label{fig:plot2}
 \end{figure}
+
 
 \subsection{Runder Stab, beidseitige Einspannung}
 
+Für die beidseitige Einspannung erhält man die Werte
+\begin{align*}
+  a &= 0.0036 ± 0.0002 \frac{1}{\unit{\meter\squared}} & \text{und}& & b&= (0.2068 ± 0.0283) \cdot 10^{-3} \unit\meter \text{ .} \\
+\end{align*}
+Da es sich nun um eine beidseitige Einspannung handelt, muss die Formel (\ref{tbd}) angewendet werden.
+Somit wird $E$ zu
+\begin{equation*}
+  E = \frac{m_\text{angehängt} \cdot g}{48 \cdot I \cdot a} = (180 \pm 10) \cdot 10^{9}
+\end{equation*}
+bestimmt. Die Abweichung beträgt somit
+\begin{equation*}
+  \increment E = \left|\frac{180 - 125}{125}\right| \cdot 100 = 44 \% \text{ .}
+\end{equation*}
 
 \begin{table}[H]
   \centering
@@ -141,12 +174,12 @@ vom Theoriewert.
   \begin{tabular}{c c c c c}
     \toprule
     $x / 10 ^{-3} \unit\meter$ &  $D_0 (x) / 10^{-3} \unit\meter$ &
-    $D_m (x) / 10^{-3} \unit\meter$ & $D(x) / 10^{-3} \unit\meter$ & $(Lx^2 - \frac{x^3}{3}) / 10^{-3} \unit\meter$\\
+    $D_m (x) / 10^{-3} \unit\meter$ & $D(x) / 10^{-3} \unit\meter$ & $(3L^2x - 4x^3) / 10^{-3} \unit\meter$\\
     \midrule
-     30.000 & 0.000 & 0.320 & 0.320 &  31.221 \\
-     50.000 & 0.120 & 0.570 & 0.450 &  51.715 \\
-     70.000 & 0.240 & 0.770 & 0.530 &  71.729 \\
-     90.000 & 0.400 & 0.960 & 0.560 &  91.071 \\
+    30.000 & 0.000 & 0.320 & 0.320 &  31.221 \\
+    50.000 & 0.120 & 0.570 & 0.450 &  51.715 \\
+    70.000 & 0.240 & 0.770 & 0.530 &  71.729 \\
+    90.000 & 0.400 & 0.960 & 0.560 &  91.071 \\
     110.000 & 0.530 & 1.170 & 0.640 & 109.549 \\
     130.000 & 0.640 & 1.360 & 0.720 & 126.971 \\
     150.000 & 0.720 & 1.520 & 0.800 & 143.145 \\
@@ -173,5 +206,71 @@ vom Theoriewert.
     \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/Lineare Regression3.pdf}
+  \caption{Plot des runden, beidseitig eingespannten Stabes gegen die lin. Regression.}
+  \label{fig:plot3}
+\end{figure}
+
+
 \subsection{Eckiger Stab, beidseitige Einspannung}
 
+Es ergeben sich die Werte 
+\begin{align*}
+  a &= 0.0032 ± 0.0006 \frac{1}{\unit{\meter\squared}} & \text{und}& & b&= (-0.2266 ± 0.0971) \cdot 10^{-3} \unit\meter \text{ .} \\
+\end{align*}
+Nun kann das Elastizitätsmodul berechnet werden. Es gilt
+\begin{equation*}
+  E = \frac{m_\text{angehängt} \cdot g}{48 \cdot I \cdot a} = (119 \pm 22) \cdot 10^{9} \text{ .}
+\end{equation*}
+Die Abweichung beträgt
+\begin{equation*}
+  \increment E = \left|\frac{119 - 125}{125}\right| \cdot 100 = 4.8 \% \text{ .}
+\end{equation*}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Auslenkung des eckigen Stabes bei beidseitiger Einspannung.}
+  \label{tab:eckigerstabbeidseitig}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $x / 10 ^{-3} \unit\meter$ &  $D_0 (x) / 10^{-3} \unit\meter$ &
+    $D_m (x) / 10^{-3} \unit\meter$ & $D(x) / 10^{-3} \unit\meter$ & $(3L^2x - 4x^3) / 10^{-3} \unit\meter$\\
+    \midrule
+    30.000 & 0.000 & 0.260 &  0.260 &  32.508 \\
+    50.000 & 0.030 & 0.280 &  0.250 &  53.861 \\
+    70.000 & 0.070 & 0.280 &  0.210 &  74.733 \\
+    90.000 & 0.110 & 0.300 &  0.190 &  94.933 \\
+    110.000 & 0.160 & 0.300 &  0.140 & 114.269 \\
+    130.000 & 0.220 & 0.320 &  0.100 & 132.550 \\
+    150.000 & 0.270 & 0.270 &  0.000 & 149.582 \\
+    170.000 & 0.310 & 0.290 & -0.020 & 165.174 \\
+    190.000 & 0.360 & 0.280 & -0.080 & 179.134 \\
+    210.000 & 0.440 & 0.210 & -0.230 & 191.271 \\
+    230.000 & 0.490 & 0.130 & -0.360 & 201.391 \\
+    250.000 & 0.550 & 0.120 & -0.430 & 209.303 \\
+    270.000 & 0.630 & 0.040 & -0.590 & 214.815 \\
+    295.000 & 0.900 & 1.500 &  0.600 & 218.038 \\
+    305.000 & 0.850 & 1.460 &  0.610 & 218.109 \\
+    325.000 & 0.800 & 1.400 &  0.600 & 216.031 \\
+    345.000 & 0.740 & 1.300 &  0.560 & 210.834 \\
+    365.000 & 0.630 & 1.170 &  0.540 & 202.324 \\
+    385.000 & 0.550 & 1.050 &  0.500 & 190.310 \\
+    405.000 & 0.500 & 0.920 &  0.420 & 174.600 \\
+    425.000 & 0.400 & 0.810 &  0.410 & 155.003 \\
+    445.000 & 0.340 & 0.680 &  0.340 & 131.325 \\
+    465.000 & 0.250 & 0.530 &  0.280 & 103.375 \\
+    485.000 & 0.240 & 0.430 &  0.190 &  70.961 \\
+    505.000 & 0.110 & 0.300 &  0.190 &  33.892 \\
+    525.000 & 0.000 & 0.110 &  0.110 &  -8.026 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/Lineare Regression4.pdf}
+  \caption{Plot des eckigen, beidseitig eingespannten Stabes.}
+  \label{fig:plot3}
+\end{figure}
