@@ -63,6 +63,16 @@ Anstelle von $R_3$ und $R_4$ kann ebenfalls ein Potentiometer benutzt werden.
     \label{fig:Schaltung3}
 \end{figure}
 
+Mit der Kapazitätsmessbrücke lassen sich komplexe Widerstände bestimmen. 
+Ein realer Kondensator ist aber niemals rein kapazitiv, sondern immer auch teilweise ohmisch.
+Das bedeutet, der Widerstand wird über eine Reihenschaltung wie in Abbildung \ref{fig:Schaltung3} realisiert.
+Natürlich muss bei dieser Art Widerstand Wechselstrom angelegt werden, da sonst der Kondensator eine Art 
+unendlich großer Widerstand wird und der Zweck der Messung verfehlt wird.
+Für diese Schaltung gelten die Gleichungen
+\begin{align}
+    C_x &= C_2 \frac {R_4}{R_3} & \text{und} & &   R_x = R_2 \frac {R_3}{R_4} \, .
+\end{align}
+
 \subsection{Induktivitätsmessbrücke}
 
 \begin{figure}
@@ -72,6 +82,19 @@ Anstelle von $R_3$ und $R_4$ kann ebenfalls ein Potentiometer benutzt werden.
     \label{fig:Schaltung4}
 \end{figure}
 
+Mit einer Induktivitätsmessbrücke werden nun Induktivitäten gemessen.
+Auch diese komplexen Widerstände bestehen immer aus einem ohmschen und einem induktiven Widerstand.
+Diese werden dann im Schaltbild dadurch realisiert, dass sie in Reihe geschalten werden.
+Das vollständige Schaltbild ist in Abbildung \ref{fig:Schaltung4} zu sehen.
+Für die unbekannten Induktivitäten ergibt sich
+\begin{equation}
+    L_x = L_2 \frac{R_3}{R_4}
+\end{equation}
+und für den ohmschen Widerstand des Widerstandes
+\begin{equation}
+    R_x = R_2 \frac{R_3}{R_4}
+\end{equation}
+
 \subsection{Maxwell Brücke}
 \begin{figure}
     \centering
@@ -80,6 +103,21 @@ Anstelle von $R_3$ und $R_4$ kann ebenfalls ein Potentiometer benutzt werden.
     \label{fig:Schaltung5}
 \end{figure}
 
+Eine alternative zu der Induktivitätsmessbrücke ist die Maxwellbrücke.
+Auch diese Brückenschaltung ist eine Schaltung, um Induktivitäten zu bestimmen.
+Der grundlegende Unterschied liegt darin, dass ein Bauteil ausgetauscht wird.
+Dabei handelt es sich um die bekannte Induktivität $L_2$.
+Nun wird eine bekannte Kapazität benötigt.
+Diese hat baubedingt einen deutlich geringeren ohmschen Widerstand.
+Nun werden die Unbekannten durch die Gleichungen
+\begin{equation}
+    L_x = R_2 R_3 C_4
+\end{equation}
+und 
+\begin{equation}
+    R_x = R_2 \frac{R_3}{R_4}
+\end{equation}
+beschrieben.
 
 \subsection{Wien-Robinson-Brücke}
 
