@@ -7,7 +7,7 @@ Zur Berechnung der Verdampfungswärme $L$ wird die in (\ref{eq:damppfdruck}) her
 \begin{equation}
     \ln \left(\frac{p}{p_{0}}\right) = -\frac{L}{R} \cdot \frac{1}{T}
 \end{equation}
-verwendet. Der anfangs gemesse Umgebungsdruck beträgt dabei
+verwendet. Der zu Beginn gemesse Umgebungsdruck beträgt dabei
 \begin{equation}
     p_{0} = \qty{1013e2}{kPa} \, .
 \end{equation}
@@ -45,10 +45,10 @@ Somit ergibt sich die Verdampfungswärme zu
 
 Die äußere Verdampfungswärme $L_\text{a}$ ist die benötigte Energie, 
 um das Volumen eines Mols der Flüssigkeit auf das Volumen eines Mols des Gases zu vergrößern.
-Wird die dabei verrichtete Volumenarbeit $W = pV$  gleich der idealen Gasgleichung (\ref{eq:idgasgleichung}),
+Wird die dabei verrichtete Volumenarbeit $W = pV$  gleich der idealen Gasgleichung (\ref{eq:idgasgleichung})
 gesetzt, ergibt sich bei $T = \qty{373}{K}$ für die äußere Verdampfungswärme
 \begin{equation}
-    L_{\text{a}} = W = pV = RT = \qty{3.101}{\kilo\joule\per\mol}
+    L_{\text{a}} = W = pV = RT = \qty{3.101}{\kilo\joule\per\mol} \text{ .}
 \end{equation}
 
 Die benötigte innere Energie $L_\text{i}$ um die molekularen Bindungskräfte bei der Verdampfung zu überwinden ist damit
@@ -65,14 +65,14 @@ ergibt die innere Energie pro Molekül. Somit lautet das Ergebnis in Elektronenv
 
 \subsection{Messung bis 15 bar}
 
-Mithilfe der Messdaten im Druckbereich $p \in [1, 15] \, \mathrm{bar}$ soll nun die temperaturabhängigkeit
-der Verdampfungswärme $L$ untersucht werden. Dafür wird (\ref{eq:clausius}) nach $L$ umgestellt:
+Mithilfe der Messdaten im Druckbereich $p \in [1, 15] \, \mathrm{bar}$ soll nun die Temperaturabhängigkeit
+der Verdampfungswärme $L$ untersucht werden. Dafür wird (\ref{eq:clausius}) nach $L$ umgestellt. Es gilt
 \begin{equation}
     L = T \left(V_{\text{D}} - V_{\text{F}}\right) \frac {\dif{p}} {\dif{T}} \, . \label{eq:verdampfungswärme}
 \end{equation}
 
 Obwohl $V_\text{F}$ weiterhin vernachlässigbar ist, kann $V_\text{D}$ nicht mehr durch (\ref{eq:idgasgleichung})
-ausgedrückt ewerden.
+ausgedrückt werden.
 Eine bessere Näherung stellt die Gleichung
 \begin{equation}
     \left(p + \frac {A} {V_{\text{D}}^{2}}\right) V_{\text{D}} = RT 
@@ -107,7 +107,7 @@ Damit ergibt sich für die Parameter
 \begin{align*}
     a &= \qty{1.108(341)}{\pascal\per\cubic\kelvin} \, , \\
     b &= \qty{-1.263(442)e3}{\pascal\per\kelvin\squared} \, , \\ % *10**3
-    c &= \qty{4.877(1.903)e5}{\pascal\per\kelvin} \, , \\ % *10**5
+    c &= \qty{4.877(1.903)e5}{\pascal\per\kelvin} \, \, \text{und} \\ % *10**5
     d &= \qty{-6.367(2.727)e7}{\pascal} \, . % *10**7
 \end{align*}
 
@@ -115,7 +115,7 @@ Werden nun $p(T)$ und $\frac{\dif{p}}{\dif{T}}$ in \ref{eq:L} eingesetzt,
 ergibt sich die Gleichung 
 \begin{align}
     L(T) &= \frac{T \left(3 a T^{2}+2 b T+c\right)}{a T^{3}+b T^{2}+c T+d} \left[\frac{R T}{2} \pm \sqrt{\left(\frac{R T}{2}\right)^{2}-A \left(a T^{3}+b T^{2}+c T+d\right)}\right]  \\
-    &= \frac{3 a T^{3}+2 b T^{2}+c T}{a T^{3}+b T^{2}+c T+d} \left[\frac{R T}{2} \pm \sqrt{\left(\frac{R T}{2}\right)^{2}-A\left(a T^{3}+b T^{2}+c T+d\right)}\right] 
+    &= \frac{3 a T^{3}+2 b T^{2}+c T}{a T^{3}+b T^{2}+c T+d} \left[\frac{R T}{2} \pm \sqrt{\left(\frac{R T}{2}\right)^{2}-A\left(a T^{3}+b T^{2}+c T+d\right)}\right] \text{ .}
 \end{align}
 
 Die daraus resultierenden temperaturabhängigen Verdampfungswärmen sind in den Abbildungen
