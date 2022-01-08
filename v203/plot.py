@@ -22,6 +22,7 @@ x = rT
 y = np.log((p/p0))
 plt.plot(x, y, 'xr', markersize=4 , label = 'Messwerte', alpha=0.5)
 
+
 # lineare Ausgleichsfunktion
 def g(x, a, b):
     return a * x + b
@@ -37,7 +38,7 @@ R = 8.314462618
 xx = np.linspace(2.6, 3.5)
 plt.plot(xx, g(xx, a, b), '-b', linewidth = 1, label = 'Ausgleichsgerade')
 
-plt.xlabel(r'$\frac{1}{T_{1}}$ ( $\frac{1}{10^3 \cdot\mathrm{K}}$ )')
+plt.xlabel(r'$T_{1}^{-1}$ / $10^{-3} \cdot \mathrm{K^{-1}}$')
 plt.ylabel(r'ln($\frac{p_{b}}{p_{0}}$)')
 plt.legend(loc="best")
 plt.grid(True)
@@ -46,6 +47,7 @@ plt.xlim(2.65, 3.45)
 
 plt.savefig('build/plot1.pdf', bbox_inches = "tight")
 plt.clf() 
+
 
 # plot 2
 md_15bar = pd.read_csv('tables/md_15bar.csv')
@@ -58,27 +60,68 @@ x = T
 y = p
 plt.plot(x, y/1e5, 'xr', markersize=6 , label = 'Messwerte', alpha=0.5)
 
-# Ausgleichsfunktion
-def f(x, a, b, c, d):
-    return a*x**3 + b*x**2 + c*x + d
 
-para, pcov = curve_fit(f, T, y)
+# Ausgleichsfunktion
+def p(T, a, b, c, d):
+    return a*T**3 + b*T**2 + c*T + d
+
+para, pcov = curve_fit(p, T, y)
 pcov = np.sqrt(np.diag(pcov))
 para = np.round(para, 3)
 pcov = np.round(pcov, 3)
 a, b, c, d = para
 fa, fb, fc, fd = pcov
+print(a)
 
 xx = np.linspace(380, 480, 10000)
-plt.plot(xx, f(xx, a, b, c, d)/1e5, '-b', linewidth = 1, label = 'Ausgleichsgerade')
+plt.plot(xx, p(xx, a, b, c, d)/1e5, '-b', linewidth = 1, label = 'Ausgleichsgerade')
 
 plt.xlabel(r'$T$ / $\mathrm{K}$')
 plt.ylabel(r'$p$ / $10^5 \mathrm{Pa}$')
 plt.legend(loc="best")
-plt.grid(linestyle='dotted')
+plt.grid(True)
 
 plt.xlim(385, 475)
 plt.ylim(0, 16)
 
 plt.savefig('build/plot2.pdf', bbox_inches = "tight")
+plt.clf() 
+
+
+# plot 3
+A = 0.9
+def p(T):
+    return a*T**3 + b*T**2 + c*T + d
+
+def dp(T):
+    return 3*a*T**2 + 2*b*T + c
+
+def Lplus(T):
+    return (T*dp(T)/p(T)) * ( (R*T/2) +  np.sqrt( (R*T/2)**2 - A*p(T) ) )
+
+def Lminus(T):
+    return (T*dp(T)/p(T)) * ( (R*T/2) -  np.sqrt( (R*T/2)**2 - A*p(T) ) )
+
+x = T
+y1 = Lplus(T)
+y2 = Lminus(T)
+
+plt.plot(x, y1, 'xr', markersize=6 , label = 'Fall: Addition')
+plt.xlabel(r'$T$ / $\mathrm{K}$')
+plt.ylabel(r'$L$ / $\mathrm{J/mol}$')
+plt.legend(loc='best')
+plt.grid(True)
+
+plt.savefig('build/plot3.pdf', bbox_inches = "tight")
+plt.clf() 
+
+
+# plot 4
+plt.plot(x, y2, 'xb', markersize=6 , label = 'Fall: Subtraktion')
+plt.xlabel(r'$T$ / $\mathrm{K}$')
+plt.ylabel(r'$L$ / $\mathrm{J/mol}$')
+plt.legend(loc='best')
+plt.grid(True)
+
+plt.savefig('build/plot4.pdf', bbox_inches = "tight")
 plt.clf() 
