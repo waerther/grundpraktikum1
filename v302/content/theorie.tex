@@ -128,3 +128,33 @@ beschrieben.
     \label{fig:Schaltung6}
 \end{figure}
 
+Die Wien-Robinson-Brücke, dargestellt in Abbildung \ref{fig:Schaltung6}, ist eine Brückenschaltung
+die vor allem als Bandpass funktionert. 
+Ein Bandpass ist ein elektronischer Filter, der  nur bestimmte Frequenzbänder hindurch lässt.
+Die Formel
+\begin{equation} \label{eq:Wien1}
+    \left|\frac{U_\text{Brücke}}{U_\text{S}}\right|^2 =  \frac{\left({\omega}^2 R^2 C^2 -1 \right)^2}
+    {9 \left[ \left( 1 - {\omega}^2 R^2 C^2 \right)^2 + 9 {\omega}^2 R^2 C^2 \right]}
+\end{equation}
+sei hier nur angegeben \cite[9]{v302}.
+Jedoch wird hier erkennbar, dass die Brückenspannung dann verschwindet, wenn
+\begin{equation*}
+    \omega_0 = \frac{1}{R C}
+\end{equation*}
+gilt. Nun kann man sich das Frequenzverhältnis definieren als
+\begin{equation*}
+    \Omega \coloneq \frac{\omega}{\omega_0} \, .
+\end{equation*}
+Führt man $\Omega$ in (\ref{eq:Wien1}) ein, verändert sich die Gleichung zu der Form
+\begin{equation} \label{eq:Wien2}
+    \left|\frac{U_\text{Brücke}}{U_\text{S}}\right|^2 = \frac{\left( \Omega^2 -1 \right)^2}
+    {9 \left( \left( 1 - \Omega^2 \right)^2 + 9 \Omega^2 \right)}
+\end{equation}
+Mit der Wien-Robinson-Brücke lässt sich eine sogenannte Klirrfaktor-Messung durchführen.
+Das bedeutet, dass der Anteil an Oberwellen im Verhältnis zur Grundwelle eines Generators gemessen wird.
+Ein Sinusgenerator sollte beispielsweise keine Oberwellen haben.
+Ist der Klirrfaktor also klein, ist die Qualität des Sinusgeneratores hoch.
+Der Klierfaktor ist gegeben durch
+\begin{equation} \label{eq:klirr}
+    k \coloneq \frac {\sum_{i=2}^{N} {U_i}^2}{U_1}  \, .
+\end{equation}
