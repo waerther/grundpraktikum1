@@ -69,7 +69,7 @@ Das bedeutet, der Widerstand wird über eine Reihenschaltung wie in Abbildung \r
 Natürlich muss bei dieser Art Widerstand Wechselstrom angelegt werden, da sonst der Kondensator eine Art 
 unendlich großer Widerstand wird und der Zweck der Messung verfehlt wird.
 Für diese Schaltung gelten die Gleichungen
-\begin{align}
+\begin{align} \label{eq:Cx}
     C_x &= C_2 \frac {R_4}{R_3} & \text{und} & &   R_x = R_2 \frac {R_3}{R_4} \, .
 \end{align}
 
@@ -87,11 +87,11 @@ Auch diese komplexen Widerstände bestehen immer aus einem ohmschen und einem in
 Diese werden dann im Schaltbild dadurch realisiert, dass sie in Reihe geschalten werden.
 Das vollständige Schaltbild ist in Abbildung \ref{fig:Schaltung4} zu sehen.
 Für die unbekannten Induktivitäten ergibt sich
-\begin{equation}
+\begin{equation} \label{eq:L_x}
     L_x = L_2 \frac{R_3}{R_4}
 \end{equation}
 und für den ohmschen Widerstand des Widerstandes
-\begin{equation}
+\begin{equation} \label{eq:induktR_x}
     R_x = R_2 \frac{R_3}{R_4}
 \end{equation}
 
@@ -110,11 +110,11 @@ Dabei handelt es sich um die bekannte Induktivität $L_2$.
 Nun wird eine bekannte Kapazität benötigt.
 Diese hat baubedingt einen deutlich geringeren ohmschen Widerstand.
 Nun werden die Unbekannten durch die Gleichungen
-\begin{equation}
+\begin{equation} \label{eq:maxwL_x}
     L_x = R_2 R_3 C_4
 \end{equation}
 und 
-\begin{equation}
+\begin{equation} \label{eq:maxwR_x}
     R_x = R_2 \frac{R_3}{R_4}
 \end{equation}
 beschrieben.
@@ -133,7 +133,7 @@ die vor allem als Bandpass funktionert.
 Ein Bandpass ist ein elektronischer Filter, der  nur bestimmte Frequenzbänder hindurch lässt.
 Die Formel
 \begin{equation} \label{eq:Wien1}
-    \left|\frac{U_\text{Brücke}}{U_\text{S}}\right|^2 =  \frac{\left({\omega}^2 R^2 C^2 -1 \right)^2}
+    \left|\frac{U_\text{Br}}{U_\text{S}}\right|^2 =  \frac{\left({\omega}^2 R^2 C^2 -1 \right)^2}
     {9 \left[ \left( 1 - {\omega}^2 R^2 C^2 \right)^2 + 9 {\omega}^2 R^2 C^2 \right]}
 \end{equation}
 sei hier nur angegeben \cite[9]{v302}.
@@ -143,11 +143,11 @@ Jedoch wird hier erkennbar, dass die Brückenspannung dann verschwindet, wenn
 \end{equation*}
 gilt. Nun kann man sich das Frequenzverhältnis definieren als
 \begin{equation*}
-    \Omega \coloneq \frac{\omega}{\omega_0} \, .
+    \Omega \coloneq \frac{\nu}{\nu_0} \quad \text{mit} \quad \nu_0 = \frac{\omega_0}{2\pi} \, .
 \end{equation*}
 Führt man $\Omega$ in (\ref{eq:Wien1}) ein, verändert sich die Gleichung zu der Form
 \begin{equation} \label{eq:Wien2}
-    \left|\frac{U_\text{Brücke}}{U_\text{S}}\right|^2 = \frac{\left( \Omega^2 -1 \right)^2}
+    \left|\frac{U_\text{Br}}{U_\text{S}}\right|^2 = \frac{\left( \Omega^2 -1 \right)^2}
     {9 \left( \left( 1 - \Omega^2 \right)^2 + 9 \Omega^2 \right)}
 \end{equation}
 Mit der Wien-Robinson-Brücke lässt sich eine sogenannte Klirrfaktor-Messung durchführen.

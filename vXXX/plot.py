@@ -17,5 +17,5 @@ plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
 plt.legend(loc='best')
 
 # in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+plt.savefig('build/plot.pdf', bbox_inches = "tight")
+plt.clf() 
