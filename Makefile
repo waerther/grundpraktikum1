@@ -22,6 +22,9 @@ v103:
 v302:
 	make -C v302
 
+v353:
+	make -C v353
+
 clean:
 	make -C vXXX clean
 	make -C v206 clean
@@ -31,5 +34,6 @@ clean:
 	make -C v203 clean
 	make -C v103 clean
 	make -C v302 clean
+	make -C v353 clean
 
-.PHONY: clean vXXX clean v206 clean v308 clean v355 clean v101 clean v203 clean v103 clean v302
+.PHONY: clean vXXX clean v206 clean v308 clean v355 clean v101 clean v203 clean v103 clean v302 clean v353
