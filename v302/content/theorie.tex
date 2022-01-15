@@ -12,7 +12,7 @@
 
 Brückenschaltungen sind essentiell, wenn unbekannte Widerstände bestimmt werden sollen.
 Um mit einer Brückenschaltung, beispielsweise wie in Abbildung \ref{fig:Schaltung1},
-benötigt man eine bakannte Speisespannung $U_\text{S}$ und vier Widerstände.
+benötigt man eine bekannte Speisespannung $U_\text{S}$ und vier Widerstände.
 Durch alle Widerstände wird ein Strom fließen.
 Es gelten die \textit{Kirchhoffschen Regeln}.
 Es gilt für die Summe aller Ströme an einem Knotenpunkt
@@ -33,8 +33,10 @@ angeben. Diese lautet
 Es kann durchaus der Fall auftreten, oder willentlich bewirkt werden, dass die Brückenspannung vollständig verschwindet.
 In diesem Falle gilt
 \begin{equation} \label{eq:Brückenspannunggleich0}
-    R_2 R_3 = R_1 R_4 \, .
+    R_2 R_3 = R_1 R_4 \, ,
 \end{equation}
+damit ist die Brücke \enquote{abgeglichen}.
+
 
 \subsection{Wheatstonesche Brücke}
 
@@ -52,7 +54,7 @@ Durch die Gleichung (\ref{eq:Brückenspannunggleich0}) erhält man dann
 \begin{equation} \label{eq:Rx}
     R_x = \frac {R_2 R_3}{R_4} \, .
 \end{equation}
-Anstelle von $R_3$ und $R_4$ kann ebenfalls ein Potentiometer benutzt werden.
+
 
 \subsection{Kapazitätsmessbrücke}
 
@@ -65,13 +67,16 @@ Anstelle von $R_3$ und $R_4$ kann ebenfalls ein Potentiometer benutzt werden.
 
 Mit der Kapazitätsmessbrücke lassen sich komplexe Widerstände bestimmen. 
 Ein realer Kondensator ist aber niemals rein kapazitiv, sondern immer auch teilweise ohmisch.
-Das bedeutet, der Widerstand wird über eine Reihenschaltung wie in Abbildung \ref{fig:Schaltung3} realisiert.
+Dies liegt daran, dass beim realen Kondensator die hindurchfließende Energie zum Teil in Wärme verloren geht
+(sogenannte dielektrische Verluste).
+Dieser Verlust wird durch einen Widerstand innerhalb der Reihenschaltung in Abbildung \ref{fig:Schaltung3} realisiert.
 Natürlich muss bei dieser Art Widerstand Wechselstrom angelegt werden, da sonst der Kondensator eine Art 
 unendlich großer Widerstand wird und der Zweck der Messung verfehlt wird.
 Für diese Schaltung gelten die Gleichungen
-\begin{align} \label{eq:Cx}
+\begin{align*} 
     C_x &= C_2 \frac {R_4}{R_3} & \text{und} & &   R_x = R_2 \frac {R_3}{R_4} \, .
-\end{align}
+\end{align*}
+
 
 \subsection{Induktivitätsmessbrücke}
 
@@ -83,7 +88,8 @@ Für diese Schaltung gelten die Gleichungen
 \end{figure}
 
 Mit einer Induktivitätsmessbrücke werden nun Induktivitäten gemessen.
-Auch diese komplexen Widerstände bestehen immer aus einem ohmschen und einem induktiven Widerstand.
+Auch diese komplexen Widerstände bestehen immer aus einem ohmschen und einem induktiven Widerstand,
+da eine reale Induktivität einen Teil der in ihr steckenden magnetischen Feldenergie irreversibel in Wärme um.
 Diese werden dann im Schaltbild dadurch realisiert, dass sie in Reihe geschalten werden.
 Das vollständige Schaltbild ist in Abbildung \ref{fig:Schaltung4} zu sehen.
 Für die unbekannten Induktivitäten ergibt sich
@@ -95,6 +101,7 @@ und für den ohmschen Widerstand des Widerstandes
     R_x = R_2 \frac{R_3}{R_4}
 \end{equation}
 
+
 \subsection{Maxwell Brücke}
 \begin{figure}
     \centering
@@ -103,7 +110,7 @@ und für den ohmschen Widerstand des Widerstandes
     \label{fig:Schaltung5}
 \end{figure}
 
-Eine alternative zu der Induktivitätsmessbrücke ist die Maxwellbrücke.
+Eine Alternative zu der Induktivitätsmessbrücke ist die Maxwellbrücke.
 Auch diese Brückenschaltung ist eine Schaltung, um Induktivitäten zu bestimmen.
 Der grundlegende Unterschied liegt darin, dass ein Bauteil ausgetauscht wird.
 Dabei handelt es sich um die bekannte Induktivität $L_2$.
@@ -114,9 +121,9 @@ Nun werden die Unbekannten durch die Gleichungen
     L_x = R_2 R_3 C_4
 \end{equation}
 und 
-\begin{equation} \label{eq:maxwR_x}
+\begin{equation*}
     R_x = R_2 \frac{R_3}{R_4}
-\end{equation}
+\end{equation*}
 beschrieben.
 
 \subsection{Wien-Robinson-Brücke}
@@ -129,7 +136,7 @@ beschrieben.
 \end{figure}
 
 Die Wien-Robinson-Brücke, dargestellt in Abbildung \ref{fig:Schaltung6}, ist eine Brückenschaltung
-die vor allem als Bandpass funktionert. 
+die vor allem als Bandpass fungiert. 
 Ein Bandpass ist ein elektronischer Filter, der  nur bestimmte Frequenzbänder hindurch lässt.
 Die Formel
 \begin{equation} \label{eq:Wien1}
