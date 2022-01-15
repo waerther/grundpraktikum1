@@ -11,7 +11,7 @@ Das heißt, dass diese ohne Phasenänderung variiert werden können, solange kei
 \begin{figure} 
     \centering
     \includegraphics[width=12cm] {pictures/phasendiagramm.pdf}  
-    \caption{Qualitatives Phasendiagramm von Wasser  \cite[1]{v203}.}
+    \caption{Qualitatives Phasendiagramm von Wasser  \cite{v203}.}
     \label{fig:phasendiagramm}
 \end{figure}
 
@@ -36,18 +36,18 @@ Die Verdampfungswärme wird also bei der Kondensation wieder freigesetzt.
 
 Nach einiger Zeit stellt sich ein Gleichgewicht zwischen Verdampfung und Kondensation ein. 
 Der Druck, der dann herscht, wird \textit{Sättigungsdampfdruck} genannt.
-Da dieser Druck nicht vom Volumen des Gasraumes abhängt, kann dieser nicht mithilfe der
+Da dieser Druck nicht vom Volumen des Gasraumes abhängt, kann dieser nicht mithilfe der idealen~Gasgleichung
 \begin{equation}
-    \text{\textit{idealen~Gasgleichung}} \quad pV = RT  \, , \label{eq:idgasgleichung} 
+    pV = RT  \, , \label{eq:idgasgleichung} 
 \end{equation}
-mit der allgemeinen Gaskonstanten $ R \approx \qty[per-mode=reciprocal]{8.314}{\joule\per\mol\per\kelvin} \,$, berechnet werden.
+mit der allgemeinen Gaskonstanten $ R \approx \qty[per-mode=reciprocal]{8.314}{\joule\per\mol\per\kelvin} \,$ \cite[467]{demtroeder1}, berechnet werden.
 
 Zur Berechnung der Dampfdruckkurve wird dagegen der Kreisprozess der Verdampfung und Kondensation von Wasser
 in Abbildung \ref{fig:kreisprozess} betrachtet.
 \begin{figure} 
     \centering
     \includegraphics[width=12cm] {pictures/kreisprozess.pdf}  
-    \caption{Kreisprozess von Wasser im $p$-$V$-Diagramm \cite[3]{v203}.}
+    \caption{Kreisprozess von Wasser im $p$-$V$-Diagramm \cite{v203}.}
     \label{fig:kreisprozess}
 \end{figure}
 
@@ -78,14 +78,14 @@ die Summe der reduzierten Wärmemengen
     0 \, .
 \end{equation}
 
-Nach einer Vereinfachung der zweiten Summe ergibt sich die 
+Nach einer Vereinfachung der zweiten Summe ergibt sich die Clausius-Clapeyronsche Gleichung
 \begin{equation}
-    \text{\textit{Clausius-Clapeyronsche Gleichung}} \quad \left(V_{\text{D}}-V_{\text{F}}\right) \dif{p} = \frac{L}{T} \dif{T} \, . 
+    \left(V_{\text{D}}-V_{\text{F}}\right) \dif{p} = \frac{L}{T} \dif{T} \, . 
     \label{eq:clausius}
 \end{equation}
 
 Liegt die Temperatur $T$ weit unter der kritischen Temperatur $T_\text{kr}$, also hinter der gestrichtelten Linie in Abbildung \ref{fig:phasendiagramm},
-dann sind folgende Näherungen möglich:
+dann sind folgende Annahmen möglich:
 \begin{itemize}
     \item $V_\text{F}$ ist gegenüber $V_\text{D}$ vernachlässigbar,
     \item $V_\text{D}$ ist nach (\ref{eq:idgasgleichung}) berechenbar und
@@ -100,6 +100,6 @@ Mithilfe dieser Voraussetzungen nähert sich (\ref{eq:clausius}) der Gleichung
 
 Schließlich folgt nach Integration der Näherung die Formel
 \begin{equation}
-    p = p_{0} \cdot \exp \left(-\frac{L}{R T}\right) \quad \text{bzw.} \quad \ln(p)= -\frac{L}{R T} + \ln(p_{0}) \, .
+    p = p_{0} \cdot \exp \left(-\frac{L}{R T}\right) \quad \text{bzw.} \quad \ln \left(\frac{p}{p_{0}}\right) = -\frac{L}{R T} \, .
     \label{eq:damppfdruck}
 \end{equation}

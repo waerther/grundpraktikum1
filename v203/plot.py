@@ -39,7 +39,7 @@ xx = np.linspace(2.6, 3.5)
 plt.plot(xx, g(xx, a, b), '-b', linewidth = 1, label = 'Ausgleichsgerade')
 
 plt.xlabel(r'$T_{1}^{-1}$ / $10^{-3} \cdot \mathrm{K^{-1}}$')
-plt.ylabel(r'ln($\frac{p_{b}}{p_{0}}$)')
+plt.ylabel(r'$\ln \left(\frac{p}{p_{0}}\right)$')
 plt.legend(loc="best")
 plt.grid(True)
 
