@@ -1,9 +1,9 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-Das Elastizitätsmodul $E$ beschreibt die physikalische Materialkonstante,
+Der Elastizitätsmodul $E$ beschreibt die physikalische Materialkonstante,
 die als Proportionalitätskonstante im Hookschen Gesetz vorkommt.
-Es ist also eine maßgebliche Einheit, für die Elastizität eines Objektes.
+$E$ ist also eine maßgebliche Einheit, für die Elastizität eines Objektes.
 Das \textbf{Hookesche Gesetz} lautet
 \begin{equation}
         \sigma = E \cdot \frac {\increment L}{L} \text{ ,}
@@ -18,7 +18,18 @@ Anschaulich ist dies in Abbildung \ref{fig:Hook1} dargestellt.
         \label{fig:Hook1}
 \end{figure}
 
-Um schließlich $E$ zu bestimmen, werden in diesem Versuch Metallstäbe unbekannten Materials eingespannt und die Biegung untersucht.
+Da es deutlich leichter ist, die Biegung von Stäben zu untersuchen, wird sich in diesem Versuch darauf beschränkt.
+Um $E$ zu bestimmen, werden Metallstäbe unbekannten Materials eingespannt und die Biegung untersucht.
+Eine schematische Darstellung ist in Abbildung \ref{fig:Hook2} zu finden.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{pictures/Hook2.png}
+        \caption{Darstellung eines durch die Kraft $F$ gebogenen Stabes.}
+        \label{fig:Hook2}
+\end{figure}
+
+
 Die Biegung entsteht durch ein angehängtes Gewicht an das Ende des Stabes.
 Dieses sorgt durch die Gravitation für ein \textit{äußeres} Drehmoment auf den Stab.
 Dieses Drehmoment lässt den Stab biegen, jedoch nur bis zu dem Punkt, an dem das \textit{innere} Drehmoment dem äußeren entspricht.
@@ -27,12 +38,12 @@ Dieses Drehmoment lässt den Stab biegen, jedoch nur bis zu dem Punkt, an dem da
 %         \int_\text{Q} y \sigma(y) dq = F (L - x) \text{ ,}
 % \end{equation}
 % wobei $\sigma(y)$ die Normalspannung und y den Abstand zur neutralen Faser $x$ beschreibt.  
-Nach Umstellen einiger Formeln, erhält man eine Formel für die Auslenkung $D(x)$.
+Nach Umstellen einiger Formeln, ergibt sich eine Formel für die Auslenkung $D(x)$.
 Es gilt
 \begin{equation} \label{eq:E1}
         D(x) = \frac{m \cdot g}{2 E I} (Lx^2 - \frac{x^3}{3}) \text{ .}
 \end{equation}
-Die beteiligten Größen entsprechen ihren normalen physikalischen Größen.
+Dabei ist $m$ die Masse, $g$ die Erdbeschleunigung und $L$ die Länge des Objektes.
 Das $I$ jedoch beschreibt das sogenannte \textit{Flächenträgheitsmoment}.
 Dieses berechnet sich über die Formel
 \begin{equation}
@@ -57,4 +68,8 @@ Für diesen Fall ist
 \begin{equation} \label{eq:E2}
         D(x) = \frac{m \cdot g}{48 E I} (3L^2x - 4 x^3)
 \end{equation}
-für $ x \in [0,L/2]$.
+für $ x \in [0,L/2]$ und
+\begin{equation} \label{eq:E3}
+        D(x) = \frac{m \cdot g}{48 E I} (4x^3 - 12Lx^2+9L^2x-L^3)
+\end{equation}
+für $ x \in [L/2,L]$.
