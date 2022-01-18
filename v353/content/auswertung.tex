@@ -99,7 +99,7 @@ in \autoref{fig:plot2} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{plot2.pdf}
-  \caption{Ausgleichsfunktion zur Bestimmung der Zeitkonstanten mithilfe der Frequenz.}
+  \caption{Ausgleichsrechnung zur Bestimmung der Zeitkonstanten mithilfe der Frequenz.}
   \label{fig:plot2}
 \end{figure}
 Darus ergibt sich nun die Zeitkonstante zu
@@ -113,35 +113,35 @@ Darus ergibt sich nun die Zeitkonstante zu
 Die Bestimmung der Phasenverschiebung zischen Generatorspannung und Kondensatorspannung erfolgt mithilfe der Messwerte in \autoref{tab:dt}.
 \begin{table} [h]
   \centering
-  \caption{Messdaten zur Frequenz.}
+  \caption{Messdaten zur Phasenverschiebung.}
   \label{tab:dt}
   \begin{tabular}{c c c}
     \toprule
-    $U_\text{c} \mathbin{/} \unit{\volt}$ &  $\phi \mathbin{/} \mathrm{rad}$ \\
+    $f \mathbin{/} \unit{\hertz}$ & $U_\text{c} \mathbin{/} \unit{\volt}$ & $\phi \mathbin{/} \mathrm{rad}$ \\
     \midrule
-     5,00 &   0,0628 \\
-     4,80 &   0,1257 \\
-     4,60 &   0,1885 \\
-     4,60 &   0,1759 \\
-     4,20 &   0,1649 \\
-     4,10 &   0,1885 \\
-     4,00 &   0,2199 \\
-     3,95 &   0,2513 \\
-     3,60 &   0,2827 \\
-     3,30 &   0,3142 \\
-     3,20 &   0,3283 \\
-     3,00 &   0,3581 \\
-     2,80 &   0,3676 \\
-     3,00 &   0,3738 \\
-     2,80 &   0,4006 \\
-     2,75 &   0,4273 \\
-     2,00 &   0,4524 \\
-     1,50 &   0,5027 \\
-     1,20 &   0,5027 \\
-     0,60 &   0,7037 \\
-     0,40 &   0,4524 \\
-     0,25 &   0,5969 \\
-     0,13 &   0,6283 \\
+       250 &   5 &   0,0628 \\
+       500 &   5 &   0,1257 \\
+       750 &   5 &   0,1885 \\
+      1000 &   5 &   0,1759 \\
+      1250 &   4 &   0,1649 \\
+      1500 &   4 &   0,1885 \\
+      1750 &   4 &   0,2199 \\
+      2000 &   4 &   0,2513 \\
+      2250 &   4 &   0,2827 \\
+      2500 &   3 &   0,3142 \\
+      2750 &   3 &   0,3283 \\
+      3000 &   3 &   0,3581 \\
+      3250 &   3 &   0,3676 \\
+      3500 &   3 &   0,3738 \\
+      3750 &   3 &   0,4006 \\
+      4000 &   3 &   0,4273 \\
+      6000 &   2 &   0,4524 \\
+      8000 &   2 &   0,5027 \\
+     10000 &   1 &   0,5027 \\
+     20000 &   1 &   0,7540 \\
+     30000 &   0 &   0,3770 \\
+     50000 &   0 &   0,6283 \\
+    100000 &   0 &   0,6283 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -150,14 +150,32 @@ Aus diesen Werten und einer Ausgleichsrechnung nach (\ref{eq:phase}) wird die Au
 \begin{equation*}
   \phi=a \arctan (b x)
 \end{equation*}
-in \autoref{fig:plot2} dargestellt.
+in \autoref{fig:plot3} dargestellt.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{plot2.pdf}
-  \caption{Ausgleichsfunktion zur Bestimmung der Zeitkonstanten mithilfe der Frequenz.}
-  \label{fig:plot2}
+  \includegraphics[width=\textwidth]{plot3.pdf}
+  \caption{Ausgleichsrechnung zur Bestimmung der Zeitkonstanten mithilfe der Phasenverschiebung.}
+  \label{fig:plot3}
 \end{figure}
 Darus ergibt sich nun die Zeitkonstante zu
 \begin{equation*}
-  RC = \qty{-66.7(1.2)}{\micro\second} \, .
+  RC = \qty{4.5(1.2)}{\micro\second} \, .
 \end{equation*}
+
+Es wird des Weiteren zur besseren Veranschaulichung ein Polarplot in \autoref{fig:plot4} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{plot4.pdf}
+  \caption{Polarplot zur Beobachtung der Phasenverschiebung zwischen der Generator und Kondensatorspannung.}
+  \label{fig:plot4}
+\end{figure}
+
+Um die Integrierbarkeit der RC-Spannung zu zeigen, wird der Erwartungswert mit dem
+Realwert vom Oszilloskop verglichen. Da sich Erwartungs- und Realwert decken ist gezeigt
+das die RC Spannung integrabel ist.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{pictures/dreieck.jpg}
+  \caption{Dreiecksspannung integriert.}
+  \label{fig:dreieck}
+\end{figure}
