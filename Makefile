@@ -1,3 +1,13 @@
+all:
+	make -C v101
+	make -C v103
+	make -C v203
+	make -C v206
+	make -C v302
+	make -C v308
+	make -C v353
+	make -C v355
+
 vXXX:
 	make -C vXXX
 
